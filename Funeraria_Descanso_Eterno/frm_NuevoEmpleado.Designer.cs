@@ -39,10 +39,8 @@
             this.lbl_Direcion = new System.Windows.Forms.Label();
             this.txt_Ciudad = new System.Windows.Forms.TextBox();
             this.txt_Departamento = new System.Windows.Forms.TextBox();
-            this.txt_Pais = new System.Windows.Forms.TextBox();
             this.lbl_Ciudad = new System.Windows.Forms.Label();
             this.lbl_Departamento = new System.Windows.Forms.Label();
-            this.lbl_Pais = new System.Windows.Forms.Label();
             this.txt_Tdoc = new System.Windows.Forms.TextBox();
             this.cmb_Tdoc = new System.Windows.Forms.ComboBox();
             this.pic_Minimizar = new System.Windows.Forms.PictureBox();
@@ -65,6 +63,8 @@
             this.lbl_Regis = new System.Windows.Forms.Label();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.pic_Redimencionar = new System.Windows.Forms.PictureBox();
+            this.lbl_Rol = new System.Windows.Forms.Label();
+            this.cmb_Rol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cerrar)).BeginInit();
@@ -172,32 +172,25 @@
             // txt_Ciudad
             // 
             this.txt_Ciudad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ciudad.Location = new System.Drawing.Point(382, 362);
+            this.txt_Ciudad.Location = new System.Drawing.Point(289, 362);
             this.txt_Ciudad.Name = "txt_Ciudad";
-            this.txt_Ciudad.Size = new System.Drawing.Size(193, 29);
+            this.txt_Ciudad.Size = new System.Drawing.Size(281, 29);
             this.txt_Ciudad.TabIndex = 27;
+            this.txt_Ciudad.TextChanged += new System.EventHandler(this.txt_Ciudad_TextChanged);
             // 
             // txt_Departamento
             // 
             this.txt_Departamento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Departamento.Location = new System.Drawing.Point(196, 362);
+            this.txt_Departamento.Location = new System.Drawing.Point(49, 362);
             this.txt_Departamento.Name = "txt_Departamento";
-            this.txt_Departamento.Size = new System.Drawing.Size(180, 29);
+            this.txt_Departamento.Size = new System.Drawing.Size(234, 29);
             this.txt_Departamento.TabIndex = 26;
-            // 
-            // txt_Pais
-            // 
-            this.txt_Pais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Pais.Location = new System.Drawing.Point(49, 362);
-            this.txt_Pais.Name = "txt_Pais";
-            this.txt_Pais.Size = new System.Drawing.Size(141, 29);
-            this.txt_Pais.TabIndex = 25;
             // 
             // lbl_Ciudad
             // 
             this.lbl_Ciudad.AutoSize = true;
             this.lbl_Ciudad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ciudad.Location = new System.Drawing.Point(378, 338);
+            this.lbl_Ciudad.Location = new System.Drawing.Point(285, 338);
             this.lbl_Ciudad.Name = "lbl_Ciudad";
             this.lbl_Ciudad.Size = new System.Drawing.Size(134, 21);
             this.lbl_Ciudad.TabIndex = 24;
@@ -207,21 +200,12 @@
             // 
             this.lbl_Departamento.AutoSize = true;
             this.lbl_Departamento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Departamento.Location = new System.Drawing.Point(192, 338);
+            this.lbl_Departamento.Location = new System.Drawing.Point(45, 338);
             this.lbl_Departamento.Name = "lbl_Departamento";
             this.lbl_Departamento.Size = new System.Drawing.Size(110, 21);
             this.lbl_Departamento.TabIndex = 23;
             this.lbl_Departamento.Text = "Departamento";
-            // 
-            // lbl_Pais
-            // 
-            this.lbl_Pais.AutoSize = true;
-            this.lbl_Pais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Pais.Location = new System.Drawing.Point(45, 338);
-            this.lbl_Pais.Name = "lbl_Pais";
-            this.lbl_Pais.Size = new System.Drawing.Size(37, 21);
-            this.lbl_Pais.TabIndex = 22;
-            this.lbl_Pais.Text = "País";
+            this.lbl_Departamento.Click += new System.EventHandler(this.lbl_Departamento_Click);
             // 
             // txt_Tdoc
             // 
@@ -287,6 +271,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_NuevoCl.BackColor = System.Drawing.Color.White;
+            this.pnl_NuevoCl.Controls.Add(this.cmb_Rol);
+            this.pnl_NuevoCl.Controls.Add(this.lbl_Rol);
             this.pnl_NuevoCl.Controls.Add(this.btn_Cancelar);
             this.pnl_NuevoCl.Controls.Add(this.btn_Confirmar);
             this.pnl_NuevoCl.Controls.Add(this.txt_Email);
@@ -297,10 +283,8 @@
             this.pnl_NuevoCl.Controls.Add(this.lbl_Direcion);
             this.pnl_NuevoCl.Controls.Add(this.txt_Ciudad);
             this.pnl_NuevoCl.Controls.Add(this.txt_Departamento);
-            this.pnl_NuevoCl.Controls.Add(this.txt_Pais);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Ciudad);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Departamento);
-            this.pnl_NuevoCl.Controls.Add(this.lbl_Pais);
             this.pnl_NuevoCl.Controls.Add(this.txt_Tdoc);
             this.pnl_NuevoCl.Controls.Add(this.cmb_Tdoc);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Tdoc);
@@ -486,6 +470,28 @@
             this.pic_Redimencionar.TabIndex = 1;
             this.pic_Redimencionar.TabStop = false;
             // 
+            // lbl_Rol
+            // 
+            this.lbl_Rol.AutoSize = true;
+            this.lbl_Rol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Rol.Location = new System.Drawing.Point(335, 51);
+            this.lbl_Rol.Name = "lbl_Rol";
+            this.lbl_Rol.Size = new System.Drawing.Size(33, 21);
+            this.lbl_Rol.TabIndex = 35;
+            this.lbl_Rol.Text = "Rol";
+            // 
+            // cmb_Rol
+            // 
+            this.cmb_Rol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Rol.FormattingEnabled = true;
+            this.cmb_Rol.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cmb_Rol.Location = new System.Drawing.Point(384, 52);
+            this.cmb_Rol.Name = "cmb_Rol";
+            this.cmb_Rol.Size = new System.Drawing.Size(186, 29);
+            this.cmb_Rol.TabIndex = 36;
+            // 
             // frm_NuevoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,10 +527,8 @@
         private System.Windows.Forms.Label lbl_Direcion;
         private System.Windows.Forms.TextBox txt_Ciudad;
         private System.Windows.Forms.TextBox txt_Departamento;
-        private System.Windows.Forms.TextBox txt_Pais;
         private System.Windows.Forms.Label lbl_Ciudad;
         private System.Windows.Forms.Label lbl_Departamento;
-        private System.Windows.Forms.Label lbl_Pais;
         private System.Windows.Forms.TextBox txt_Tdoc;
         private System.Windows.Forms.ComboBox cmb_Tdoc;
         private System.Windows.Forms.PictureBox pic_Minimizar;
@@ -547,5 +551,7 @@
         private System.Windows.Forms.Label lbl_Regis;
         private System.Windows.Forms.Panel pnl_Titulo;
         private System.Windows.Forms.PictureBox pic_Redimencionar;
+        private System.Windows.Forms.ComboBox cmb_Rol;
+        private System.Windows.Forms.Label lbl_Rol;
     }
 }

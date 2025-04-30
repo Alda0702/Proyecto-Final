@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Finisar.SQLite;
 
 namespace Funeraria_Descanso_Eterno
 {
@@ -53,6 +55,7 @@ namespace Funeraria_Descanso_Eterno
             frm_Menu.ShowDialog();
             this.Show();
             this.Close();
+
         }
 
         private void pnl_Titulo_Paint(object sender, PaintEventArgs e)

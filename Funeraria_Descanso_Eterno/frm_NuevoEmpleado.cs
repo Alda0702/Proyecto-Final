@@ -31,5 +31,15 @@ namespace Funeraria_Descanso_Eterno
         {
             this.Close();
         }
+
+        private void lbl_Departamento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Ciudad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLite.NET">
+      <HintPath>..\..\..\Downloads\Login-bd-main (1)\Login-bd-main\Login-master\Login\bin\Debug\SQLite.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -48,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cls_AbrirForm.cs" />
+    <Compile Include="Cls_ClienteCRUD.cs" />
+    <Compile Include="Cls_ConexionDB.cs" />
+    <Compile Include="Cls_EmpleadoCRUD.cs" />
+    <Compile Include="Cls_InventarioCRUD.cs" />
+    <Compile Include="Cls_ProveedoresCRUD.cs" />
+    <Compile Include="Cls_ServiciosCRUD.cs" />
     <Compile Include="frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>

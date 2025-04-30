@@ -27,10 +27,7 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_EliminarI_Click(object sender, EventArgs e)
         {
-            frm_EliminarProd frm_EliminarProd = new frm_EliminarProd();
-            this.Hide();
-            frm_EliminarProd.ShowDialog();
-            this.Show();
+
         }
     }
 }

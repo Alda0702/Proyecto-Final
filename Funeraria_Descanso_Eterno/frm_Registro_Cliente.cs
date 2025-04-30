@@ -37,10 +37,6 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_EliminarC_Click(object sender, EventArgs e)
         {
-            frm_EliminarCliente frm_Eliminar = new frm_EliminarCliente();
-            this.Hide();
-            frm_Eliminar.ShowDialog();
-            this.Show();
 
         }
     }
