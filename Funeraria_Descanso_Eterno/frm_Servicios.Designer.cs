@@ -158,6 +158,7 @@
             this.txt_BuscarS.Name = "txt_BuscarS";
             this.txt_BuscarS.Size = new System.Drawing.Size(888, 33);
             this.txt_BuscarS.TabIndex = 0;
+            this.txt_BuscarS.TextChanged += new System.EventHandler(this.txt_BuscarS_TextChanged);
             // 
             // btn_EliminarS
             // 
@@ -187,6 +188,7 @@
             this.btn_ActualizarS.TabIndex = 14;
             this.btn_ActualizarS.Text = "Actualizar Servicio";
             this.btn_ActualizarS.UseVisualStyleBackColor = false;
+            this.btn_ActualizarS.Click += new System.EventHandler(this.btn_ActualizarS_Click);
             // 
             // btn_NuevoS
             // 
