@@ -117,6 +117,7 @@
             this.btn_Confirmar.TabIndex = 4;
             this.btn_Confirmar.Text = "Actualizar Producto";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // txt_Duracion
             // 
@@ -311,20 +312,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_NuevoCl;
-        private System.Windows.Forms.TextBox tx_PrecioProd;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Confirmar;
-        private System.Windows.Forms.TextBox txt_Duracion;
-        private System.Windows.Forms.TextBox txt_CategoriaProd;
-        private System.Windows.Forms.TextBox txt_DescProd;
         private System.Windows.Forms.Label lbl_Descripcion;
         private System.Windows.Forms.Label lbl_CategoriaProd;
         private System.Windows.Forms.Label lbl_Duracion;
         private System.Windows.Forms.Label lbl_PrecioProd;
         private System.Windows.Forms.Label lbl_NomProd;
-        private System.Windows.Forms.TextBox txt_NomProd;
         private System.Windows.Forms.Label lbl_Inf;
         private System.Windows.Forms.Label lbl_Actua;
         private System.Windows.Forms.PictureBox pic_Restaurar;
@@ -332,5 +326,11 @@
         private System.Windows.Forms.PictureBox pic_Redimencionar;
         private System.Windows.Forms.PictureBox pic_Cerrar;
         private System.Windows.Forms.Panel pnl_Titulo;
+        public System.Windows.Forms.Panel pnl_NuevoCl;
+        public System.Windows.Forms.TextBox tx_PrecioProd;
+        public System.Windows.Forms.TextBox txt_Duracion;
+        public System.Windows.Forms.TextBox txt_CategoriaProd;
+        public System.Windows.Forms.TextBox txt_DescProd;
+        public System.Windows.Forms.TextBox txt_NomProd;
     }
 }

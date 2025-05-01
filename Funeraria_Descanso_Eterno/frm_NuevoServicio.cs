@@ -46,7 +46,7 @@ namespace Funeraria_Descanso_Eterno
             string descripcion = txt_DescServ.Text;
             string categoria = txt_CategoriaServ.Text;
             int duracion = Convert.ToInt32(txt_Duracion.Text);
-            decimal precio = Convert.ToDecimal(tx_PrecioServ.Text);
+            int precio = Convert.ToInt32(tx_PrecioServ.Text);
 
             Cls_ServiciosCRUD ADD = new Cls_ServiciosCRUD();
             ADD.InsertarServicios(nombre, descripcion, categoria, duracion, precio);

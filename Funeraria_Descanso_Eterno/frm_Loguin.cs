@@ -55,10 +55,6 @@ namespace Funeraria_Descanso_Eterno
             frm_Menu.ShowDialog();
             this.Show();
             this.Close();
-            a.crear_tablas();
-
-            a.crear_tablas();
-
         }
 
         private void pnl_Titulo_Paint(object sender, PaintEventArgs e)

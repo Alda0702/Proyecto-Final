@@ -30,6 +30,7 @@ namespace Funeraria_Descanso_Eterno
             }
         }
 
+        //este es para cargar la tabla por defecto
         public void mostrardata(DataGridView dgv)
         {
             SQLiteDataReader datareader_sqlite;
@@ -56,7 +57,7 @@ namespace Funeraria_Descanso_Eterno
 
         }
 
-
+        // y este recibe un string para buscar por nombre
         public void mostrardata(DataGridView dgv, string busq)
         {
             SQLiteDataReader datareader_sqlite;
@@ -97,6 +98,25 @@ namespace Funeraria_Descanso_Eterno
             }
         }
 
+
+        public void ModificarServicio(int id, string Nombre, string Descripcion, string Categoria, int DuracioEst, decimal Precio)
+        {
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"UPDATE tabla_servicio SET NombreServ = '{Nombre}', DescripcionServ = '{Descripcion}', CategoriaServ = '{Categoria}', DuracionEstimadaServ = {DuracioEst}, PrecioServ = {Precio} WHERE CodigoServ = {id}";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el Servicio: " + ex.Message);
+            }
+        }
+
+
+        //esto se va ahora
         public void ALTER()
         {
             conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();

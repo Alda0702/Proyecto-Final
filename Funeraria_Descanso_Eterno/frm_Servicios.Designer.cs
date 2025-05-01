@@ -188,7 +188,7 @@
             this.btn_ActualizarS.TabIndex = 14;
             this.btn_ActualizarS.Text = "Actualizar Servicio";
             this.btn_ActualizarS.UseVisualStyleBackColor = false;
-            this.btn_ActualizarS.Click += new System.EventHandler(this.btn_ActualizarS_Click);
+            this.btn_ActualizarS.Click += new System.EventHandler(this.btn_ActualizarS_Click_1);
             // 
             // btn_NuevoS
             // 
