@@ -67,8 +67,12 @@ namespace Funeraria_Descanso_Eterno
             Cls_UsuariosCRUD.usuariodb userdb = new Cls_UsuariosCRUD.usuariodb();
             //userdb.CrearTablaUsuario();
             userdb.InsertarUsuario(nuevoUsuario, idEmpleado);
+            frm_Menu.Instancia.Show();
+
 
             MessageBox.Show($"Usuario registrado correctamente con ID de empleado: {idEmpleado}");
+
+
         }
 
         private void frm_NuevoUsario_Load(object sender, EventArgs e)

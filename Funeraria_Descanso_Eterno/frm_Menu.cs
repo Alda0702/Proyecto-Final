@@ -13,9 +13,26 @@ namespace Funeraria_Descanso_Eterno
 {
     public partial class frm_Menu : Form
     {
+
+        private static frm_Menu instancia;
+
+      
+      
+
         public frm_Menu()
         {
             InitializeComponent();
+        }
+          public static frm_Menu Instancia
+        {
+            get
+            {
+                if (instancia == null || instancia.IsDisposed)
+                {
+                    instancia = new frm_Menu();
+                }
+                return instancia;
+            }
         }
 
         private void pic_Cerrar_Click(object sender, EventArgs e)
@@ -98,6 +115,11 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Facturacion(), this.pnl_Contenedor);
+        }
+
+        private void pnl_Contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
