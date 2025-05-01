@@ -50,11 +50,11 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
-            //frm_Menu frm_Menu = new frm_Menu();
-            //this.Hide();
-            //frm_Menu.ShowDialog();
-            //this.Show();
-            //this.Close();
+            frm_Menu frm_Menu = new frm_Menu();
+            this.Hide();
+            frm_Menu.ShowDialog();
+            this.Show();
+            this.Close();
 
             Cls_ConexionDB a = Cls_ConexionDB.Instancia;
 
