@@ -104,5 +104,71 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Error al insertar el cliente: " + ex.Message);
             }
         }
+
+        public void mostrarcliente(DataGridView dgv)
+        {
+            SQLiteDataReader datareader_sqlite;
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Select * FROM tabla_cliente";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+                while (datareader_sqlite.Read())
+                {
+                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString());
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+
+        }
+        public void mostrarcliente(DataGridView dgv, string bust)
+        {
+            SQLiteDataReader datareader_sqlite;
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Select * FROM tabla_cliente";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+                while (datareader_sqlite.Read())
+                {
+                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString());
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+
+        }
+        public void EliminarRegistro(int id)
+        {
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Delete From tabla_cliente Where IdCliente = {id} ";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar Cliente" + ex.Message);
+            }
+        }
     }
 }

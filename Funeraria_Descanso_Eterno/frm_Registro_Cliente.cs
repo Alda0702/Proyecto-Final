@@ -15,11 +15,21 @@ namespace Funeraria_Descanso_Eterno
         public frm_Registro_Cliente()
         {
             InitializeComponent();
+            llenarGrid();
         }
+
+        Cls_ClienteCRUD client = new Cls_ClienteCRUD();
 
         private void pnl_Buscar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void llenarGrid()
+        {
+            // Llenar el DataGridView con los datos de la base de datos
+            dtg_Clientes.Rows.Clear();
+            client.mostrarcliente(dtg_Clientes);
         }
 
         private void lbl_Complemento_Cantidad_Click(object sender, EventArgs e)
@@ -29,13 +39,50 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_NuevoC_Click(object sender, EventArgs e)
         {
-            frm_NuevoCliente frm_NuevoCliente = new frm_NuevoCliente();
-            this.Hide();
-            frm_NuevoCliente.ShowDialog();
-            this.Show();
+            using (var frm = new frm_NuevoCliente())
+            {
+                this.Hide();
+                frm.ShowDialog();
+                this.Show();
+            }
+            llenarGrid();
         }
 
         private void btn_EliminarC_Click(object sender, EventArgs e)
+        {
+            if (dtg_Clientes.SelectedRows.Count > 0)
+            {
+                int idProceso = Convert.ToInt32(dtg_Clientes.SelectedRows[0].Cells["Cod"].Value);
+                MessageBox.Show("¿Está seguro de que desea eliminar el servicio con ID: " + idProceso + "?");
+                client.EliminarRegistro(idProceso);
+                llenarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proceso para finalizar.");
+            }
+        }
+
+        private void dtg_Clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void txt_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            string texto = txt_Buscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(texto))
+            {
+                llenarGrid();
+            }
+            else
+            {
+                dtg_Clientes.Rows.Clear();
+                client.mostrarcliente(dtg_Clientes, texto);
+            }
+        }
+
+        private void lbl_Buscar_Click(object sender, EventArgs e)
         {
 
         }
