@@ -48,6 +48,7 @@
             this.pic_Cerrar = new System.Windows.Forms.PictureBox();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.pnl_NuevoCl = new System.Windows.Forms.Panel();
+            this.txt_CodProd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Redimencionar)).BeginInit();
@@ -92,6 +93,7 @@
             this.btn_Confirmar.TabIndex = 4;
             this.btn_Confirmar.Text = "Actualizar Producto";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // txt_Cantidad
             // 
@@ -268,6 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_NuevoCl.BackColor = System.Drawing.Color.White;
+            this.pnl_NuevoCl.Controls.Add(this.txt_CodProd);
             this.pnl_NuevoCl.Controls.Add(this.tx_PrecioProd);
             this.pnl_NuevoCl.Controls.Add(this.btn_Cancelar);
             this.pnl_NuevoCl.Controls.Add(this.btn_Confirmar);
@@ -287,6 +290,14 @@
             this.pnl_NuevoCl.Size = new System.Drawing.Size(613, 556);
             this.pnl_NuevoCl.TabIndex = 9;
             // 
+            // txt_CodProd
+            // 
+            this.txt_CodProd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CodProd.Location = new System.Drawing.Point(-169, 228);
+            this.txt_CodProd.Name = "txt_CodProd";
+            this.txt_CodProd.Size = new System.Drawing.Size(50, 29);
+            this.txt_CodProd.TabIndex = 10;
+            // 
             // frm_ActualizarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +309,7 @@
             this.Name = "frm_ActualizarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ActualizarProducto";
+            this.Load += new System.EventHandler(this.frm_ActualizarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Redimencionar)).EndInit();
@@ -310,19 +322,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tx_PrecioProd;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Confirmar;
-        private System.Windows.Forms.TextBox txt_Cantidad;
-        private System.Windows.Forms.TextBox txt_CategoriaProd;
-        private System.Windows.Forms.TextBox txt_DescProd;
         private System.Windows.Forms.Label lbl_Descripcion;
         private System.Windows.Forms.Label lbl_CategoriaProd;
         private System.Windows.Forms.Label lbl_Cantidad;
         private System.Windows.Forms.Label lbl_PrecioProd;
         private System.Windows.Forms.Label lbl_NomProd;
-        private System.Windows.Forms.TextBox txt_NomProd;
         private System.Windows.Forms.Label lbl_Inf;
         private System.Windows.Forms.Label lbl_Actua;
         private System.Windows.Forms.PictureBox pic_Restaurar;
@@ -331,5 +337,11 @@
         private System.Windows.Forms.PictureBox pic_Cerrar;
         private System.Windows.Forms.Panel pnl_Titulo;
         private System.Windows.Forms.Panel pnl_NuevoCl;
+        private System.Windows.Forms.TextBox txt_CodProd;
+        public System.Windows.Forms.TextBox tx_PrecioProd;
+        public System.Windows.Forms.TextBox txt_Cantidad;
+        public System.Windows.Forms.TextBox txt_CategoriaProd;
+        public System.Windows.Forms.TextBox txt_DescProd;
+        public System.Windows.Forms.TextBox txt_NomProd;
     }
 }
