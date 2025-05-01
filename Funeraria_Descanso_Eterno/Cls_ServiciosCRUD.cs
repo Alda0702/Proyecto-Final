@@ -8,5 +8,6 @@ namespace Funeraria_Descanso_Eterno
 {
     internal class Cls_ServiciosCRUD
     {
+
     }
 }
