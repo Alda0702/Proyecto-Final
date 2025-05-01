@@ -242,8 +242,9 @@
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(164, 42);
             this.btn_Confirmar.TabIndex = 4;
-            this.btn_Confirmar.Text = "Reistrar Empleado";
+            this.btn_Confirmar.Text = "Reistrar Producto";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // btn_Cancelar
             // 
@@ -288,7 +289,7 @@
             // tx_PrecioProd
             // 
             this.tx_PrecioProd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_PrecioProd.Location = new System.Drawing.Point(239, 392);
+            this.tx_PrecioProd.Location = new System.Drawing.Point(239, 352);
             this.tx_PrecioProd.Name = "tx_PrecioProd";
             this.tx_PrecioProd.Size = new System.Drawing.Size(331, 29);
             this.tx_PrecioProd.TabIndex = 35;
