@@ -74,38 +74,12 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_ActualizarE_Click(object sender, EventArgs e)
         {
-            if (dtg_Empleados.SelectedRows.Count > 0)
-            {
-                MessageBox.Show("¿Está seguro de que desea actualizar el servicio con ID: " + dtg_Empleados.SelectedRows[0].Cells["Cod"].Value + "?");
 
-                frm_ActualizarServico frm_ActualizarServico = new frm_ActualizarServico();
-
-                int idProceso = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["Cod"].Value);
-                frm_ActualizarServico.txt_NomProd.Text = dtg_Servicios.SelectedRows[0].Cells["NombreP"].Value.ToString();
-                frm_ActualizarServico.txt_DescProd.Text = dtg_Servicios.SelectedRows[0].Cells["Desc"].Value.ToString();
-                frm_ActualizarServico.txt_CategoriaProd.Text = dtg_Servicios.SelectedRows[0].Cells["Categoria"].Value.ToString();
-                frm_ActualizarServico.txt_Duracion.Text = dtg_Servicios.SelectedRows[0].Cells["Duracion"].Value.ToString();
-                string precio = dtg_Servicios.SelectedRows[0].Cells["Precio"].Value.ToString();
-                string cadenaSinDecimales = precio.Split(',')[0]; // Toma la parte antes de la coma
-
-                frm_ActualizarServico.tx_PrecioProd.Text = cadenaSinDecimales;
-                frm_ActualizarServico.idServicio = idProceso;
-                this.Hide();
-                frm_ActualizarServico.ShowDialog();
-                this.Show();
-                llenarGrid();
-
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un proceso para editar.");
-            }
-
+        
         }
     }
-}
-    }
 
+    
 
 }
     
