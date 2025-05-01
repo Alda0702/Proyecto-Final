@@ -48,7 +48,6 @@ namespace Funeraria_Descanso_Eterno
         public SQLiteConnection ObtenerConexion()
         {
             return conexion;
-           
         }
     }
 }

@@ -39,5 +39,13 @@ namespace Funeraria_Descanso_Eterno
         {
 
         }
+
+        private void btn_ActualizarC_Click(object sender, EventArgs e)
+        {
+            frm_ActualizarCliente frm_ActuaCliente = new frm_ActualizarCliente();
+            this.Hide();
+            frm_ActuaCliente.ShowDialog();
+            this.Show();
+        }
     }
 }
