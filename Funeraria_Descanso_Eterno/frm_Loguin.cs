@@ -58,8 +58,6 @@ namespace Funeraria_Descanso_Eterno
 
             Cls_ConexionDB a = Cls_ConexionDB.Instancia;
 
-            a.crear_tablas();
-
         }
 
         private void pnl_Titulo_Paint(object sender, PaintEventArgs e)
