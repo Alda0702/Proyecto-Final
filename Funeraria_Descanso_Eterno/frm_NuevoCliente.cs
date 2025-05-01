@@ -41,5 +41,10 @@ namespace Funeraria_Descanso_Eterno
         {
             this.Close();
         }
+
+        private void btn_Confirmar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
