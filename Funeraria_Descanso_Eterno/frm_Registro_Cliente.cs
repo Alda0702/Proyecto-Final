@@ -52,7 +52,7 @@ namespace Funeraria_Descanso_Eterno
         {
             if (dtg_Clientes.SelectedRows.Count > 0)
             {
-                int idProceso = Convert.ToInt32(dtg_Clientes.SelectedRows[0].Cells["Cod"].Value);
+                int idProceso = Convert.ToInt32(dtg_Clientes.SelectedRows[0].Cells["ID"].Value);
                 MessageBox.Show("¿Está seguro de que desea eliminar el servicio con ID: " + idProceso + "?");
                 client.EliminarRegistro(idProceso);
                 llenarGrid();
