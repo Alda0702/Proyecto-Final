@@ -57,6 +57,36 @@
     <Compile Include="Cls_InventarioCRUD.cs" />
     <Compile Include="Cls_ProveedoresCRUD.cs" />
     <Compile Include="Cls_ServiciosCRUD.cs" />
+    <Compile Include="frm_ActualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActualizarCliente.Designer.cs">
+      <DependentUpon>frm_ActualizarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ActualizarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActualizarEmpleado.Designer.cs">
+      <DependentUpon>frm_ActualizarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ActualizarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActualizarProducto.Designer.cs">
+      <DependentUpon>frm_ActualizarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ActualizarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActualizarProveedor.Designer.cs">
+      <DependentUpon>frm_ActualizarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ActualizarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActualizarServico.Designer.cs">
+      <DependentUpon>frm_ActualizarServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +141,12 @@
     <Compile Include="frm_NuevoProducto.Designer.cs">
       <DependentUpon>frm_NuevoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NuevoProveedor.Designer.cs">
+      <DependentUpon>frm_NuevoProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_NuevoServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +173,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ActualizarCliente.resx">
+      <DependentUpon>frm_ActualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ActualizarEmpleado.resx">
+      <DependentUpon>frm_ActualizarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ActualizarProducto.resx">
+      <DependentUpon>frm_ActualizarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ActualizarProveedor.resx">
+      <DependentUpon>frm_ActualizarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ActualizarServico.resx">
+      <DependentUpon>frm_ActualizarServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Empleados.resx">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NuevoProducto.resx">
       <DependentUpon>frm_NuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NuevoProveedor.resx">
+      <DependentUpon>frm_NuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NuevoServicio.resx">
       <DependentUpon>frm_NuevoServicio.cs</DependentUpon>

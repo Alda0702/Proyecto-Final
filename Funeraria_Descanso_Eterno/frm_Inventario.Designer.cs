@@ -107,6 +107,7 @@
             this.btn_ActualizarI.TabIndex = 9;
             this.btn_ActualizarI.Text = "Actualizar Producto";
             this.btn_ActualizarI.UseVisualStyleBackColor = false;
+            this.btn_ActualizarI.Click += new System.EventHandler(this.btn_ActualizarI_Click);
             // 
             // btn_NuevoI
             // 

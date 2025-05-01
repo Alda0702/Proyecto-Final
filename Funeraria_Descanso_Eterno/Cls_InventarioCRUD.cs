@@ -119,5 +119,24 @@
 
                 }
             }
+        public void ModificarProducto(int id, string Nombre, string Descripcion, string Categoria, int Cantidad, decimal Precio)
+        {
+            SQLiteConnection conexion_sqlite;
+            SQLiteCommand cmd_sqlite;
+
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"UPDATE tabla_inventario SET NombreProd = '{Nombre}', DescripcionProd = '{Descripcion}', CategoriaProd = '{Categoria}', CantidadProd = {Cantidad}, PrecioProd = {Precio} WHERE CodigoProd = {id}";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el Producto: " + ex.Message);
+            }
         }
+
     }
+}
