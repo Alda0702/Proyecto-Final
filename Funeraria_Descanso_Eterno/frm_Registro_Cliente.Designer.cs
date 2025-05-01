@@ -105,6 +105,7 @@
             this.lbl_Buscar.Size = new System.Drawing.Size(109, 37);
             this.lbl_Buscar.TabIndex = 2;
             this.lbl_Buscar.Text = "Buscar:";
+            this.lbl_Buscar.Click += new System.EventHandler(this.lbl_Buscar_Click);
             // 
             // txt_Buscar
             // 
@@ -113,6 +114,7 @@
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(578, 33);
             this.txt_Buscar.TabIndex = 0;
+            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
             // 
             // btn_NuevoC
             // 
@@ -209,6 +211,7 @@
             this.dtg_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_Clientes.Size = new System.Drawing.Size(1076, 420);
             this.dtg_Clientes.TabIndex = 5;
+            this.dtg_Clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Clientes_CellContentClick);
             // 
             // ID
             // 

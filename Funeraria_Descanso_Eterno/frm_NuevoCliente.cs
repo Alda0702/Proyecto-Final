@@ -44,7 +44,29 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
+            string tipoc = cmb_Tdoc.Text;
+            string doc = txt_Tdoc.Text;
+            string nombre = txt_NomC.Text;
+            string apellidoP = txt_ApellidoPC.Text;
+            string apellidoM = txt_ApellidoMC.Text;
+            string nacimiento = txt_Nacimiento.Text;
+            string sexo = cmb_Sexo.Text;
+            string pais = txt_Pais.Text;
+            string depto = txt_Departamento.Text;
+            string ciudad = txt_Ciudad.Text;
+            string direccion = txt_Direccion.Text;
+            string telefono = txt_Cel.Text;
+            string email = txt_Email.Text;
 
+            if (string.IsNullOrEmpty(cmb_Tdoc.Text) || string.IsNullOrEmpty(txt_Tdoc.Text) || string.IsNullOrEmpty(txt_NomC.Text) || string.IsNullOrEmpty(txt_ApellidoPC.Text) || string.IsNullOrEmpty(txt_ApellidoMC.Text) || string.IsNullOrEmpty(txt_Nacimiento.Text) || string.IsNullOrEmpty(cmb_Sexo.Text) || string.IsNullOrEmpty(txt_Pais.Text) || string.IsNullOrEmpty(txt_Departamento.Text) || string.IsNullOrEmpty(txt_Ciudad.Text) || string.IsNullOrEmpty(txt_Direccion.Text) || string.IsNullOrEmpty(txt_Cel.Text) || string.IsNullOrEmpty(txt_Email.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+                return;
+            }
+
+            Cls_ClienteCRUD clientesCrud = new Cls_ClienteCRUD();
+            clientesCrud.CrearTablaCliente();
+            clientesCrud.InsertarCliente(tipoc, doc, nombre, apellidoP, apellidoM, nacimiento, sexo, pais, depto, ciudad, direccion, telefono, email);
         }
     }
 }
