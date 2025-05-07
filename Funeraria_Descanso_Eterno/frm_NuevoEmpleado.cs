@@ -126,8 +126,8 @@ namespace Funeraria_Descanso_Eterno
             };
 
             EmpleadoDB empleadoDB = new EmpleadoDB();
-            empleadoDB.employee();
-            empleadoDB.insertroles();
+            //empleadoDB.employee();
+            //empleadoDB.insertroles();
             int idEmpleado = empleadoDB.InsertarEmpleado(nuevoEmpleado);  // Aquí obtienes el ID del empleado recién insertado
 
              frm_NuevoUsario.LastEmpleadoID = result;
@@ -135,6 +135,7 @@ namespace Funeraria_Descanso_Eterno
 
 
               frm_NuevoUsario.Instancia.Show();
+
         }
 
     }

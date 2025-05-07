@@ -60,12 +60,10 @@ namespace Funeraria_Descanso_Eterno
             (""Usuario"", ""Pass"", ""RolEmpleado"")
             VALUES ('{usr.Usuario}', '{usr.Contraseña}', '{idEmpleado}');";
 
-                    // Puedes mostrar esto como depuración temporal
-                    MessageBox.Show($"Insertando usuario: {usr.Usuario} con ID de empleado: {idEmpleado}");
-
+                    // Puedes mostrar esto como depuración tempora
                     cmd_sqlite.ExecuteNonQuery();
 
-                    MessageBox.Show($"Usuario registrado correctamente con ID de empleado: {idEmpleado}");
+                    MessageBox.Show($"Usuario registrado correctamente");
                 }
                 catch (Exception ex)
                 {

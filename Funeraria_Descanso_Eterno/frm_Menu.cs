@@ -136,7 +136,7 @@ namespace Funeraria_Descanso_Eterno
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Empleados(), this.pnl_Contenedor);
 
-         
+
         }
 
         private void btn_Inventario_Click(object sender, EventArgs e)

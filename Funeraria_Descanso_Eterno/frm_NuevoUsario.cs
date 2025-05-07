@@ -15,6 +15,8 @@ namespace Funeraria_Descanso_Eterno
 
     public partial class frm_NuevoUsario : Form
     {
+
+        public string Roll = "";
         public static string LastEmpleadoID { get; set; }  // Variable estática para almacenar el último ID de empleado
 
         private static frm_NuevoUsario instancia;
@@ -63,14 +65,17 @@ namespace Funeraria_Descanso_Eterno
 
             string idEmpleado = LastEmpleadoID;
 
-            // Insertar el usuario usando el ID del empleado
             Cls_UsuariosCRUD.usuariodb userdb = new Cls_UsuariosCRUD.usuariodb();
             //userdb.CrearTablaUsuario();
             userdb.InsertarUsuario(nuevoUsuario, idEmpleado);
-            frm_Menu.Instancia.Show();
+
+            frm_NuevoEmpleado frm_NuevoEmpleado = new frm_NuevoEmpleado();
 
 
-            MessageBox.Show($"Usuario registrado correctamente con ID de empleado: {idEmpleado}");
+            this.Close();
+
+
+
 
 
         }

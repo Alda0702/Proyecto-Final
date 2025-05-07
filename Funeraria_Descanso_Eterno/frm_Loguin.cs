@@ -63,7 +63,10 @@ namespace Funeraria_Descanso_Eterno
                 frm_Menu frm_Menu;
                 frm_Menu = frm_Menu.Instancia;
                 frm_Menu.loginrol = rol;
-                
+
+
+
+
 
                 this.Hide();
                 frm_Menu.ShowDialog();

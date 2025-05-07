@@ -252,26 +252,27 @@ CREATE TABLE tabla_empleado (
                     cmd_sqlite = conexion_sqlite.CreateCommand();
 
                     // Establecer y ejecutar la consulta para buscar productos cuyo Código contenga el texto ingresado
-                    cmd_sqlite.CommandText = $"SELECT * FROM Empleado WHERE Nombre_E LIKE '%{codigo}%'";
+                    cmd_sqlite.CommandText = $"SELECT * FROM tabla_empleado WHERE NombreEmpleado LIKE '%{codigo}%'";
                     reader = cmd_sqlite.ExecuteReader();
 
                     // Leer todos los registros encontrados y agregarlos al DataGridView
                     while (reader.Read())
                     {
                         dgv.Rows.Add(
-                              reader["ID_Empleado"].ToString(),
-                              reader["Nombre_E"].ToString(),
-                              reader["ApellidoP_E"].ToString(),
-                              reader["ApellidoM_E"].ToString(),
-                              reader["Cedula_E"].ToString(),
-                              reader["Sexo_E"].ToString(),
-                              reader["F_Nacimiento_E"].ToString(),
-                              reader["Depto_E"].ToString(),
-                              reader["Ciudad_E"].ToString(),
-                              reader["Direccion_E"].ToString(),
-                              reader["Mail_E"].ToString(),
-                              reader["Celular_E"].ToString(),
-                              reader["Tdoc_E"].ToString());
+                              reader["IdEmpleado"].ToString(),
+       reader["Tipo_Documento"].ToString(),
+       reader["CedulaEmpleado"].ToString(),
+       reader["NombreEmpleado"].ToString(),
+       reader["ApellidoPEmpleado"].ToString(),
+       reader["ApellidoMEmpleado"].ToString(),
+       reader["FechaNacimientoEmpleado"].ToString(),
+       reader["SexoEmpleado"].ToString(),
+       reader["RolEmpleado"].ToString(),
+       reader["DepartamentoEmpleado"].ToString(),
+       reader["CiudadEmpleado"].ToString(),
+       reader["DireccionEmpleado"].ToString(),
+       reader["CelularEmpleado"].ToString(),
+       reader["EmailEmpleado"].ToString());
                     }
                 }
                 catch (Exception ex)
