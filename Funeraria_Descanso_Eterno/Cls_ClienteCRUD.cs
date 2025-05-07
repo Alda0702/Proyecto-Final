@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Funeraria_Descanso_Eterno
 {
     public class ConexionSQLite
@@ -138,16 +139,15 @@ namespace Funeraria_Descanso_Eterno
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"Select * FROM tabla_cliente";
+                cmd_sqlite.CommandText = $"SELECT * FROM tabla_cliente WHERE NombreCliente LIKE '%{bust}%'";
                 cmd_sqlite.ExecuteNonQuery();
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
+
 
                 while (datareader_sqlite.Read())
                 {
                     dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString());
                 }
-
-
             }
             catch (Exception ex)
             {

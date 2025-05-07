@@ -30,6 +30,8 @@ namespace Funeraria_Descanso_Eterno
             // Llenar el DataGridView con los datos de la base de datos
             dtg_Clientes.Rows.Clear();
             client.mostrarcliente(dtg_Clientes);
+            //Actualiza label segun cantidad de filas
+            ActualizarConteo();
         }
 
         private void lbl_Complemento_Cantidad_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Funeraria_Descanso_Eterno
         {
             if (dtg_Clientes.SelectedRows.Count > 0)
             {
-                int idProceso = Convert.ToInt32(dtg_Clientes.SelectedRows[0].Cells["Cod"].Value);
+                int idProceso = Convert.ToInt32(dtg_Clientes.SelectedRows[0].Cells["ID"].Value);
                 MessageBox.Show("¿Está seguro de que desea eliminar el servicio con ID: " + idProceso + "?");
                 client.EliminarRegistro(idProceso);
                 llenarGrid();
@@ -69,20 +71,37 @@ namespace Funeraria_Descanso_Eterno
 
         private void txt_Buscar_TextChanged(object sender, EventArgs e)
         {
-            string texto = txt_Buscar.Text.Trim();
-
-            if (string.IsNullOrEmpty(texto))
+            string busqueda = txt_Buscar.Text.Trim();
+            if (!string.IsNullOrEmpty(busqueda))
             {
-                llenarGrid();
+                dtg_Clientes.Rows.Clear();
+                client.mostrarcliente(dtg_Clientes, busqueda);
+
             }
             else
             {
-                dtg_Clientes.Rows.Clear();
-                client.mostrarcliente(dtg_Clientes, texto);
+
+                llenarGrid();
             }
+            ActualizarConteo();
+        }
+
+        private void ActualizarConteo()
+        {
+            // Cuenta solo las filas que no son la fila “nueva” de inserción
+            int totalClientes = dtg_Clientes.Rows
+                .Cast<DataGridViewRow>()
+                .Count(r => !r.IsNewRow);
+
+            lbl_Cantidad.Text = totalClientes.ToString();
         }
 
         private void lbl_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Cantidad_Click(object sender, EventArgs e)
         {
 
         }
