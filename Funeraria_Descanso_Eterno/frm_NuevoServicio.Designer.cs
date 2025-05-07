@@ -98,7 +98,7 @@
             // tx_PrecioServ
             // 
             this.tx_PrecioServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_PrecioServ.Location = new System.Drawing.Point(239, 356);
+            this.tx_PrecioServ.Location = new System.Drawing.Point(239, 392);
             this.tx_PrecioServ.Name = "tx_PrecioServ";
             this.tx_PrecioServ.Size = new System.Drawing.Size(331, 29);
             this.tx_PrecioServ.TabIndex = 35;
@@ -154,13 +154,14 @@
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(164, 42);
             this.btn_Confirmar.TabIndex = 4;
-            this.btn_Confirmar.Text = "Reistrar Servicio";
+            this.btn_Confirmar.Text = "Reistrar Empleado";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // txt_Duracion
             // 
             this.txt_Duracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Duracion.Location = new System.Drawing.Point(239, 321);
+            this.txt_Duracion.Location = new System.Drawing.Point(239, 357);
             this.txt_Duracion.Name = "txt_Duracion";
             this.txt_Duracion.Size = new System.Drawing.Size(331, 29);
             this.txt_Duracion.TabIndex = 14;
@@ -168,7 +169,7 @@
             // txt_CategoriaServ
             // 
             this.txt_CategoriaServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CategoriaServ.Location = new System.Drawing.Point(239, 286);
+            this.txt_CategoriaServ.Location = new System.Drawing.Point(239, 322);
             this.txt_CategoriaServ.Name = "txt_CategoriaServ";
             this.txt_CategoriaServ.Size = new System.Drawing.Size(331, 29);
             this.txt_CategoriaServ.TabIndex = 13;
@@ -176,7 +177,7 @@
             // txt_DescServ
             // 
             this.txt_DescServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DescServ.Location = new System.Drawing.Point(239, 137);
+            this.txt_DescServ.Location = new System.Drawing.Point(239, 173);
             this.txt_DescServ.Multiline = true;
             this.txt_DescServ.Name = "txt_DescServ";
             this.txt_DescServ.Size = new System.Drawing.Size(331, 143);
@@ -186,7 +187,7 @@
             // 
             this.lbl_Descripcion.AutoSize = true;
             this.lbl_Descripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion.Location = new System.Drawing.Point(45, 140);
+            this.lbl_Descripcion.Location = new System.Drawing.Point(45, 176);
             this.lbl_Descripcion.Name = "lbl_Descripcion";
             this.lbl_Descripcion.Size = new System.Drawing.Size(91, 21);
             this.lbl_Descripcion.TabIndex = 11;
@@ -196,7 +197,7 @@
             // 
             this.lbl_CategoriaServ.AutoSize = true;
             this.lbl_CategoriaServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CategoriaServ.Location = new System.Drawing.Point(45, 286);
+            this.lbl_CategoriaServ.Location = new System.Drawing.Point(45, 322);
             this.lbl_CategoriaServ.Name = "lbl_CategoriaServ";
             this.lbl_CategoriaServ.Size = new System.Drawing.Size(77, 21);
             this.lbl_CategoriaServ.TabIndex = 10;
@@ -206,18 +207,17 @@
             // 
             this.lbl_Duracion.AutoSize = true;
             this.lbl_Duracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Duracion.Location = new System.Drawing.Point(45, 321);
+            this.lbl_Duracion.Location = new System.Drawing.Point(45, 357);
             this.lbl_Duracion.Name = "lbl_Duracion";
             this.lbl_Duracion.Size = new System.Drawing.Size(140, 21);
             this.lbl_Duracion.TabIndex = 9;
             this.lbl_Duracion.Text = "Duración Estimada";
-            this.lbl_Duracion.Click += new System.EventHandler(this.lbl_Duracion_Click);
             // 
             // lbl_PrecioServ
             // 
             this.lbl_PrecioServ.AutoSize = true;
             this.lbl_PrecioServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PrecioServ.Location = new System.Drawing.Point(45, 356);
+            this.lbl_PrecioServ.Location = new System.Drawing.Point(45, 392);
             this.lbl_PrecioServ.Name = "lbl_PrecioServ";
             this.lbl_PrecioServ.Size = new System.Drawing.Size(53, 21);
             this.lbl_PrecioServ.TabIndex = 8;
@@ -227,7 +227,7 @@
             // 
             this.lbl_NomServ.AutoSize = true;
             this.lbl_NomServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NomServ.Location = new System.Drawing.Point(45, 105);
+            this.lbl_NomServ.Location = new System.Drawing.Point(45, 122);
             this.lbl_NomServ.Name = "lbl_NomServ";
             this.lbl_NomServ.Size = new System.Drawing.Size(68, 21);
             this.lbl_NomServ.TabIndex = 7;
@@ -236,7 +236,7 @@
             // txt_NomServ
             // 
             this.txt_NomServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NomServ.Location = new System.Drawing.Point(239, 105);
+            this.txt_NomServ.Location = new System.Drawing.Point(239, 122);
             this.txt_NomServ.Name = "txt_NomServ";
             this.txt_NomServ.Size = new System.Drawing.Size(331, 29);
             this.txt_NomServ.TabIndex = 6;

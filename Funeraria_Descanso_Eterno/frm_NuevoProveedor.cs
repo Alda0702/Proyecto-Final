@@ -14,7 +14,7 @@ namespace Funeraria_Descanso_Eterno
     {
         public frm_NuevoProveedor()
         {
-            InitializeComponent();
+           // InitializeComponent();
         }
 
         private void pic_Cerrar_Click(object sender, EventArgs e)

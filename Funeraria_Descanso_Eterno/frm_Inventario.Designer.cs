@@ -65,6 +65,7 @@
             this.txt_BuscarI.Name = "txt_BuscarI";
             this.txt_BuscarI.Size = new System.Drawing.Size(888, 33);
             this.txt_BuscarI.TabIndex = 0;
+            this.txt_BuscarI.TextChanged += new System.EventHandler(this.txt_BuscarI_TextChanged);
             // 
             // pnl_BuscarI
             // 
@@ -229,6 +230,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Inventario";
             this.Text = "frm_Inventario";
+            this.Load += new System.EventHandler(this.frm_Inventario_Load);
             this.pnl_BuscarI.ResumeLayout(false);
             this.pnl_BuscarI.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Inventario)).EndInit();
