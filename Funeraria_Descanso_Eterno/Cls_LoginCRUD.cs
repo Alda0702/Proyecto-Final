@@ -10,18 +10,24 @@ namespace Funeraria_Descanso_Eterno
 
     public class Cls_LoginCRUD
     {
-        public static bool AutenticarUsuario(string usuario, string contraseña)
+        public static bool AutenticarUsuario(string usuario, string contraseña, out string rol)
         {
+            rol = "";
             SQLiteConnection conn = Cls_ConexionDB.Instancia.ObtenerConexion();
 
             try
             {
-                string query = $"SELECT COUNT(*) FROM tabla_loguin WHERE Usuario = '{usuario}' AND Pass = '{contraseña}'";
+                string query = $"SELECT RolEmpleado FROM tabla_loguin WHERE Usuario = '{usuario}' AND Pass = '{contraseña}'";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count > 0;
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        rol = result.ToString();
+                        return true;
+                    }
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -30,5 +36,6 @@ namespace Funeraria_Descanso_Eterno
                 return false;
             }
         }
+
     }
 }

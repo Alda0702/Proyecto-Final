@@ -74,8 +74,28 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_ActualizarE_Click(object sender, EventArgs e)
         {
+            frm_ActualizarEmpleado frmActualizar = frm_ActualizarEmpleado.Instancia;
 
-        
+            int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
+            frmActualizar.cmb_Tdoc.Text = dtg_Empleados.SelectedRows[0].Cells["Tdoc"].Value.ToString();
+            frmActualizar.txt_Tdoc.Text = dtg_Empleados.SelectedRows[0].Cells["CedulaEmpleado"].Value.ToString();
+            frmActualizar.txt_NomE.Text = dtg_Empleados.SelectedRows[0].Cells["Nombre"].Value.ToString();
+            frmActualizar.txt_ApellidoPE.Text = dtg_Empleados.SelectedRows[0].Cells["ApellidoP"].Value.ToString();
+            frmActualizar.txt_ApellidoME.Text = dtg_Empleados.SelectedRows[0].Cells["ApellidoM"].Value.ToString();
+            frmActualizar.txt_Nacimiento.Text = dtg_Empleados.SelectedRows[0].Cells["Nacimiento"].Value.ToString();
+            frmActualizar.cmb_Sexo.Text = dtg_Empleados.SelectedRows[0].Cells["Sexo"].Value.ToString();
+            frmActualizar.cmb_Rol.Text = dtg_Empleados.SelectedRows[0].Cells["Rol"].Value.ToString();
+            frmActualizar.txt_Departamento.Text = dtg_Empleados.SelectedRows[0].Cells["Departamento"].Value.ToString();
+            frmActualizar.txt_Ciudad.Text = dtg_Empleados.SelectedRows[0].Cells["Ciudad"].Value.ToString();
+            frmActualizar.txt_Direccion.Text = dtg_Empleados.SelectedRows[0].Cells["Direccion"].Value.ToString();
+            frmActualizar.txt_Cel.Text = dtg_Empleados.SelectedRows[0].Cells["Celular"].Value.ToString();
+            frmActualizar.txt_Email.Text = dtg_Empleados.SelectedRows[0].Cells["Email"].Value.ToString();
+
+            frmActualizar.idservicio = idEmpleado;
+            this.Hide();
+            frmActualizar.Show();
+
+
         }
     }
 

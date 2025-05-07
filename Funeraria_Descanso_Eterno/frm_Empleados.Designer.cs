@@ -39,10 +39,19 @@
             this.btn_NuevoE = new System.Windows.Forms.Button();
             this.dtg_Empleados = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tdoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CedulaEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo_Electrónico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_BuscarE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Empleados)).BeginInit();
             this.SuspendLayout();
@@ -149,10 +158,19 @@
             this.dtg_Empleados.ColumnHeadersHeight = 50;
             this.dtg_Empleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.Tdoc,
+            this.CedulaEmpleado,
             this.Nombre,
-            this.Apellido,
+            this.ApellidoP,
+            this.ApellidoM,
+            this.Nacimiento,
+            this.Sexo,
+            this.Rol,
+            this.Departamento,
+            this.Ciudad,
+            this.Direccion,
             this.Celular,
-            this.Correo_Electrónico});
+            this.Email});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +208,22 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 150;
             // 
+            // Tdoc
+            // 
+            this.Tdoc.HeaderText = "Tdoc";
+            this.Tdoc.MinimumWidth = 6;
+            this.Tdoc.Name = "Tdoc";
+            this.Tdoc.ReadOnly = true;
+            this.Tdoc.Width = 125;
+            // 
+            // CedulaEmpleado
+            // 
+            this.CedulaEmpleado.HeaderText = "CedulaEmpleado";
+            this.CedulaEmpleado.MinimumWidth = 6;
+            this.CedulaEmpleado.Name = "CedulaEmpleado";
+            this.CedulaEmpleado.ReadOnly = true;
+            this.CedulaEmpleado.Width = 125;
+            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -198,13 +232,69 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 230;
             // 
-            // Apellido
+            // ApellidoP
             // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 230;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 230;
+            this.ApellidoP.HeaderText = "ApellidoP";
+            this.ApellidoP.MinimumWidth = 6;
+            this.ApellidoP.Name = "ApellidoP";
+            this.ApellidoP.ReadOnly = true;
+            this.ApellidoP.Width = 125;
+            // 
+            // ApellidoM
+            // 
+            this.ApellidoM.HeaderText = "ApellidoM";
+            this.ApellidoM.MinimumWidth = 6;
+            this.ApellidoM.Name = "ApellidoM";
+            this.ApellidoM.ReadOnly = true;
+            this.ApellidoM.Width = 125;
+            // 
+            // Nacimiento
+            // 
+            this.Nacimiento.HeaderText = "Nacimiento";
+            this.Nacimiento.MinimumWidth = 6;
+            this.Nacimiento.Name = "Nacimiento";
+            this.Nacimiento.ReadOnly = true;
+            this.Nacimiento.Width = 125;
+            // 
+            // Sexo
+            // 
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.MinimumWidth = 6;
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 125;
+            // 
+            // Rol
+            // 
+            this.Rol.HeaderText = "Rol";
+            this.Rol.MinimumWidth = 6;
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            this.Rol.Width = 125;
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.MinimumWidth = 6;
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Width = 125;
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.HeaderText = "Ciudad";
+            this.Ciudad.MinimumWidth = 6;
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.ReadOnly = true;
+            this.Ciudad.Width = 125;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.MinimumWidth = 6;
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 125;
             // 
             // Celular
             // 
@@ -214,13 +304,13 @@
             this.Celular.ReadOnly = true;
             this.Celular.Width = 150;
             // 
-            // Correo_Electrónico
+            // Email
             // 
-            this.Correo_Electrónico.HeaderText = "Correo Electrónico";
-            this.Correo_Electrónico.MinimumWidth = 300;
-            this.Correo_Electrónico.Name = "Correo_Electrónico";
-            this.Correo_Electrónico.ReadOnly = true;
-            this.Correo_Electrónico.Width = 300;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 125;
             // 
             // frm_Empleados
             // 
@@ -254,9 +344,18 @@
         private System.Windows.Forms.Button btn_NuevoE;
         private System.Windows.Forms.DataGridView dtg_Empleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tdoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CedulaEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo_Electrónico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

@@ -16,7 +16,7 @@ namespace Funeraria_Descanso_Eterno
         {
             private static ConexionSQLite instancia;
             private SQLiteConnection conexion;
-                    SQLiteCommand cmd_sqlite;
+            SQLiteCommand cmd_sqlite;
 
 
             private ConexionSQLite()
@@ -111,10 +111,10 @@ CREATE TABLE tabla_empleado (
 
                     // Insertar roles únicos
                     cmd_sqlite.CommandText = @"
-        INSERT INTO Rol (Nombre) VALUES ('Vendedor');
-        INSERT INTO Rol (Nombre) VALUES ('Logística');
-        INSERT INTO Rol (Nombre) VALUES ('RRHH');
-        INSERT INTO Rol (Nombre) VALUES ('Contradator');
+        INSERT INTO tabla_rol (Nombre) VALUES ('Vendedor');
+        INSERT INTO tabla_rol (Nombre) VALUES ('Logística');
+        INSERT INTO tabla_rol (Nombre) VALUES ('RRHH');
+        INSERT INTO tabla_rol (Nombre) VALUES ('Contradator');
 
     ";
                     cmd_sqlite.ExecuteNonQuery();
@@ -178,18 +178,20 @@ CREATE TABLE tabla_empleado (
                     {
                         dgv.Rows.Add(
        reader["IdEmpleado"].ToString(),
+       reader["Tipo_Documento"].ToString(),
+       reader["CedulaEmpleado"].ToString(),
        reader["NombreEmpleado"].ToString(),
        reader["ApellidoPEmpleado"].ToString(),
        reader["ApellidoMEmpleado"].ToString(),
-       reader["CedulaEmpleado"].ToString(),
-       reader["SexoEmpleado"].ToString(),
        reader["FechaNacimientoEmpleado"].ToString(),
+       reader["SexoEmpleado"].ToString(),
+       reader["RolEmpleado"].ToString(),
        reader["DepartamentoEmpleado"].ToString(),
        reader["CiudadEmpleado"].ToString(),
        reader["DireccionEmpleado"].ToString(),
-       reader["EmailEmpleado"].ToString(),
        reader["CelularEmpleado"].ToString(),
-       reader["Tipo_Documento"].ToString()
+       reader["EmailEmpleado"].ToString()
+
    );
 
                     }
@@ -210,7 +212,7 @@ CREATE TABLE tabla_empleado (
             }
             // Método para obtener los datos de un empleado específico por su ID
             // Método para obtener los datos de un empleado específico por su ID
-            public SQLiteDataReader ObtenerEmpleadoPorID(int idEmpleado)
+            public SQLiteDataReader ObtenerEmpleadoPorCed(string Cedula)
             {
                 SQLiteDataReader reader = null;
 
@@ -221,7 +223,7 @@ CREATE TABLE tabla_empleado (
                     SQLiteCommand cmd_sqlite = conexion_sqlite.CreateCommand();
 
                     // Usar interpolación de cadenas para insertar el valor del ID en la consulta
-                    cmd_sqlite.CommandText = $"SELECT * FROM tabla_empleado WHERE IdEmpleado = {idEmpleado};";
+                    cmd_sqlite.CommandText = $"SELECT * FROM tabla_empleado WHERE CedulaEmpleado = {Cedula};";
 
                     // Ejecutar la consulta
                     reader = cmd_sqlite.ExecuteReader();
@@ -289,7 +291,7 @@ CREATE TABLE tabla_empleado (
                 }
             }
             // Método para actualizar los datos de un empleado
-            public static void ActualizarEmpleado(string idEmpleado, string tipoDocumento, string cedula, string nombre, string apellidoP, string apellidoM, string fechaNacimiento, string sexo, string rol, string departamento, string ciudad, string direccion, string celular, string email)
+            public static void ActualizarEmpleado(string tipoDocumento, string cedula, string nombre, string apellidoP, string apellidoM, string fechaNacimiento, string sexo, string rol, string departamento, string ciudad, string direccion, string celular, string email)
             {
                 try
                 {
@@ -311,7 +313,7 @@ CREATE TABLE tabla_empleado (
                     DireccionEmpleado = '{direccion}', 
                     CelularEmpleado = '{celular}', 
                     EmailEmpleado = '{email}'
-                WHERE IdEmpleado = {idEmpleado};
+                WHERE CedulaEmpleado = {cedula};
             ";
                     cmd_sqlite.ExecuteNonQuery();
                     MessageBox.Show("Empleado actualizado correctamente.");
@@ -415,24 +417,42 @@ CREATE TABLE tabla_empleado (
 
                 return false;
             }
-            public void ModificarEmpld(int id, string Nombre, string apellido, string celular, string correoelectronico)
+
+            public void ModificarEmpld(int id, string tipoDoc, string nroDoc, string nombre, string apellidoP, string apellidoM, string nacimiento, string sexo, string rol, string departamento, string ciudad, string direccion, string celular, string correo)
             {
                 try
                 {
                     conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                     cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                    cmd_sqlite.CommandText = $"UPDATE tabla_servicio SET NombreEmpleado = '{Nombre}', ApellidoEmpleado = '{apellido}', CelularEmpleado = '{celular}', EmailEmpleado = '{correoelectronico}' WHERE CodigoServ = {id}";
+                    cmd_sqlite.CommandText = $@"
+            UPDATE tabla_empleado 
+            SET 
+                Tipo_Documento = '{tipoDoc}', 
+                CedulaEmpleado = '{nroDoc}',
+                NombreEmpleado = '{nombre}', 
+                ApellidoPEmpleado = '{apellidoP}', 
+                ApellidoMEmpleado = '{apellidoM}', 
+                FechaNacimientoEmpleado = '{nacimiento}', 
+                SexoEmpleado = '{sexo}', 
+                RolEmpleado = '{rol}', 
+                DepartamentoEmpleado = '{departamento}', 
+                CiudadEmpleado = '{ciudad}', 
+                DireccionEmpleado = '{direccion}', 
+                CelularEmpleado = '{celular}', 
+                EmailEmpleado = '{correo}'
+            WHERE IdEmpleado = '{id}'"; // Asumiendo que 'NumeroDocumento' es la clave primaria
                     cmd_sqlite.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al modificar el Servicio: " + ex.Message);
+                    MessageBox.Show("Error al modificar el empleado: " + ex.Message);
                 }
             }
+
         }
 
-     
+
 
     }
 
