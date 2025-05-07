@@ -47,18 +47,45 @@ namespace Funeraria_Descanso_Eterno
             pic_Redimencionar.Visible = false;
             pic_Restaurar.Visible = true;
         }
+        string rol;
 
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
-            frm_Menu frm_Menu = new frm_Menu();
-            this.Hide();
-            frm_Menu.ShowDialog();
-            this.Show();
-            this.Close();
 
+            string usuario = txt_Usuario.Text;
+            string contraseña = txt_Pass.Text;
+
+            if (Cls_LoginCRUD.AutenticarUsuario(usuario, contraseña, out rol))
+            {
+                MessageBox.Show("Inicio de sesión exitoso, Bienvenido Empleado " + rol);
+
+
+                frm_Menu frm_Menu;
+                frm_Menu = frm_Menu.Instancia;
+                frm_Menu.loginrol = rol;
+
+
+
+
+
+                this.Hide();
+                frm_Menu.ShowDialog();
+                this.Show();
+                this.Close();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
             Cls_ConexionDB a = Cls_ConexionDB.Instancia;
 
         }
+
+
+
+
 
         private void pnl_Titulo_Paint(object sender, PaintEventArgs e)
         {

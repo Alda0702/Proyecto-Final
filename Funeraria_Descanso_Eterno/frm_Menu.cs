@@ -13,9 +13,28 @@ namespace Funeraria_Descanso_Eterno
 {
     public partial class frm_Menu : Form
     {
+
+        private static frm_Menu instancia;
+
+
+        public string loginrol = "";
+      
+      
+
         public frm_Menu()
         {
             InitializeComponent();
+        }
+          public static frm_Menu Instancia
+        {
+            get
+            {
+                if (instancia == null || instancia.IsDisposed)
+                {
+                    instancia = new frm_Menu();
+                }
+                return instancia;
+            }
         }
 
         private void pic_Cerrar_Click(object sender, EventArgs e)
@@ -63,6 +82,52 @@ namespace Funeraria_Descanso_Eterno
         {
             //La pantalla en la que se iniciara dentro del panel COntenedor sera la del form de Inicio
             pic_Logo_Click(null, e);
+
+
+
+            if (loginrol == "Contratador")
+            {
+                btn_Empleados.Enabled = false;
+                btn_Facturación.Enabled = false;
+                btn_Inventario.Enabled = false;
+                btn_Proveedores.Enabled = true;
+                btn_Servicios.Enabled = false;
+                btn_Registro_Cliente.Enabled = false;
+
+
+            }
+            else if (loginrol == "Logística")
+            {
+                btn_Empleados.Enabled = false;
+                btn_Facturación.Enabled = false;
+                btn_Inventario.Enabled = true;
+                btn_Proveedores.Enabled = true;
+                btn_Servicios.Enabled = false;
+                btn_Registro_Cliente.Enabled = false;
+
+
+            }
+            else if (loginrol == "Vendedor")
+            {
+                btn_Registro_Cliente.Enabled = true;
+                btn_Empleados.Enabled = false;
+                btn_Facturación.Enabled = true;
+                btn_Inventario.Enabled = true;
+                btn_Proveedores.Enabled = false;
+                btn_Servicios.Enabled = true;
+
+            }
+            else if (loginrol == "RRHH")
+            {
+                btn_Registro_Cliente.Enabled = false;
+                btn_Empleados.Enabled = true;
+                btn_Facturación.Enabled = false;
+                btn_Inventario.Enabled = false;
+                btn_Proveedores.Enabled = false;
+                btn_Servicios.Enabled = false;
+
+            }
+
         }
 
         private void btn_Empleados_Click(object sender, EventArgs e)
@@ -70,6 +135,8 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Empleados(), this.pnl_Contenedor);
+
+
         }
 
         private void btn_Inventario_Click(object sender, EventArgs e)
@@ -98,6 +165,16 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Facturacion(), this.pnl_Contenedor);
+        }
+
+        private void pnl_Contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_Menu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

@@ -30,8 +30,6 @@ namespace Funeraria_Descanso_Eterno
             // Llenar el DataGridView con los datos de la base de datos
             dtg_Clientes.Rows.Clear();
             client.mostrarcliente(dtg_Clientes);
-            //Actualiza label segun cantidad de filas
-            ActualizarConteo();
         }
 
         private void lbl_Complemento_Cantidad_Click(object sender, EventArgs e)
@@ -71,29 +69,17 @@ namespace Funeraria_Descanso_Eterno
 
         private void txt_Buscar_TextChanged(object sender, EventArgs e)
         {
-            string busqueda = txt_Buscar.Text.Trim();
-            if (!string.IsNullOrEmpty(busqueda))
-            {
-                dtg_Clientes.Rows.Clear();
-                client.mostrarcliente(dtg_Clientes, busqueda);
+            string texto = txt_Buscar.Text.Trim();
 
+            if (string.IsNullOrEmpty(texto))
+            {
+                llenarGrid();
             }
             else
             {
-
-                llenarGrid();
+                dtg_Clientes.Rows.Clear();
+                client.mostrarcliente(dtg_Clientes, texto);
             }
-            ActualizarConteo();
-        }
-
-        private void ActualizarConteo()
-        {
-            // Cuenta solo las filas que no son la fila “nueva” de inserción
-            int totalClientes = dtg_Clientes.Rows
-                .Cast<DataGridViewRow>()
-                .Count(r => !r.IsNewRow);
-
-            lbl_Cantidad.Text = totalClientes.ToString();
         }
 
         private void lbl_Buscar_Click(object sender, EventArgs e)
@@ -101,9 +87,12 @@ namespace Funeraria_Descanso_Eterno
 
         }
 
-        private void lbl_Cantidad_Click(object sender, EventArgs e)
+        private void btn_ActualizarC_Click(object sender, EventArgs e)
         {
-
+            frm_ActualizarCliente frm_ActuaCliente = new frm_ActualizarCliente();
+            this.Hide();
+            frm_ActuaCliente.ShowDialog();
+            this.Show();
         }
     }
 }

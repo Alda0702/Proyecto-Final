@@ -145,6 +145,7 @@
             this.btn_ActualizarC.TabIndex = 3;
             this.btn_ActualizarC.Text = "Actualizar Cliente";
             this.btn_ActualizarC.UseVisualStyleBackColor = false;
+            this.btn_ActualizarC.Click += new System.EventHandler(this.btn_ActualizarC_Click);
             // 
             // btn_EliminarC
             // 

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_BuscarE = new System.Windows.Forms.Label();
             this.txt_BuscarE = new System.Windows.Forms.TextBox();
             this.pnl_BuscarE = new System.Windows.Forms.Panel();
@@ -40,9 +40,10 @@
             this.dtg_Empleados = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo_Electrónico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_BuscarE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Empleados)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             this.txt_BuscarE.Name = "txt_BuscarE";
             this.txt_BuscarE.Size = new System.Drawing.Size(888, 33);
             this.txt_BuscarE.TabIndex = 0;
+            this.txt_BuscarE.TextChanged += new System.EventHandler(this.txt_BuscarE_TextChanged);
             // 
             // pnl_BuscarE
             // 
@@ -105,6 +107,7 @@
             this.btn_ActualizarE.TabIndex = 6;
             this.btn_ActualizarE.Text = "Actualizar Empleado";
             this.btn_ActualizarE.UseVisualStyleBackColor = false;
+            this.btn_ActualizarE.Click += new System.EventHandler(this.btn_ActualizarE_Click);
             // 
             // btn_NuevoE
             // 
@@ -123,99 +126,104 @@
             // 
             // dtg_Empleados
             // 
-            this.dtg_Empleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtg_Empleados.BackgroundColor = System.Drawing.Color.White;
             this.dtg_Empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_Empleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtg_Empleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_Empleados.ColumnHeadersHeight = 50;
             this.dtg_Empleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre,
-            this.Apellido,
+            this.ApellidoP,
+            this.Rol,
             this.Celular,
-            this.Correo_Electrónico});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Empleados.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Email});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Empleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_Empleados.EnableHeadersVisualStyles = false;
             this.dtg_Empleados.Location = new System.Drawing.Point(12, 180);
             this.dtg_Empleados.Name = "dtg_Empleados";
             this.dtg_Empleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Empleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Empleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_Empleados.RowHeadersVisible = false;
+            this.dtg_Empleados.RowHeadersWidth = 51;
             this.dtg_Empleados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_Empleados.Size = new System.Drawing.Size(1076, 420);
             this.dtg_Empleados.TabIndex = 8;
+            this.dtg_Empleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Empleados_CellContentClick);
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 150;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 150;
+            this.ID.Width = 70;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 230;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 230;
+            this.Nombre.Width = 150;
             // 
-            // Apellido
+            // ApellidoP
             // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 230;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 230;
+            this.ApellidoP.HeaderText = "ApellidoP";
+            this.ApellidoP.MinimumWidth = 6;
+            this.ApellidoP.Name = "ApellidoP";
+            this.ApellidoP.ReadOnly = true;
+            this.ApellidoP.Width = 150;
+            // 
+            // Rol
+            // 
+            this.Rol.HeaderText = "Rol";
+            this.Rol.MinimumWidth = 6;
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            this.Rol.Width = 125;
             // 
             // Celular
             // 
             this.Celular.HeaderText = "Celular";
-            this.Celular.MinimumWidth = 150;
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
-            this.Celular.Width = 150;
+            this.Celular.Width = 125;
             // 
-            // Correo_Electrónico
+            // Email
             // 
-            this.Correo_Electrónico.HeaderText = "Correo Electrónico";
-            this.Correo_Electrónico.MinimumWidth = 300;
-            this.Correo_Electrónico.Name = "Correo_Electrónico";
-            this.Correo_Electrónico.ReadOnly = true;
-            this.Correo_Electrónico.Width = 300;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 150;
             // 
             // frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1040, 612);
             this.Controls.Add(this.dtg_Empleados);
             this.Controls.Add(this.btn_EliminarE);
             this.Controls.Add(this.btn_ActualizarE);
@@ -224,6 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Empleados";
             this.Text = "frm_Empleados";
+            this.Load += new System.EventHandler(this.frm_Empleados_Load);
             this.pnl_BuscarE.ResumeLayout(false);
             this.pnl_BuscarE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Empleados)).EndInit();
@@ -242,8 +251,9 @@
         private System.Windows.Forms.DataGridView dtg_Empleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo_Electrónico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
