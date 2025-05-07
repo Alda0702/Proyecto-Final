@@ -34,10 +34,6 @@
             this.lbl_BuscarF = new System.Windows.Forms.Label();
             this.txt_BuscarF = new System.Windows.Forms.TextBox();
             this.dtg_Factura = new System.Windows.Forms.DataGridView();
-            this.btn_EliminarF = new System.Windows.Forms.Button();
-            this.btn_ActualizarF = new System.Windows.Forms.Button();
-            this.btn_NuevoF = new System.Windows.Forms.Button();
-            this.pnl_BuscarF = new System.Windows.Forms.Panel();
             this.CodigoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +42,10 @@
             this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Metodo_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_EliminarF = new System.Windows.Forms.Button();
+            this.btn_ActualizarF = new System.Windows.Forms.Button();
+            this.btn_NuevoF = new System.Windows.Forms.Button();
+            this.pnl_BuscarF = new System.Windows.Forms.Panel();
             this.btn_Imprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).BeginInit();
             this.pnl_BuscarF.SuspendLayout();
@@ -122,60 +122,6 @@
             this.dtg_Factura.Size = new System.Drawing.Size(1076, 372);
             this.dtg_Factura.TabIndex = 16;
             // 
-            // btn_EliminarF
-            // 
-            this.btn_EliminarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_EliminarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(76)))), ((int)(((byte)(70)))));
-            this.btn_EliminarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarF.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarF.Location = new System.Drawing.Point(594, 123);
-            this.btn_EliminarF.Name = "btn_EliminarF";
-            this.btn_EliminarF.Size = new System.Drawing.Size(254, 42);
-            this.btn_EliminarF.TabIndex = 15;
-            this.btn_EliminarF.Text = "Eliminar Pago";
-            this.btn_EliminarF.UseVisualStyleBackColor = false;
-            // 
-            // btn_ActualizarF
-            // 
-            this.btn_ActualizarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_ActualizarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            this.btn_ActualizarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ActualizarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarF.ForeColor = System.Drawing.Color.White;
-            this.btn_ActualizarF.Location = new System.Drawing.Point(422, 123);
-            this.btn_ActualizarF.Name = "btn_ActualizarF";
-            this.btn_ActualizarF.Size = new System.Drawing.Size(166, 42);
-            this.btn_ActualizarF.TabIndex = 14;
-            this.btn_ActualizarF.Text = "Actualizar Pago";
-            this.btn_ActualizarF.UseVisualStyleBackColor = false;
-            // 
-            // btn_NuevoF
-            // 
-            this.btn_NuevoF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_NuevoF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
-            this.btn_NuevoF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NuevoF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NuevoF.ForeColor = System.Drawing.Color.White;
-            this.btn_NuevoF.Location = new System.Drawing.Point(252, 123);
-            this.btn_NuevoF.Name = "btn_NuevoF";
-            this.btn_NuevoF.Size = new System.Drawing.Size(164, 42);
-            this.btn_NuevoF.TabIndex = 13;
-            this.btn_NuevoF.Text = "+ Nuevo Pago";
-            this.btn_NuevoF.UseVisualStyleBackColor = false;
-            // 
-            // pnl_BuscarF
-            // 
-            this.pnl_BuscarF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_BuscarF.BackColor = System.Drawing.Color.White;
-            this.pnl_BuscarF.Controls.Add(this.lbl_BuscarF);
-            this.pnl_BuscarF.Controls.Add(this.txt_BuscarF);
-            this.pnl_BuscarF.Location = new System.Drawing.Point(25, 12);
-            this.pnl_BuscarF.Name = "pnl_BuscarF";
-            this.pnl_BuscarF.Size = new System.Drawing.Size(1046, 93);
-            this.pnl_BuscarF.TabIndex = 12;
-            // 
             // CodigoF
             // 
             this.CodigoF.HeaderText = "Codigo Factura";
@@ -232,6 +178,60 @@
             this.Metodo_Pago.ReadOnly = true;
             this.Metodo_Pago.Width = 130;
             // 
+            // btn_EliminarF
+            // 
+            this.btn_EliminarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_EliminarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(76)))), ((int)(((byte)(70)))));
+            this.btn_EliminarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarF.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarF.Location = new System.Drawing.Point(594, 123);
+            this.btn_EliminarF.Name = "btn_EliminarF";
+            this.btn_EliminarF.Size = new System.Drawing.Size(254, 42);
+            this.btn_EliminarF.TabIndex = 15;
+            this.btn_EliminarF.Text = "Eliminar Pago";
+            this.btn_EliminarF.UseVisualStyleBackColor = false;
+            // 
+            // btn_ActualizarF
+            // 
+            this.btn_ActualizarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_ActualizarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            this.btn_ActualizarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ActualizarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarF.ForeColor = System.Drawing.Color.White;
+            this.btn_ActualizarF.Location = new System.Drawing.Point(422, 123);
+            this.btn_ActualizarF.Name = "btn_ActualizarF";
+            this.btn_ActualizarF.Size = new System.Drawing.Size(166, 42);
+            this.btn_ActualizarF.TabIndex = 14;
+            this.btn_ActualizarF.Text = "Actualizar Pago";
+            this.btn_ActualizarF.UseVisualStyleBackColor = false;
+            // 
+            // btn_NuevoF
+            // 
+            this.btn_NuevoF.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_NuevoF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
+            this.btn_NuevoF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NuevoF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NuevoF.ForeColor = System.Drawing.Color.White;
+            this.btn_NuevoF.Location = new System.Drawing.Point(252, 123);
+            this.btn_NuevoF.Name = "btn_NuevoF";
+            this.btn_NuevoF.Size = new System.Drawing.Size(164, 42);
+            this.btn_NuevoF.TabIndex = 13;
+            this.btn_NuevoF.Text = "+ Nuevo Pago";
+            this.btn_NuevoF.UseVisualStyleBackColor = false;
+            // 
+            // pnl_BuscarF
+            // 
+            this.pnl_BuscarF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_BuscarF.BackColor = System.Drawing.Color.White;
+            this.pnl_BuscarF.Controls.Add(this.lbl_BuscarF);
+            this.pnl_BuscarF.Controls.Add(this.txt_BuscarF);
+            this.pnl_BuscarF.Location = new System.Drawing.Point(25, 12);
+            this.pnl_BuscarF.Name = "pnl_BuscarF";
+            this.pnl_BuscarF.Size = new System.Drawing.Size(1046, 93);
+            this.pnl_BuscarF.TabIndex = 12;
+            // 
             // btn_Imprimir
             // 
             this.btn_Imprimir.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -245,6 +245,7 @@
             this.btn_Imprimir.TabIndex = 17;
             this.btn_Imprimir.Text = "Imprimir Factura";
             this.btn_Imprimir.UseVisualStyleBackColor = false;
+            this.btn_Imprimir.Click += new System.EventHandler(this.btn_Imprimir_Click);
             // 
             // frm_Facturacion
             // 
