@@ -16,5 +16,13 @@ namespace Funeraria_Descanso_Eterno
         {
             InitializeComponent();
         }
+
+        private void btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            frm_Factura frm_Factura = new frm_Factura();
+            this.Hide();
+            frm_Factura.Show();
+            this.Show();
+        }
     }
 }
