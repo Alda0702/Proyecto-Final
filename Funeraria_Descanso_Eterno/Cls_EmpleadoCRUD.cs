@@ -474,6 +474,37 @@ CREATE TABLE tabla_empleado (
                 return emp;
             }
 
+            public void BorrarRegistrosLoginMenosAdministrador()
+            {
+                try
+                {
+                    SQLiteConnection conexion_sqlite = ConexionSQLite.Instancia.ObtenerConexion();
+                    SQLiteCommand cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                    // Comando para eliminar todos los registros de la tabla login excepto el que tenga el rol 'Administrador'
+                    cmd_sqlite.CommandText = @"
+            DELETE FROM tabla_loguin
+            WHERE RolEmpleado != 'Administrador';
+        ";
+
+                    int filasAfectadas = cmd_sqlite.ExecuteNonQuery();
+
+                    // Verificar si se eliminaron filas
+                    if (filasAfectadas > 0)
+                    {
+                        MessageBox.Show("Registros eliminados correctamente (menos el rol 'Administrador').");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros para eliminar.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar los registros: " + ex.Message);
+                }
+            }
+
 
         }
 
@@ -496,3 +527,5 @@ CREATE TABLE tabla_empleado (
 
 
 
+
+//     }

@@ -135,10 +135,16 @@ namespace Funeraria_Descanso_Eterno
             int idEmpleado = empleadoDB.InsertarEmpleado(nuevoEmpleado);  // Aquí obtienes el ID del empleado recién insertado
 
              frm_NuevoUsario.LastEmpleadoID = result;
-        //    MessageBox.Show("Empleado registrado correctamente.");
+            //    MessageBox.Show("Empleado registrado correctamente.");
 
 
-              frm_NuevoUsario.Instancia.Show();
+
+            this.Hide();
+
+            frm_NuevoUsario nuevoUsuario = frm_NuevoUsario.Instancia;
+            nuevoUsuario.ShowDialog();
+
+
 
         }
 
