@@ -82,5 +82,10 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Seleccione un proceso para editar.");
             }
         }
+
+        private void dtg_Inventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

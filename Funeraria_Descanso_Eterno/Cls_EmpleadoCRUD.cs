@@ -111,10 +111,9 @@ CREATE TABLE tabla_empleado (
 
                     // Insertar roles únicos
                     cmd_sqlite.CommandText = @"
-        INSERT INTO tabla_rol (Nombre) VALUES ('Vendedor');
-        INSERT INTO tabla_rol (Nombre) VALUES ('Logística');
-        INSERT INTO tabla_rol (Nombre) VALUES ('RRHH');
-        INSERT INTO tabla_rol (Nombre) VALUES ('Contradator');
+ 
+        INSERT INTO tabla_rol (Nombre) VALUES ('Administrador');
+
 
     ";
                     cmd_sqlite.ExecuteNonQuery();
@@ -443,13 +442,60 @@ CREATE TABLE tabla_empleado (
                 }
             }
 
+
+
+
+            public ClsEmpleado ObtenerEmpleadoPorID(int id)
+            {
+                ClsEmpleado emp = null;
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=DBFunebre.db;Version=3;"))
+                {
+                    conn.Open();
+                    string query = $"SELECT * FROM tabla_empleado WHERE IdEmpleado = {id}";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            emp = new ClsEmpleado
+                            {
+                                ID_Empleado = reader.GetInt32(reader.GetOrdinal("IdEmpleado")),
+                                Tdoc_E = reader["Tipo_Documento"].ToString(),
+                                Cedula_E = reader["CedulaEmpleado"].ToString(),
+                                Nombre_E = reader["NombreEmpleado"].ToString(),
+                                ApellidoP_E = reader["ApellidoPEmpleado"].ToString(),
+                                ApellidoM_E = reader["ApellidoMEmpleado"].ToString(),
+                                F_Nacimiento_E = reader["FechaNacimientoEmpleado"].ToString(),
+                                Sexo_E = reader["SexoEmpleado"].ToString(),
+                                REF_Rol = reader["RolEmpleado"].ToString(),
+                                Depto_E = reader["DepartamentoEmpleado"].ToString(),
+                                Ciudad_E = reader["CiudadEmpleado"].ToString(),
+                                Direccion_E = reader["DireccionEmpleado"].ToString(),
+                                Celular_E = reader["CelularEmpleado"].ToString(),
+                                Mail_E = reader["EmailEmpleado"].ToString()
+                            };
+                        }
+                    }
+                }
+
+                return emp;
+            }
+
+
         }
+
+
+
 
 
 
     }
 
+
 }
+
+
 
 
 

@@ -127,6 +127,18 @@ namespace Funeraria_Descanso_Eterno
                 btn_Servicios.Enabled = false;
 
             }
+            else if (loginrol == "Administrador")
+            {
+                btn_Registro_Cliente.Enabled = true;
+                btn_Empleados.Enabled = true;
+                btn_Facturación.Enabled = true;
+                btn_Inventario.Enabled = true;
+                btn_Proveedores.Enabled = true;
+                btn_Servicios.Enabled = true;
+
+            }
+
+
 
         }
 

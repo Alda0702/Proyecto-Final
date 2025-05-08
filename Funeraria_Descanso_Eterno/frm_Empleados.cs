@@ -14,8 +14,22 @@ namespace Funeraria_Descanso_Eterno
 {
     public partial class frm_Empleados : Form
     {
-        EmpleadoDB empleadoDB = new EmpleadoDB();
+       private EmpleadoDB empleadoDB = new EmpleadoDB();
 
+        private static frm_Empleados instancia;
+
+        public static frm_Empleados Instancia
+        {
+            get
+            {
+                // Si la instancia no existe, se crea
+                if (instancia == null)
+                {
+                    instancia = new frm_Empleados();
+                }
+                return instancia;
+            }
+        }
         public frm_Empleados()
         {
             InitializeComponent();
@@ -27,6 +41,8 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_N_Empleado.ShowDialog();
             this.Show();
+
+
         }
 
         private void btn_EliminarE_Click(object sender, EventArgs e)
@@ -74,23 +90,33 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_ActualizarE_Click(object sender, EventArgs e)
         {
-            frm_ActualizarEmpleado frmActualizar = frm_ActualizarEmpleado.Instancia;
 
-            int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
+            if (dtg_Empleados.SelectedRows.Count > 0)
+                {
+                    int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
 
-            frmActualizar.txt_NomE.Text = dtg_Empleados.SelectedRows[0].Cells["Nombre"].Value.ToString();
-            frmActualizar.txt_ApellidoPE.Text = dtg_Empleados.SelectedRows[0].Cells["ApellidoP"].Value.ToString();
-            frmActualizar.cmb_Rol.Text = dtg_Empleados.SelectedRows[0].Cells["Rol"].Value.ToString();
-            frmActualizar.txt_Cel.Text = dtg_Empleados.SelectedRows[0].Cells["Celular"].Value.ToString();
-            frmActualizar.txt_Email.Text = dtg_Empleados.SelectedRows[0].Cells["Email"].Value.ToString();
+                ClsEmpleado empleado = empleadoDB.ObtenerEmpleadoPorID(idEmpleado);
 
-            frmActualizar.idservicio = idEmpleado;
-            this.Hide();
-            frmActualizar.Show();
 
+                if (empleado != null)
+                    {
+                        frm_ActualizarEmpleado frm = new frm_ActualizarEmpleado(empleado);
+                        frm.ShowDialog();
+                        this.Hide();
+
+                }
+            }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona un empleado para actualizar.");
+                }
 
         }
+
+
+
     }
+    
 
     
 

@@ -96,6 +96,10 @@ namespace Funeraria_Descanso_Eterno
             {
                 result = "Contratador";
             }
+            else if (cmb_Rol.Text == "Administrador")
+            {
+                result = "Administrador";
+            }
             else
             {
                 MessageBox.Show("El rol seleccionado no es válido.");
@@ -138,5 +142,9 @@ namespace Funeraria_Descanso_Eterno
 
         }
 
+        private void pnl_NuevoCl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
