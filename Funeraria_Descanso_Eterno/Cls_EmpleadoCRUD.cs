@@ -34,6 +34,8 @@ namespace Funeraria_Descanso_Eterno
                 }
             }
 
+            //recuperar instancia
+
             public static ConexionSQLite Instancia
             {
                 get
@@ -61,19 +63,17 @@ namespace Funeraria_Descanso_Eterno
             SQLiteCommand cmd_sqlite;
 
 
+            // Metodo prueba para crear tabla empleado
             public void employee()
             {
                 try
                 {
-                    // Obtener la conexión a SQLite
                     conexion_sqlite = ConexionSQLite.Instancia.ObtenerConexion();
                     cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                    // Activar claves foráneas (opcional en este caso, no hay claves foráneas en esta tabla)
                     cmd_sqlite.CommandText = "PRAGMA foreign_keys = ON;";
                     cmd_sqlite.ExecuteNonQuery();
 
-                    // Crear la tabla tabla_empleado con los campos solicitados
                     cmd_sqlite.CommandText = @"
 CREATE TABLE tabla_empleado (
     IdEmpleado INTEGER PRIMARY KEY,
@@ -102,6 +102,7 @@ CREATE TABLE tabla_empleado (
             }
 
 
+            //metodo prueba par a insertar los roles
             public void insertroles()
             {
                 try
@@ -130,6 +131,8 @@ CREATE TABLE tabla_empleado (
 
 
             }
+
+            //metodo prueba para insertar los empleados
             public int InsertarEmpleado(ClsEmpleado emp)
             {
                 int idEmpleado = -1;
@@ -201,8 +204,7 @@ CREATE TABLE tabla_empleado (
                 }
 
             }
-            // Método para obtener los datos de un empleado específico por su ID
-            // Método para obtener los datos de un empleado específico por su ID
+            // metodo para obtener los datos de un empleado específico por su ID
             public SQLiteDataReader ObtenerEmpleadoPorCed(string Cedula)
             {
                 SQLiteDataReader reader = null;
@@ -231,7 +233,6 @@ CREATE TABLE tabla_empleado (
 
             public void BuscarPorCodigoempl(DataGridView dgv, string codigo)
             {
-                // Declarar el lector para recorrer los resultados de la consulta
                 SQLiteDataReader reader = null;
 
 
@@ -268,13 +269,12 @@ CREATE TABLE tabla_empleado (
                     if (reader != null && !reader.IsClosed)
                         reader.Close();
 
-                    // Liberar el recurso del comando
                     if (cmd_sqlite != null)
                         cmd_sqlite.Dispose();
 
                 }
             }
-            // Método para actualizar los datos de un empleado
+            // metodo para actualizar los datos de un empleado
             public static void ActualizarEmpleado(string tipoDocumento, string cedula, string nombre, string apellidoP, string apellidoM, string fechaNacimiento, string sexo, string rol, string departamento, string ciudad, string direccion, string celular, string email)
             {
                 try
@@ -330,7 +330,7 @@ CREATE TABLE tabla_empleado (
                     cmd_sqlite.CommandText = $"DELETE FROM tabla_empleado WHERE IdEmpleado = '{codigo}'";
                     int filasAfectadas = cmd_sqlite.ExecuteNonQuery();
 
-                    // Verificar si realmente se eliminó (si se afectó al menos una fila)
+                    // Verificar si realmente se eliminó si se afectó al menos una fila
                     if (filasAfectadas > 0)
                     {
                         MessageBox.Show("Producto eliminado correctamente.");
@@ -338,7 +338,6 @@ CREATE TABLE tabla_empleado (
                     }
                     else
                     {
-                        // Por si algo salió mal y no se eliminó nada
                         MessageBox.Show("No se pudo eliminar el producto.");
                         return false;
                     }
@@ -350,20 +349,15 @@ CREATE TABLE tabla_empleado (
                 }
                 finally
                 {
-                    // Liberar recursos aunque haya éxito o error
-                    // Liberar el comando
-                    if (cmd_sqlite != null)
+                if (cmd_sqlite != null)
                         cmd_sqlite.Dispose();
 
-                    // Cerrar la conexión a la base de datos
                 }
             }
             public bool BuscarEmpleado(string textoBusqueda, out string codigo, out string nombre)
             {
-                // Declarar el lector de datos
                 SQLiteDataReader reader = null;
 
-                // Inicializar los valores de salida
                 codigo = "";
                 nombre = "";
 
@@ -380,7 +374,7 @@ CREATE TABLE tabla_empleado (
                         codigo = reader["Cedula_E"].ToString();
                         nombre = reader["Nombre_E"].ToString();
 
-                        // Retornar true indicando que se encontró un producto
+                        // true indica que se encontró un producto
                         return true;
                     }
                 }
@@ -425,7 +419,7 @@ CREATE TABLE tabla_empleado (
                 DireccionEmpleado = '{direccion}', 
                 CelularEmpleado = '{celular}', 
                 EmailEmpleado = '{correo}'
-            WHERE IdEmpleado = '{id}'"; // Asumiendo que 'NumeroDocumento' es la clave primaria
+            WHERE IdEmpleado = '{id}'";
                     cmd_sqlite.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -436,7 +430,7 @@ CREATE TABLE tabla_empleado (
 
 
 
-
+            //obtiene empleado por id recibiendo parametros
             public ClsEmpleado ObtenerEmpleadoPorID(int id)
             {
                 ClsEmpleado emp = null;
@@ -481,7 +475,7 @@ CREATE TABLE tabla_empleado (
                     SQLiteConnection conexion_sqlite = ConexionSQLite.Instancia.ObtenerConexion();
                     SQLiteCommand cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                    // Comando para eliminar todos los registros de la tabla login excepto el que tenga el rol 'Administrador'
+                    //para eliminar todos los registros de la tabla login excepto el que tenga el rol 'Administrador'
                     cmd_sqlite.CommandText = @"
             DELETE FROM tabla_loguin
             WHERE RolEmpleado != 'Administrador';
@@ -489,7 +483,6 @@ CREATE TABLE tabla_empleado (
 
                     int filasAfectadas = cmd_sqlite.ExecuteNonQuery();
 
-                    // Verificar si se eliminaron filas
                     if (filasAfectadas > 0)
                     {
                         MessageBox.Show("Registros eliminados correctamente (menos el rol 'Administrador').");

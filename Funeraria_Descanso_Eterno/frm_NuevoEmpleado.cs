@@ -14,7 +14,7 @@ namespace Funeraria_Descanso_Eterno
     public partial class frm_NuevoEmpleado : Form
     {
         private static frm_NuevoEmpleado instancia;
-        public static string LastEmpleadoID { get; set; }  // Variable estática para almacenar el último ID de empleado
+        public static string LastEmpleadoID { get; set; }  // variable estática para almacenar el último ID de empleado
 
         public frm_NuevoEmpleado()
         {
@@ -61,7 +61,7 @@ namespace Funeraria_Descanso_Eterno
 
             string result = "";
 
-            // Validar campos vacíos
+            // se validan los campos vacíos
             if (string.IsNullOrWhiteSpace(txt_NomE.Text) ||
                 string.IsNullOrWhiteSpace(txt_ApellidoPE.Text) ||
                 string.IsNullOrWhiteSpace(txt_ApellidoME.Text) ||
@@ -79,7 +79,7 @@ namespace Funeraria_Descanso_Eterno
                 return;
             }
 
-            // Validar Rol
+            // aqui se valida cada rol
             if (cmb_Rol.Text == "Vendedor")
             {
                 result = "Vendedor";

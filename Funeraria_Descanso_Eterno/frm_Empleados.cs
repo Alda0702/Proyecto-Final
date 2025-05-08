@@ -49,10 +49,9 @@ namespace Funeraria_Descanso_Eterno
         {
             if (dtg_Empleados.SelectedRows.Count > 0)
             {
-                // Obtener el ID del empleado seleccionado (suponiendo que la columna "IdEmpleado" es la primera columna)
+                // obtiene el id del empleado seleccionado 
                 int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
 
-                // Confirmación antes de eliminar
                 DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar este empleado?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -74,12 +73,15 @@ namespace Funeraria_Descanso_Eterno
 
         private void frm_Empleados_Load(object sender, EventArgs e)
         {
+            // cargar los empleados al iniciar el formulario
             empleadoDB.Mostrarempleado(dtg_Empleados);
 
         }
 
         private void txt_BuscarE_TextChanged(object sender, EventArgs e)
         {
+
+            //llamar al metodo de busqueda
             empleadoDB.BuscarPorCodigoempl(dtg_Empleados, txt_BuscarE.Text.Trim());
 
         }
@@ -91,6 +93,7 @@ namespace Funeraria_Descanso_Eterno
         private void btn_ActualizarE_Click(object sender, EventArgs e)
         {
 
+            // verifica si hay una fila seleccionada en el datagridview
             if (dtg_Empleados.SelectedRows.Count > 0)
                 {
                     int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);

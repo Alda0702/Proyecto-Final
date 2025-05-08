@@ -83,7 +83,7 @@ namespace Funeraria_Descanso_Eterno
 
 
             try
-            {
+            {  //envia la informacion almacenada en cada text como parametro mas el id para operar el update
                 Cls_EmpleadoCRUD.ModificarEmpld(id, cmb_Tdoc.Text, txt_Tdoc.Text, txt_NomE.Text, txt_ApellidoPE.Text, txt_ApellidoME.Text, txt_Nacimiento.Text, cmb_Sexo.Text, cmb_Rol.Text, txt_Departamento.Text, txt_Ciudad.Text, txt_Direccion.Text, txt_Cel.Text, txt_Email.Text);
 
                 MessageBox.Show("Empleado actualizado correctamente.");
