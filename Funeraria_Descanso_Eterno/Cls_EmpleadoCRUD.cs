@@ -251,17 +251,9 @@ CREATE TABLE tabla_empleado (
                     {
                         dgv.Rows.Add(
                               reader["IdEmpleado"].ToString(),
-       reader["Tipo_Documento"].ToString(),
-       reader["CedulaEmpleado"].ToString(),
        reader["NombreEmpleado"].ToString(),
        reader["ApellidoPEmpleado"].ToString(),
-       reader["ApellidoMEmpleado"].ToString(),
-       reader["FechaNacimientoEmpleado"].ToString(),
-       reader["SexoEmpleado"].ToString(),
        reader["RolEmpleado"].ToString(),
-       reader["DepartamentoEmpleado"].ToString(),
-       reader["CiudadEmpleado"].ToString(),
-       reader["DireccionEmpleado"].ToString(),
        reader["CelularEmpleado"].ToString(),
        reader["EmailEmpleado"].ToString());
                     }

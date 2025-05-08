@@ -376,6 +376,7 @@
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(700, 34);
             this.txt_Direccion.TabIndex = 29;
+            this.txt_Direccion.TextChanged += new System.EventHandler(this.txt_Direccion_TextChanged);
             // 
             // lbl_Direcion
             // 

@@ -101,5 +101,10 @@ namespace Funeraria_Descanso_Eterno
         {
 
         }
+
+        private void txt_Direccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
