@@ -12,6 +12,7 @@ namespace Funeraria_Descanso_Eterno
 {
     public partial class frm_NuevoCliente : Form
     {
+
         public frm_NuevoCliente()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace Funeraria_Descanso_Eterno
 
         private void pic_Restaurar_Click(object sender, EventArgs e)
         {
-  
+
         }
 
         private void pic_Minimizar_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Funeraria_Descanso_Eterno
             this.Close();
         }
 
-        private void btn_Confirmar_Click(object sender, EventArgs e)
+        public void btn_Confirmar_Click(object sender, EventArgs e)
         {
             string tipoc = cmb_Tdoc.Text;
             string doc = txt_Tdoc.Text;

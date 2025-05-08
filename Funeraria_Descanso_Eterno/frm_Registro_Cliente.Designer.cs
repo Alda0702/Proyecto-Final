@@ -47,6 +47,14 @@
             this.ApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo_Electrónico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_N = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion_C = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Clientes_Registrados.SuspendLayout();
             this.pnl_Buscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Clientes)).BeginInit();
@@ -186,7 +194,15 @@
             this.ApellidoP,
             this.ApellidoM,
             this.Celular,
-            this.Correo_Electrónico});
+            this.Correo_Electrónico,
+            this.Tipo_Doc,
+            this.Cedula_Cliente,
+            this.Fecha_N,
+            this.Sexo_C,
+            this.Pais,
+            this.Departamento_C,
+            this.Ciudad_C,
+            this.Direccion_C});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,6 +272,54 @@
             this.Correo_Electrónico.ReadOnly = true;
             this.Correo_Electrónico.Width = 300;
             // 
+            // Tipo_Doc
+            // 
+            this.Tipo_Doc.HeaderText = "TipoDocumento";
+            this.Tipo_Doc.Name = "Tipo_Doc";
+            this.Tipo_Doc.Visible = false;
+            // 
+            // Cedula_Cliente
+            // 
+            this.Cedula_Cliente.HeaderText = "Cedula";
+            this.Cedula_Cliente.Name = "Cedula_Cliente";
+            this.Cedula_Cliente.Visible = false;
+            // 
+            // Fecha_N
+            // 
+            this.Fecha_N.HeaderText = "FechaN";
+            this.Fecha_N.Name = "Fecha_N";
+            this.Fecha_N.Visible = false;
+            // 
+            // Sexo_C
+            // 
+            this.Sexo_C.HeaderText = "SexoC";
+            this.Sexo_C.Name = "Sexo_C";
+            this.Sexo_C.Visible = false;
+            // 
+            // Pais
+            // 
+            this.Pais.HeaderText = "Pais";
+            this.Pais.Name = "Pais";
+            this.Pais.Visible = false;
+            // 
+            // Departamento_C
+            // 
+            this.Departamento_C.HeaderText = "DepartamentoC";
+            this.Departamento_C.Name = "Departamento_C";
+            this.Departamento_C.Visible = false;
+            // 
+            // Ciudad_C
+            // 
+            this.Ciudad_C.HeaderText = "CiudadC";
+            this.Ciudad_C.Name = "Ciudad_C";
+            this.Ciudad_C.Visible = false;
+            // 
+            // Direccion_C
+            // 
+            this.Direccion_C.HeaderText = "DireccionC";
+            this.Direccion_C.Name = "Direccion_C";
+            this.Direccion_C.Visible = false;
+            // 
             // frm_Registro_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,5 +361,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo_Electrónico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Doc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_N;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad_C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion_C;
     }
 }

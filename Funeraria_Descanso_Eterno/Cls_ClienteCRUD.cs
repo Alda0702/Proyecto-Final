@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 namespace Funeraria_Descanso_Eterno
@@ -120,7 +121,7 @@ namespace Funeraria_Descanso_Eterno
 
                 while (datareader_sqlite.Read())
                 {
-                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString());
+                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString(), datareader_sqlite["TipoDocumentoCliente"].ToString(), datareader_sqlite["CedulaCliente"].ToString(), datareader_sqlite["FechaNacimientoCliente"].ToString(), datareader_sqlite["SexoCliente"].ToString(), datareader_sqlite["Pais"].ToString(), datareader_sqlite["DepartamentoCliente"].ToString(), datareader_sqlite["CiudadCliente"].ToString(), datareader_sqlite["DireccionCliente"].ToString());
                 }
 
 
@@ -146,9 +147,10 @@ namespace Funeraria_Descanso_Eterno
 
                 while (datareader_sqlite.Read())
                 {
-                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString());
+                    dgv.Rows.Add(datareader_sqlite["IdCliente"].ToString(), datareader_sqlite["NombreCliente"].ToString(), datareader_sqlite["ApellidoPCliente"].ToString(), datareader_sqlite["ApellidoMCliente"].ToString(), datareader_sqlite["CelularCliente"].ToString(), datareader_sqlite["EmailCliente"].ToString(), datareader_sqlite["TipoDocumentoCliente"].ToString(), datareader_sqlite["CedulaCliente"].ToString(), datareader_sqlite["FechaNacimientoCliente"].ToString(), datareader_sqlite["SexoCliente"].ToString(), datareader_sqlite["Pais"].ToString(), datareader_sqlite["DepartamentoCliente"].ToString(), datareader_sqlite["CiudadCliente"].ToString(), datareader_sqlite["DireccionCliente"].ToString());
                 }
             }
+                                                                                                                                                                                                                    
             catch (Exception ex)
             {
                 MessageBox.Show("Error al mostrar los datos: " + ex.Message);
@@ -168,6 +170,22 @@ namespace Funeraria_Descanso_Eterno
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar Cliente" + ex.Message);
+            }
+        }
+
+        public void ModificarCliente(int id, string tipoc, string doc, string nombre, string apellidoP, string apellidoM, string nacimiento, string sexo, string pais, string depto, string ciudad, string direccion, string telefono, string email)
+        {
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"UPDATE tabla_cliente SET TipoDocumentoCliente = '{tipoc}', CedulaCliente = '{doc}', NombreCliente = '{nombre}', ApellidoPCliente = '{apellidoP}', ApellidoMCliente = '{apellidoM}', FechaNacimientoCliente = '{nacimiento}', SexoCliente = '{sexo}', Pais = '{pais}', DepartamentoCliente = '{depto}', CiudadCliente = '{ciudad}', DireccionCliente = '{direccion}', CelularCliente = '{telefono}', EmailCliente = '{email}' WHERE IdCliente = '{id}'";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el cliente: " + ex.Message);
             }
         }
     }
