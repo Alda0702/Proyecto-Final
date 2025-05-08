@@ -15,14 +15,34 @@ namespace Funeraria_Descanso_Eterno
         public frm_Facturacion()
         {
             InitializeComponent();
+            llenarGrid();
+        }
+
+        Cls_Factura factura = new Cls_Factura();
+        public void llenarGrid()
+        {
+            // Llenar el DataGridView con los datos de la base de datos
+            dtg_Factura.Rows.Clear();
+            factura.mostrarFacturacion(dtg_Factura);
         }
 
         private void btn_Imprimir_Click(object sender, EventArgs e)
         {
-            frm_Factura frm_Factura = new frm_Factura();
-            this.Hide();
-            frm_Factura.Show();
-            this.Show();
+            if (dtg_Factura.SelectedRows.Count > 0)
+            {
+                int idProceso = Convert.ToInt32(dtg_Factura.SelectedRows[0].Cells["CodigoF"].Value);
+                MessageBox.Show("¿Está seguro de que desea imprimir la factura con ID: " + idProceso + "?");
+                frm_Factura frm_Factura = new frm_Factura();
+                frm_Factura.idBuscar = idProceso;
+
+                this.Hide();
+                frm_Factura.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proceso para finalizar.");
+            }
         }
     }
 }

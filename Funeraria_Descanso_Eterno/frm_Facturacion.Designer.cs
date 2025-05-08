@@ -34,19 +34,15 @@
             this.lbl_BuscarF = new System.Windows.Forms.Label();
             this.txt_BuscarF = new System.Windows.Forms.TextBox();
             this.dtg_Factura = new System.Windows.Forms.DataGridView();
-            this.CodigoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cod_Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sub_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Metodo_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_EliminarF = new System.Windows.Forms.Button();
             this.btn_ActualizarF = new System.Windows.Forms.Button();
             this.btn_NuevoF = new System.Windows.Forms.Button();
             this.pnl_BuscarF = new System.Windows.Forms.Panel();
             this.btn_Imprimir = new System.Windows.Forms.Button();
+            this.CodigoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).BeginInit();
             this.pnl_BuscarF.SuspendLayout();
             this.SuspendLayout();
@@ -89,13 +85,9 @@
             this.dtg_Factura.ColumnHeadersHeight = 50;
             this.dtg_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoF,
-            this.Fecha,
-            this.ID_Cliente,
-            this.Cod_Servicio,
-            this.Sub_Total,
-            this.IVA,
-            this.Total,
-            this.Metodo_Pago});
+            this.Cliente,
+            this.Empleado,
+            this.Fecha});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,64 +111,8 @@
             this.dtg_Factura.RowHeadersVisible = false;
             this.dtg_Factura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Factura.Size = new System.Drawing.Size(1076, 372);
+            this.dtg_Factura.Size = new System.Drawing.Size(1059, 372);
             this.dtg_Factura.TabIndex = 16;
-            // 
-            // CodigoF
-            // 
-            this.CodigoF.HeaderText = "Codigo Factura";
-            this.CodigoF.Name = "CodigoF";
-            this.CodigoF.ReadOnly = true;
-            this.CodigoF.Width = 130;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 130;
-            // 
-            // ID_Cliente
-            // 
-            this.ID_Cliente.HeaderText = "Id Cliente";
-            this.ID_Cliente.Name = "ID_Cliente";
-            this.ID_Cliente.ReadOnly = true;
-            this.ID_Cliente.Width = 130;
-            // 
-            // Cod_Servicio
-            // 
-            this.Cod_Servicio.HeaderText = "Codigo Servicio";
-            this.Cod_Servicio.Name = "Cod_Servicio";
-            this.Cod_Servicio.ReadOnly = true;
-            this.Cod_Servicio.Width = 130;
-            // 
-            // Sub_Total
-            // 
-            this.Sub_Total.HeaderText = "Sub total";
-            this.Sub_Total.Name = "Sub_Total";
-            this.Sub_Total.ReadOnly = true;
-            this.Sub_Total.Width = 130;
-            // 
-            // IVA
-            // 
-            this.IVA.HeaderText = "IVA";
-            this.IVA.Name = "IVA";
-            this.IVA.ReadOnly = true;
-            this.IVA.Width = 130;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 130;
-            // 
-            // Metodo_Pago
-            // 
-            this.Metodo_Pago.HeaderText = "Metodo de Pago";
-            this.Metodo_Pago.Name = "Metodo_Pago";
-            this.Metodo_Pago.ReadOnly = true;
-            this.Metodo_Pago.Width = 130;
             // 
             // btn_EliminarF
             // 
@@ -247,6 +183,34 @@
             this.btn_Imprimir.UseVisualStyleBackColor = false;
             this.btn_Imprimir.Click += new System.EventHandler(this.btn_Imprimir_Click);
             // 
+            // CodigoF
+            // 
+            this.CodigoF.HeaderText = "Codigo Factura";
+            this.CodigoF.Name = "CodigoF";
+            this.CodigoF.ReadOnly = true;
+            this.CodigoF.Width = 130;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 130;
+            // 
+            // Empleado
+            // 
+            this.Empleado.HeaderText = "empleado";
+            this.Empleado.Name = "Empleado";
+            this.Empleado.ReadOnly = true;
+            this.Empleado.Width = 130;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 130;
+            // 
             // frm_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,14 +241,10 @@
         private System.Windows.Forms.Button btn_ActualizarF;
         private System.Windows.Forms.Button btn_NuevoF;
         private System.Windows.Forms.Panel pnl_BuscarF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sub_Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Metodo_Pago;
         private System.Windows.Forms.Button btn_Imprimir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }

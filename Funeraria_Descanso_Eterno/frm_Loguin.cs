@@ -51,7 +51,6 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
-
             string usuario = txt_Usuario.Text;
             string contraseña = txt_Pass.Text;
 

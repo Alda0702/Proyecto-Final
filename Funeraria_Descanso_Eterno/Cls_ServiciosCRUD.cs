@@ -122,9 +122,8 @@ namespace Funeraria_Descanso_Eterno
             conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
             cmd_sqlite = conexion_sqlite.CreateCommand();
 
-            cmd_sqlite.CommandText = $"";
+            cmd_sqlite.CommandText = $"INSERT into datalles_Servicio (Ref_Venta,ref_Servicio,cantidad) VALUES\r\n(1,2,1)";
             cmd_sqlite.ExecuteNonQuery();
         }
     }
 }
-
