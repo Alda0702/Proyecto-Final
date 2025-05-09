@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Funeraria_Descanso_Eterno.Cls_EmpleadoCRUD;
 
 namespace Funeraria_Descanso_Eterno
 {
@@ -17,20 +18,47 @@ namespace Funeraria_Descanso_Eterno
             InitializeComponent();
         }
 
+        Cls_ProveedoresCRUD Provedores = new Cls_ProveedoresCRUD();
         private void btn_NuevoProv_Click(object sender, EventArgs e)
         {
-            frm_NuevoProveedor frm_NuevoProv = new frm_NuevoProveedor();
+            frm_NuevoProveedor frm_Proveedor = new frm_NuevoProveedor();
             this.Hide();
-            frm_NuevoProv.ShowDialog();
+            frm_Proveedor.ShowDialog();
             this.Show();
+        }
+        
+        private void llenarGrid()
+        {
+            dtg_Proveedores.Rows.Clear();
+            Provedores.mostrardataProv(dtg_Proveedores);
         }
 
         private void btn_ActualizarProv_Click(object sender, EventArgs e)
         {
-            frm_ActualizarProveedor frm_ActualizarProveedor = new frm_ActualizarProveedor();
+            frm_ActualizarProveedor frm_Proveedores = new frm_ActualizarProveedor();
+
+            int idProve = Convert.ToInt32(dtg_Proveedores.SelectedRows[0].Cells["Cod"].Value);
+
+            frm_Proveedores.txt_NomProv.Text = dtg_Proveedores.SelectedRows[0].Cells["NombreP"].Value.ToString();
+            frm_Proveedores.txt_DescProv.Text = dtg_Proveedores.SelectedRows[0].Cells["Contacto"].Value.ToString();
+            frm_Proveedores.txt_Contacto.Text = dtg_Proveedores.SelectedRows[0].Cells["email"].Value.ToString();
+            frm_Proveedores.txt_Email.Text = dtg_Proveedores.SelectedRows[0].Cells["Ciudad"].Value.ToString();
+
+            frm_Proveedores.idproveedor = idProve;
+
             this.Hide();
-            frm_ActualizarProveedor.ShowDialog();
+            frm_Proveedores.ShowDialog();
             this.Show();
+        }
+
+        private void frm_Proveedores_Load(object sender, EventArgs e)
+        {
+            Provedores.mostrardataProv(dtg_Proveedores);
+        }
+
+        private void btn_EliminarProv_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

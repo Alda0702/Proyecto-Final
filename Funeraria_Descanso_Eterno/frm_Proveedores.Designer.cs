@@ -51,18 +51,20 @@
             // 
             this.lbl_BuscarProv.AutoSize = true;
             this.lbl_BuscarProv.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BuscarProv.Location = new System.Drawing.Point(17, 29);
+            this.lbl_BuscarProv.Location = new System.Drawing.Point(23, 36);
+            this.lbl_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_BuscarProv.Name = "lbl_BuscarProv";
-            this.lbl_BuscarProv.Size = new System.Drawing.Size(109, 37);
+            this.lbl_BuscarProv.Size = new System.Drawing.Size(136, 46);
             this.lbl_BuscarProv.TabIndex = 2;
             this.lbl_BuscarProv.Text = "Buscar:";
             // 
             // txt_BuscarProv
             // 
             this.txt_BuscarProv.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_BuscarProv.Location = new System.Drawing.Point(132, 29);
+            this.txt_BuscarProv.Location = new System.Drawing.Point(176, 36);
+            this.txt_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_BuscarProv.Name = "txt_BuscarProv";
-            this.txt_BuscarProv.Size = new System.Drawing.Size(888, 33);
+            this.txt_BuscarProv.Size = new System.Drawing.Size(1183, 39);
             this.txt_BuscarProv.TabIndex = 0;
             // 
             // dtg_Proveedores
@@ -98,7 +100,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_Proveedores.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_Proveedores.EnableHeadersVisualStyles = false;
-            this.dtg_Proveedores.Location = new System.Drawing.Point(12, 180);
+            this.dtg_Proveedores.Location = new System.Drawing.Point(16, 222);
+            this.dtg_Proveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_Proveedores.Name = "dtg_Proveedores";
             this.dtg_Proveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,14 +113,16 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_Proveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_Proveedores.RowHeadersVisible = false;
+            this.dtg_Proveedores.RowHeadersWidth = 51;
             this.dtg_Proveedores.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Proveedores.Size = new System.Drawing.Size(1076, 420);
+            this.dtg_Proveedores.Size = new System.Drawing.Size(1435, 517);
             this.dtg_Proveedores.TabIndex = 16;
             // 
             // Cod
             // 
             this.Cod.HeaderText = "Codigo";
+            this.Cod.MinimumWidth = 6;
             this.Cod.Name = "Cod";
             this.Cod.ReadOnly = true;
             this.Cod.Width = 200;
@@ -125,6 +130,7 @@
             // NombreP
             // 
             this.NombreP.HeaderText = "Razón Social";
+            this.NombreP.MinimumWidth = 6;
             this.NombreP.Name = "NombreP";
             this.NombreP.ReadOnly = true;
             this.NombreP.Width = 200;
@@ -132,6 +138,7 @@
             // Contacto
             // 
             this.Contacto.HeaderText = "Contacto";
+            this.Contacto.MinimumWidth = 6;
             this.Contacto.Name = "Contacto";
             this.Contacto.ReadOnly = true;
             this.Contacto.Width = 200;
@@ -139,6 +146,7 @@
             // email
             // 
             this.email.HeaderText = "Correo Electrónico";
+            this.email.MinimumWidth = 6;
             this.email.Name = "email";
             this.email.ReadOnly = true;
             this.email.Width = 300;
@@ -146,6 +154,7 @@
             // Ciudad
             // 
             this.Ciudad.HeaderText = "Ciudad";
+            this.Ciudad.MinimumWidth = 6;
             this.Ciudad.Name = "Ciudad";
             this.Ciudad.ReadOnly = true;
             this.Ciudad.Width = 150;
@@ -157,12 +166,14 @@
             this.btn_EliminarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarProv.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarProv.Location = new System.Drawing.Point(594, 123);
+            this.btn_EliminarProv.Location = new System.Drawing.Point(792, 151);
+            this.btn_EliminarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_EliminarProv.Name = "btn_EliminarProv";
-            this.btn_EliminarProv.Size = new System.Drawing.Size(254, 42);
+            this.btn_EliminarProv.Size = new System.Drawing.Size(339, 52);
             this.btn_EliminarProv.TabIndex = 15;
             this.btn_EliminarProv.Text = "Eliminar Proveedor";
             this.btn_EliminarProv.UseVisualStyleBackColor = false;
+            this.btn_EliminarProv.Click += new System.EventHandler(this.btn_EliminarProv_Click);
             // 
             // btn_ActualizarProv
             // 
@@ -171,9 +182,10 @@
             this.btn_ActualizarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ActualizarProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ActualizarProv.ForeColor = System.Drawing.Color.White;
-            this.btn_ActualizarProv.Location = new System.Drawing.Point(422, 123);
+            this.btn_ActualizarProv.Location = new System.Drawing.Point(563, 151);
+            this.btn_ActualizarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ActualizarProv.Name = "btn_ActualizarProv";
-            this.btn_ActualizarProv.Size = new System.Drawing.Size(166, 42);
+            this.btn_ActualizarProv.Size = new System.Drawing.Size(221, 52);
             this.btn_ActualizarProv.TabIndex = 14;
             this.btn_ActualizarProv.Text = "Actualizar Proveedor";
             this.btn_ActualizarProv.UseVisualStyleBackColor = false;
@@ -186,9 +198,10 @@
             this.btn_NuevoProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NuevoProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NuevoProv.ForeColor = System.Drawing.Color.White;
-            this.btn_NuevoProv.Location = new System.Drawing.Point(252, 123);
+            this.btn_NuevoProv.Location = new System.Drawing.Point(336, 151);
+            this.btn_NuevoProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NuevoProv.Name = "btn_NuevoProv";
-            this.btn_NuevoProv.Size = new System.Drawing.Size(164, 42);
+            this.btn_NuevoProv.Size = new System.Drawing.Size(219, 52);
             this.btn_NuevoProv.TabIndex = 13;
             this.btn_NuevoProv.Text = "+ Nuevo Proveedor";
             this.btn_NuevoProv.UseVisualStyleBackColor = false;
@@ -201,24 +214,27 @@
             this.pnl_BuscarProv.BackColor = System.Drawing.Color.White;
             this.pnl_BuscarProv.Controls.Add(this.lbl_BuscarProv);
             this.pnl_BuscarProv.Controls.Add(this.txt_BuscarProv);
-            this.pnl_BuscarProv.Location = new System.Drawing.Point(25, 12);
+            this.pnl_BuscarProv.Location = new System.Drawing.Point(33, 15);
+            this.pnl_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_BuscarProv.Name = "pnl_BuscarProv";
-            this.pnl_BuscarProv.Size = new System.Drawing.Size(1046, 93);
+            this.pnl_BuscarProv.Size = new System.Drawing.Size(1395, 114);
             this.pnl_BuscarProv.TabIndex = 12;
             // 
             // frm_Proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1467, 753);
             this.Controls.Add(this.dtg_Proveedores);
             this.Controls.Add(this.btn_EliminarProv);
             this.Controls.Add(this.btn_ActualizarProv);
             this.Controls.Add(this.btn_NuevoProv);
             this.Controls.Add(this.pnl_BuscarProv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Proveedores";
             this.Text = "frm_Proveedores";
+            this.Load += new System.EventHandler(this.frm_Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Proveedores)).EndInit();
             this.pnl_BuscarProv.ResumeLayout(false);
             this.pnl_BuscarProv.PerformLayout();

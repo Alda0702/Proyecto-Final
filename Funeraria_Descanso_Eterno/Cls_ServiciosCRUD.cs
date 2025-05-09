@@ -80,7 +80,7 @@ namespace Funeraria_Descanso_Eterno
             {
                 MessageBox.Show("Error al mostrar los datos: " + ex.Message);
             }
-
+             
         }
         public void EliminarRegistro(int id)
         {
@@ -117,14 +117,7 @@ namespace Funeraria_Descanso_Eterno
 
 
         //esto se va ahora
-        public void ALTER()
-        {
-            conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
-            cmd_sqlite = conexion_sqlite.CreateCommand();
-
-            cmd_sqlite.CommandText = $"";
-            cmd_sqlite.ExecuteNonQuery();
-        }
+      
     }
 }
 
