@@ -25,6 +25,7 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_Proveedor.ShowDialog();
             this.Show();
+            llenarGrid(); 
         }
         
         private void llenarGrid()
@@ -49,6 +50,7 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_Proveedores.ShowDialog();
             this.Show();
+            llenarGrid();
         }
 
         private void frm_Proveedores_Load(object sender, EventArgs e)
