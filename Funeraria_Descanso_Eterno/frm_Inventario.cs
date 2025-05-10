@@ -21,6 +21,7 @@ namespace Funeraria_Descanso_Eterno
 
         public void llenarGridProd()
         {
+            dtg_Inventario.Rows.Clear();            
             inventario.MostrarInventario(dtg_Inventario);
         }
         private void btn_NuevoI_Click(object sender, EventArgs e)
@@ -29,6 +30,8 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_NuevoProducto.ShowDialog();
             this.Show();
+
+            llenarGridProd();
         }
 
         private void btn_EliminarI_Click(object sender, EventArgs e)
@@ -36,6 +39,7 @@ namespace Funeraria_Descanso_Eterno
             Cls_InventarioCRUD inventario = new Cls_InventarioCRUD();
             int codigoProducto = Convert.ToInt32(dtg_Inventario.SelectedRows[0].Cells["Cod"].Value);
             inventario.EliminarProducto(codigoProducto);
+            llenarGridProd();
         }
 
         private void frm_Inventario_Load(object sender, EventArgs e)
@@ -75,9 +79,6 @@ namespace Funeraria_Descanso_Eterno
 
             }
             else
-            {
-
-            }
             {
                 MessageBox.Show("Seleccione un proceso para editar.");
             }
