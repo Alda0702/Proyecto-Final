@@ -134,7 +134,8 @@ namespace Funeraria_Descanso_Eterno
         //    MessageBox.Show("Empleado registrado correctamente.");
 
 
-              frm_NuevoUsario.Instancia.Show();
+              frm_NuevoUsario.Instancia.ShowDialog();
+            this.Close();
 
         }
 

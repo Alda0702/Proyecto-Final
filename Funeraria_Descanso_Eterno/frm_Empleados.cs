@@ -27,6 +27,7 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_N_Empleado.ShowDialog();
             this.Show();
+            llenargrid();
         }
 
         private void btn_EliminarE_Click(object sender, EventArgs e)
@@ -53,12 +54,19 @@ namespace Funeraria_Descanso_Eterno
             {
                 MessageBox.Show("Por favor, seleccione un empleado para eliminar.");
             }
+            llenargrid();
+        }
+
+        private void llenargrid()
+        {
+            dtg_Empleados.Rows.Clear();
+            empleadoDB.Mostrarempleado(dtg_Empleados);
         }
 
 
         private void frm_Empleados_Load(object sender, EventArgs e)
         {
-            empleadoDB.Mostrarempleado(dtg_Empleados);
+            llenargrid();
 
         }
 
@@ -86,7 +94,8 @@ namespace Funeraria_Descanso_Eterno
 
             frmActualizar.idservicio = idEmpleado;
             this.Hide();
-            frmActualizar.Show();
+            frmActualizar.ShowDialog();
+            llenargrid();
 
 
         }
