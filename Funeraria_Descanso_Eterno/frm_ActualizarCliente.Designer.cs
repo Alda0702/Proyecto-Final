@@ -101,6 +101,7 @@
             this.btn_Confirmar.TabIndex = 4;
             this.btn_Confirmar.Text = "Actualizar Cliente";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // txt_Email
             // 
@@ -117,6 +118,7 @@
             this.txt_Cel.Name = "txt_Cel";
             this.txt_Cel.Size = new System.Drawing.Size(186, 29);
             this.txt_Cel.TabIndex = 32;
+            this.txt_Cel.TextChanged += new System.EventHandler(this.txt_Cel_TextChanged);
             // 
             // lbl_Email
             // 
@@ -508,36 +510,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Cancelar;
-        private System.Windows.Forms.Button btn_Confirmar;
-        private System.Windows.Forms.TextBox txt_Email;
-        private System.Windows.Forms.TextBox txt_Cel;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_Celular;
-        private System.Windows.Forms.TextBox txt_Direccion;
         private System.Windows.Forms.Label lbl_Direcion;
-        private System.Windows.Forms.TextBox txt_Ciudad;
-        private System.Windows.Forms.TextBox txt_Departamento;
-        private System.Windows.Forms.TextBox txt_Pais;
         private System.Windows.Forms.Label lbl_Ciudad;
         private System.Windows.Forms.Label lbl_Departamento;
         private System.Windows.Forms.Label lbl_Pais;
-        private System.Windows.Forms.TextBox txt_Tdoc;
-        private System.Windows.Forms.ComboBox cmb_Tdoc;
         private System.Windows.Forms.Label lbl_Tdoc;
         private System.Windows.Forms.Label lbl_Domicilio;
         private System.Windows.Forms.Label lbl_Decoracion;
-        private System.Windows.Forms.ComboBox cmb_Sexo;
-        private System.Windows.Forms.TextBox txt_Nacimiento;
-        private System.Windows.Forms.TextBox txt_ApellidoMC;
-        private System.Windows.Forms.TextBox txt_ApellidoPC;
         private System.Windows.Forms.Label lbl_ApellidoPC;
         private System.Windows.Forms.Label lbl_ApellidoMC;
         private System.Windows.Forms.Label lbl_Nacimiento;
         private System.Windows.Forms.Label lbl_Sexo;
         private System.Windows.Forms.Label lbl_NomC;
-        private System.Windows.Forms.TextBox txt_NomC;
         private System.Windows.Forms.Label lbl_Inf;
         private System.Windows.Forms.Label lbl_Regis;
         private System.Windows.Forms.PictureBox pic_Restaurar;
@@ -546,5 +532,20 @@
         private System.Windows.Forms.PictureBox pic_Cerrar;
         private System.Windows.Forms.Panel pnl_NuevoCl;
         private System.Windows.Forms.Panel pnl_Titulo;
+        public System.Windows.Forms.ComboBox cmb_Tdoc;
+        public System.Windows.Forms.Button btn_Cancelar;
+        public System.Windows.Forms.Button btn_Confirmar;
+        public System.Windows.Forms.TextBox txt_Email;
+        public System.Windows.Forms.TextBox txt_Cel;
+        public System.Windows.Forms.TextBox txt_Direccion;
+        public System.Windows.Forms.TextBox txt_Ciudad;
+        public System.Windows.Forms.TextBox txt_Departamento;
+        public System.Windows.Forms.TextBox txt_Pais;
+        public System.Windows.Forms.TextBox txt_Tdoc;
+        public System.Windows.Forms.ComboBox cmb_Sexo;
+        public System.Windows.Forms.TextBox txt_Nacimiento;
+        public System.Windows.Forms.TextBox txt_ApellidoMC;
+        public System.Windows.Forms.TextBox txt_ApellidoPC;
+        public System.Windows.Forms.TextBox txt_NomC;
     }
 }
