@@ -64,8 +64,7 @@ namespace Funeraria_Descanso_Eterno
                 frm_Menu.loginrol = rol;
                 this.Hide();
                 frm_Menu.ShowDialog();
-                this.Show();
-                this.Close();
+                
 
             }
 
