@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_Loguin = new System.Windows.Forms.Panel();
+            this.cmb_Tabla = new System.Windows.Forms.ComboBox();
             this.btn_Siguiente = new System.Windows.Forms.Button();
             this.lbl_Escoger = new System.Windows.Forms.Label();
             this.lbl_Exportar = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.pic_Redimencionar = new System.Windows.Forms.PictureBox();
             this.pic_Cerrar = new System.Windows.Forms.PictureBox();
-            this.cmb_Tabla = new System.Windows.Forms.ComboBox();
             this.pnl_Loguin.SuspendLayout();
             this.pnl_Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).BeginInit();
@@ -60,6 +60,23 @@
             this.pnl_Loguin.Name = "pnl_Loguin";
             this.pnl_Loguin.Size = new System.Drawing.Size(394, 332);
             this.pnl_Loguin.TabIndex = 4;
+            // 
+            // cmb_Tabla
+            // 
+            this.cmb_Tabla.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Tabla.FormattingEnabled = true;
+            this.cmb_Tabla.Items.AddRange(new object[] {
+            "Tabla Servicio",
+            "Table Rol",
+            "Tabla Proveedores",
+            "Tabla Loguín",
+            "Tabla Inventario",
+            "Tabla Empleado",
+            "Tabla Cliente"});
+            this.cmb_Tabla.Location = new System.Drawing.Point(48, 142);
+            this.cmb_Tabla.Name = "cmb_Tabla";
+            this.cmb_Tabla.Size = new System.Drawing.Size(301, 29);
+            this.cmb_Tabla.TabIndex = 37;
             // 
             // btn_Siguiente
             // 
@@ -165,23 +182,6 @@
             this.pic_Cerrar.TabStop = false;
             this.pic_Cerrar.Click += new System.EventHandler(this.pic_Cerrar_Click);
             // 
-            // cmb_Tabla
-            // 
-            this.cmb_Tabla.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Tabla.FormattingEnabled = true;
-            this.cmb_Tabla.Items.AddRange(new object[] {
-            "Tabla Servicio",
-            "Table Rol",
-            "Tabla Proveedores",
-            "Tabla Loguín",
-            "Tabla Inventario",
-            "Tabla Empleado",
-            "Tabla Cliente"});
-            this.cmb_Tabla.Location = new System.Drawing.Point(48, 142);
-            this.cmb_Tabla.Name = "cmb_Tabla";
-            this.cmb_Tabla.Size = new System.Drawing.Size(301, 29);
-            this.cmb_Tabla.TabIndex = 37;
-            // 
             // frm_Exportar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,7 +191,7 @@
             this.Controls.Add(this.pnl_Loguin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Exportar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Exportar";
             this.pnl_Loguin.ResumeLayout(false);
             this.pnl_Loguin.PerformLayout();
