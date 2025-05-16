@@ -176,6 +176,23 @@ namespace Funeraria_Descanso_Eterno
         {
 
         }
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            frm_Loguin frm_loguin = new frm_Loguin();
+            this.Hide();
+            frm_loguin.ShowDialog();
+            this.Show();
+            this.Close();
+        }
+
+        private void btn_Exportar_Click(object sender, EventArgs e)
+        {
+            frm_Exportar frm_Exportar = new frm_Exportar();
+            this.Hide();
+            frm_Exportar.ShowDialog();
+            this.Show();
+        }
     }
 
 }

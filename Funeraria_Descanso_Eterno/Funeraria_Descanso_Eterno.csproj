@@ -98,6 +98,12 @@
     <Compile Include="frm_Empleados.Designer.cs">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Exportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Exportar.Designer.cs">
+      <DependentUpon>frm_Exportar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     <EmbeddedResource Include="frm_Empleados.resx">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Exportar.resx">
+      <DependentUpon>frm_Exportar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Factura.resx">
       <DependentUpon>frm_Factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
