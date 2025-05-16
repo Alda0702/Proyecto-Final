@@ -51,7 +51,6 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
-
             string usuario = txt_Usuario.Text;
             string contraseña = txt_Pass.Text;
 
@@ -63,11 +62,6 @@ namespace Funeraria_Descanso_Eterno
                 frm_Menu frm_Menu;
                 frm_Menu = frm_Menu.Instancia;
                 frm_Menu.loginrol = rol;
-
-
-
-
-
                 this.Hide();
                 frm_Menu.ShowDialog();
                 this.Show();

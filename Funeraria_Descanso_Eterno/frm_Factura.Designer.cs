@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Fondo = new System.Windows.Forms.Panel();
+            this.dtg_Factura = new System.Windows.Forms.DataGridView();
+            this.Dod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pic_Logo = new System.Windows.Forms.PictureBox();
             this.lbl_PrintTotal = new System.Windows.Forms.Label();
             this.lbl_Total = new System.Windows.Forms.Label();
             this.lbl_City = new System.Windows.Forms.Label();
@@ -43,42 +50,33 @@
             this.lbl_Dian = new System.Windows.Forms.Label();
             this.lbl_Resolucion = new System.Windows.Forms.Label();
             this.pnl_3 = new System.Windows.Forms.Panel();
-            this.lbl_PrintUser = new System.Windows.Forms.Label();
-            this.lbl_PrintVendidopor = new System.Windows.Forms.Label();
-            this.lbl_Usuario = new System.Windows.Forms.Label();
-            this.lbl_PrintCliente = new System.Windows.Forms.Label();
+            this.lbl_PrintUserCC = new System.Windows.Forms.Label();
+            this.lbl_CedulaEmp = new System.Windows.Forms.Label();
             this.lbl_Vendidoa = new System.Windows.Forms.Label();
             this.lbl_PrintNombreC = new System.Windows.Forms.Label();
-            this.lbl_PrintApellidoC = new System.Windows.Forms.Label();
+            this.lbl_PrintCedulaC = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_Vendidopor = new System.Windows.Forms.Label();
-            this.lbl_Apellido = new System.Windows.Forms.Label();
+            this.lbl_Cedula = new System.Windows.Forms.Label();
             this.pnl_2 = new System.Windows.Forms.Panel();
             this.lbl_PrintNunFact = new System.Windows.Forms.Label();
             this.lbl_No = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.lbl_Fact = new System.Windows.Forms.Label();
-            this.pic_Logo = new System.Windows.Forms.PictureBox();
-            this.dtg_Factura = new System.Windows.Forms.DataGridView();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.pic_Restaurar = new System.Windows.Forms.PictureBox();
             this.pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.pic_Redimencionar = new System.Windows.Forms.PictureBox();
             this.pic_Cerrar = new System.Windows.Forms.PictureBox();
             this.btn_ImprimirFac = new System.Windows.Forms.Button();
-            this.Dod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Fondo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).BeginInit();
             this.pnl_4.SuspendLayout();
             this.pnl_3.SuspendLayout();
             this.pnl_2.SuspendLayout();
             this.pnl_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).BeginInit();
             this.pnl_Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).BeginInit();
@@ -105,6 +103,95 @@
             this.pnl_Fondo.Name = "pnl_Fondo";
             this.pnl_Fondo.Size = new System.Drawing.Size(484, 459);
             this.pnl_Fondo.TabIndex = 12;
+            // 
+            // dtg_Factura
+            // 
+            this.dtg_Factura.BackgroundColor = System.Drawing.Color.White;
+            this.dtg_Factura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtg_Factura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtg_Factura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtg_Factura.ColumnHeadersHeight = 20;
+            this.dtg_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dod,
+            this.Nomb,
+            this.Cantidad,
+            this.Precio,
+            this.ValorT});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dtg_Factura.EnableHeadersVisualStyles = false;
+            this.dtg_Factura.Location = new System.Drawing.Point(22, 277);
+            this.dtg_Factura.Name = "dtg_Factura";
+            this.dtg_Factura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtg_Factura.RowHeadersVisible = false;
+            this.dtg_Factura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtg_Factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtg_Factura.Size = new System.Drawing.Size(425, 147);
+            this.dtg_Factura.TabIndex = 13;
+            // 
+            // Dod
+            // 
+            this.Dod.HeaderText = "Codigo";
+            this.Dod.Name = "Dod";
+            this.Dod.ReadOnly = true;
+            this.Dod.Width = 50;
+            // 
+            // Nomb
+            // 
+            this.Nomb.HeaderText = "Nombre";
+            this.Nomb.Name = "Nomb";
+            this.Nomb.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // ValorT
+            // 
+            this.ValorT.HeaderText = "Valor Total";
+            this.ValorT.Name = "ValorT";
+            this.ValorT.ReadOnly = true;
+            // 
+            // pic_Logo
+            // 
+            this.pic_Logo.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.WhatsApp_Image_2025_04_26_at_7_46_00_PM__2_;
+            this.pic_Logo.Location = new System.Drawing.Point(39, 15);
+            this.pic_Logo.Name = "pic_Logo";
+            this.pic_Logo.Size = new System.Drawing.Size(117, 63);
+            this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Logo.TabIndex = 26;
+            this.pic_Logo.TabStop = false;
             // 
             // lbl_PrintTotal
             // 
@@ -220,66 +307,42 @@
             // pnl_3
             // 
             this.pnl_3.BackColor = System.Drawing.Color.White;
-            this.pnl_3.Controls.Add(this.lbl_PrintUser);
-            this.pnl_3.Controls.Add(this.lbl_PrintVendidopor);
-            this.pnl_3.Controls.Add(this.lbl_Usuario);
-            this.pnl_3.Controls.Add(this.lbl_PrintCliente);
+            this.pnl_3.Controls.Add(this.lbl_PrintUserCC);
+            this.pnl_3.Controls.Add(this.lbl_CedulaEmp);
             this.pnl_3.Controls.Add(this.lbl_Vendidoa);
             this.pnl_3.Controls.Add(this.lbl_PrintNombreC);
-            this.pnl_3.Controls.Add(this.lbl_PrintApellidoC);
+            this.pnl_3.Controls.Add(this.lbl_PrintCedulaC);
             this.pnl_3.Controls.Add(this.lbl_Nombre);
             this.pnl_3.Controls.Add(this.label5);
             this.pnl_3.Controls.Add(this.lbl_Vendidopor);
-            this.pnl_3.Controls.Add(this.lbl_Apellido);
+            this.pnl_3.Controls.Add(this.lbl_Cedula);
             this.pnl_3.Location = new System.Drawing.Point(24, 176);
             this.pnl_3.Name = "pnl_3";
             this.pnl_3.Size = new System.Drawing.Size(423, 95);
             this.pnl_3.TabIndex = 14;
             this.pnl_3.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_3_Paint);
             // 
-            // lbl_PrintUser
+            // lbl_PrintUserCC
             // 
-            this.lbl_PrintUser.AutoSize = true;
-            this.lbl_PrintUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintUser.Location = new System.Drawing.Point(78, 68);
-            this.lbl_PrintUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_PrintUser.Name = "lbl_PrintUser";
-            this.lbl_PrintUser.Size = new System.Drawing.Size(41, 13);
-            this.lbl_PrintUser.TabIndex = 13;
-            this.lbl_PrintUser.Text = "label13";
+            this.lbl_PrintUserCC.AutoSize = true;
+            this.lbl_PrintUserCC.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_PrintUserCC.Location = new System.Drawing.Point(91, 71);
+            this.lbl_PrintUserCC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintUserCC.Name = "lbl_PrintUserCC";
+            this.lbl_PrintUserCC.Size = new System.Drawing.Size(41, 13);
+            this.lbl_PrintUserCC.TabIndex = 13;
+            this.lbl_PrintUserCC.Text = "label13";
             // 
-            // lbl_PrintVendidopor
+            // lbl_CedulaEmp
             // 
-            this.lbl_PrintVendidopor.AutoSize = true;
-            this.lbl_PrintVendidopor.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintVendidopor.Location = new System.Drawing.Point(78, 55);
-            this.lbl_PrintVendidopor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_PrintVendidopor.Name = "lbl_PrintVendidopor";
-            this.lbl_PrintVendidopor.Size = new System.Drawing.Size(41, 13);
-            this.lbl_PrintVendidopor.TabIndex = 12;
-            this.lbl_PrintVendidopor.Text = "label12";
-            // 
-            // lbl_Usuario
-            // 
-            this.lbl_Usuario.AutoSize = true;
-            this.lbl_Usuario.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Usuario.Location = new System.Drawing.Point(12, 68);
-            this.lbl_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Usuario.Name = "lbl_Usuario";
-            this.lbl_Usuario.Size = new System.Drawing.Size(43, 13);
-            this.lbl_Usuario.TabIndex = 11;
-            this.lbl_Usuario.Text = "Usuario";
-            // 
-            // lbl_PrintCliente
-            // 
-            this.lbl_PrintCliente.AutoSize = true;
-            this.lbl_PrintCliente.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintCliente.Location = new System.Drawing.Point(78, 5);
-            this.lbl_PrintCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_PrintCliente.Name = "lbl_PrintCliente";
-            this.lbl_PrintCliente.Size = new System.Drawing.Size(35, 13);
-            this.lbl_PrintCliente.TabIndex = 6;
-            this.lbl_PrintCliente.Text = "label7";
+            this.lbl_CedulaEmp.AutoSize = true;
+            this.lbl_CedulaEmp.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_CedulaEmp.Location = new System.Drawing.Point(12, 68);
+            this.lbl_CedulaEmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_CedulaEmp.Name = "lbl_CedulaEmp";
+            this.lbl_CedulaEmp.Size = new System.Drawing.Size(73, 13);
+            this.lbl_CedulaEmp.TabIndex = 11;
+            this.lbl_CedulaEmp.Text = "CC: empleado";
             // 
             // lbl_Vendidoa
             // 
@@ -296,23 +359,23 @@
             // 
             this.lbl_PrintNombreC.AutoSize = true;
             this.lbl_PrintNombreC.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintNombreC.Location = new System.Drawing.Point(78, 18);
+            this.lbl_PrintNombreC.Location = new System.Drawing.Point(91, 19);
             this.lbl_PrintNombreC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrintNombreC.Name = "lbl_PrintNombreC";
             this.lbl_PrintNombreC.Size = new System.Drawing.Size(35, 13);
             this.lbl_PrintNombreC.TabIndex = 5;
             this.lbl_PrintNombreC.Text = "label6";
             // 
-            // lbl_PrintApellidoC
+            // lbl_PrintCedulaC
             // 
-            this.lbl_PrintApellidoC.AutoSize = true;
-            this.lbl_PrintApellidoC.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintApellidoC.Location = new System.Drawing.Point(78, 32);
-            this.lbl_PrintApellidoC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_PrintApellidoC.Name = "lbl_PrintApellidoC";
-            this.lbl_PrintApellidoC.Size = new System.Drawing.Size(35, 13);
-            this.lbl_PrintApellidoC.TabIndex = 2;
-            this.lbl_PrintApellidoC.Text = "label3";
+            this.lbl_PrintCedulaC.AutoSize = true;
+            this.lbl_PrintCedulaC.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_PrintCedulaC.Location = new System.Drawing.Point(91, 32);
+            this.lbl_PrintCedulaC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintCedulaC.Name = "lbl_PrintCedulaC";
+            this.lbl_PrintCedulaC.Size = new System.Drawing.Size(35, 13);
+            this.lbl_PrintCedulaC.TabIndex = 2;
+            this.lbl_PrintCedulaC.Text = "label3";
             // 
             // lbl_Nombre
             // 
@@ -346,16 +409,16 @@
             this.lbl_Vendidopor.TabIndex = 10;
             this.lbl_Vendidopor.Text = "Vendido por:";
             // 
-            // lbl_Apellido
+            // lbl_Cedula
             // 
-            this.lbl_Apellido.AutoSize = true;
-            this.lbl_Apellido.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Apellido.Location = new System.Drawing.Point(12, 32);
-            this.lbl_Apellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Apellido.Name = "lbl_Apellido";
-            this.lbl_Apellido.Size = new System.Drawing.Size(47, 13);
-            this.lbl_Apellido.TabIndex = 9;
-            this.lbl_Apellido.Text = "Apellido:";
+            this.lbl_Cedula.AutoSize = true;
+            this.lbl_Cedula.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_Cedula.Location = new System.Drawing.Point(12, 32);
+            this.lbl_Cedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Cedula.Name = "lbl_Cedula";
+            this.lbl_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.lbl_Cedula.TabIndex = 9;
+            this.lbl_Cedula.Text = "Cedula:";
             // 
             // pnl_2
             // 
@@ -411,63 +474,6 @@
             this.lbl_Fact.Size = new System.Drawing.Size(166, 24);
             this.lbl_Fact.TabIndex = 17;
             this.lbl_Fact.Text = "Factura de venta";
-            // 
-            // pic_Logo
-            // 
-            this.pic_Logo.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.WhatsApp_Image_2025_04_26_at_7_46_00_PM__2_;
-            this.pic_Logo.Location = new System.Drawing.Point(39, 15);
-            this.pic_Logo.Name = "pic_Logo";
-            this.pic_Logo.Size = new System.Drawing.Size(117, 63);
-            this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Logo.TabIndex = 26;
-            this.pic_Logo.TabStop = false;
-            // 
-            // dtg_Factura
-            // 
-            this.dtg_Factura.BackgroundColor = System.Drawing.Color.White;
-            this.dtg_Factura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtg_Factura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dtg_Factura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dtg_Factura.ColumnHeadersHeight = 20;
-            this.dtg_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Dod,
-            this.Nomb,
-            this.Cantidad,
-            this.Precio,
-            this.ValorT});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dtg_Factura.EnableHeadersVisualStyles = false;
-            this.dtg_Factura.Location = new System.Drawing.Point(22, 276);
-            this.dtg_Factura.Name = "dtg_Factura";
-            this.dtg_Factura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dtg_Factura.RowHeadersVisible = false;
-            this.dtg_Factura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtg_Factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Factura.Size = new System.Drawing.Size(425, 147);
-            this.dtg_Factura.TabIndex = 13;
             // 
             // pnl_Titulo
             // 
@@ -547,38 +553,6 @@
             this.btn_ImprimirFac.UseVisualStyleBackColor = false;
             this.btn_ImprimirFac.Click += new System.EventHandler(this.btn_ImprimirFac_Click);
             // 
-            // Dod
-            // 
-            this.Dod.HeaderText = "Codigo";
-            this.Dod.Name = "Dod";
-            this.Dod.ReadOnly = true;
-            this.Dod.Width = 50;
-            // 
-            // Nomb
-            // 
-            this.Nomb.HeaderText = "Nombre";
-            this.Nomb.Name = "Nomb";
-            this.Nomb.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // ValorT
-            // 
-            this.ValorT.HeaderText = "Valor Total";
-            this.ValorT.Name = "ValorT";
-            this.ValorT.ReadOnly = true;
-            // 
             // frm_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,8 +565,11 @@
             this.Name = "frm_Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frm_Factura";
+            this.Load += new System.EventHandler(this.frm_Factura_Load);
             this.pnl_Fondo.ResumeLayout(false);
             this.pnl_Fondo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.pnl_4.ResumeLayout(false);
             this.pnl_4.PerformLayout();
             this.pnl_3.ResumeLayout(false);
@@ -601,8 +578,6 @@
             this.pnl_2.PerformLayout();
             this.pnl_1.ResumeLayout(false);
             this.pnl_1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).EndInit();
             this.pnl_Titulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).EndInit();
@@ -626,19 +601,13 @@
         private System.Windows.Forms.Label lbl_Dian;
         private System.Windows.Forms.Label lbl_Resolucion;
         private System.Windows.Forms.Panel pnl_3;
-        private System.Windows.Forms.Label lbl_PrintUser;
-        private System.Windows.Forms.Label lbl_PrintVendidopor;
-        private System.Windows.Forms.Label lbl_Usuario;
-        private System.Windows.Forms.Label lbl_PrintCliente;
+        private System.Windows.Forms.Label lbl_CedulaEmp;
         private System.Windows.Forms.Label lbl_Vendidoa;
-        private System.Windows.Forms.Label lbl_PrintNombreC;
-        private System.Windows.Forms.Label lbl_PrintApellidoC;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_Vendidopor;
-        private System.Windows.Forms.Label lbl_Apellido;
+        private System.Windows.Forms.Label lbl_Cedula;
         private System.Windows.Forms.Panel pnl_2;
-        private System.Windows.Forms.Label lbl_PrintNunFact;
         private System.Windows.Forms.Label lbl_No;
         private System.Windows.Forms.Panel pnl_1;
         private System.Windows.Forms.Label lbl_Fact;
@@ -655,5 +624,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorT;
+        public System.Windows.Forms.Label lbl_PrintUserCC;
+        public System.Windows.Forms.Label lbl_PrintNombreC;
+        public System.Windows.Forms.Label lbl_PrintCedulaC;
+        public System.Windows.Forms.Label lbl_PrintNunFact;
     }
 }

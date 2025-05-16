@@ -183,6 +183,16 @@ namespace Funeraria_Descanso_Eterno.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap salir {
+            get {
+                object obj = ResourceManager.GetObject("salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2025_04_26_at_7_46_00_PM__2_ {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2025-04-26 at 7.46.00 PM (2)", resourceCulture);

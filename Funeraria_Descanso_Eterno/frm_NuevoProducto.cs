@@ -85,6 +85,7 @@ namespace Funeraria_Descanso_Eterno
             MessageBox.Show("Producto Agregado");
             Inventario ADD = new Inventario();
             ADD.InsertarProducto(nombre, descripcion, categoria, cantidad, precio);
+            this.Close();
 
         }
     }

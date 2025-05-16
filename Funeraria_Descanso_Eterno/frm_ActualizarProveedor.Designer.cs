@@ -311,14 +311,10 @@
         private System.Windows.Forms.Panel pnl_NuevoCl;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Confirmar;
-        private System.Windows.Forms.TextBox txt_Email;
-        private System.Windows.Forms.TextBox txt_Contacto;
-        private System.Windows.Forms.TextBox txt_DescProv;
         private System.Windows.Forms.Label lbl_Ciudad;
         private System.Windows.Forms.Label lbl_Contacto;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_NomProd;
-        private System.Windows.Forms.TextBox txt_NomProv;
         private System.Windows.Forms.Label lbl_Inf;
         private System.Windows.Forms.Label lbl_Regis;
         private System.Windows.Forms.PictureBox pic_Restaurar;
@@ -326,5 +322,9 @@
         private System.Windows.Forms.PictureBox pic_Redimencionar;
         private System.Windows.Forms.Panel pnl_Titulo;
         private System.Windows.Forms.PictureBox pic_Cerrar;
+        public System.Windows.Forms.TextBox txt_Email;
+        public System.Windows.Forms.TextBox txt_Contacto;
+        public System.Windows.Forms.TextBox txt_DescProv;
+        public System.Windows.Forms.TextBox txt_NomProv;
     }
 }
