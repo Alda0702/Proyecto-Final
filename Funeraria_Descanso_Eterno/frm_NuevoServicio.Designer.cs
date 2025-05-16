@@ -61,9 +61,10 @@
             this.pic_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
-            this.pic_Restaurar.Location = new System.Drawing.Point(1032, 7);
+            this.pic_Restaurar.Location = new System.Drawing.Point(1376, 9);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Restaurar.Name = "pic_Restaurar";
-            this.pic_Restaurar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Restaurar.TabIndex = 2;
             this.pic_Restaurar.TabStop = false;
@@ -74,9 +75,10 @@
             this.pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
-            this.pic_Minimizar.Location = new System.Drawing.Point(991, 7);
+            this.pic_Minimizar.Location = new System.Drawing.Point(1321, 9);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Minimizar.Name = "pic_Minimizar";
-            this.pic_Minimizar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Minimizar.TabIndex = 2;
             this.pic_Minimizar.TabStop = false;
@@ -87,9 +89,10 @@
             this.pic_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
-            this.pic_Cerrar.Location = new System.Drawing.Point(1072, 7);
+            this.pic_Cerrar.Location = new System.Drawing.Point(1429, 9);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Cerrar.Name = "pic_Cerrar";
-            this.pic_Cerrar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Cerrar.TabIndex = 0;
             this.pic_Cerrar.TabStop = false;
@@ -98,9 +101,10 @@
             // tx_PrecioServ
             // 
             this.tx_PrecioServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_PrecioServ.Location = new System.Drawing.Point(239, 392);
+            this.tx_PrecioServ.Location = new System.Drawing.Point(319, 482);
+            this.tx_PrecioServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tx_PrecioServ.Name = "tx_PrecioServ";
-            this.tx_PrecioServ.Size = new System.Drawing.Size(331, 29);
+            this.tx_PrecioServ.Size = new System.Drawing.Size(440, 34);
             this.tx_PrecioServ.TabIndex = 35;
             // 
             // pnl_NuevoCl
@@ -123,10 +127,12 @@
             this.pnl_NuevoCl.Controls.Add(this.txt_NomServ);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Inf);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Regis);
-            this.pnl_NuevoCl.Location = new System.Drawing.Point(246, 55);
+            this.pnl_NuevoCl.Location = new System.Drawing.Point(328, 68);
+            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
-            this.pnl_NuevoCl.Size = new System.Drawing.Size(613, 556);
+            this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 9;
+            this.pnl_NuevoCl.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_NuevoCl_Paint);
             // 
             // btn_Cancelar
             // 
@@ -135,9 +141,10 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(339, 509);
+            this.btn_Cancelar.Location = new System.Drawing.Point(452, 626);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(94, 42);
+            this.btn_Cancelar.Size = new System.Drawing.Size(125, 52);
             this.btn_Cancelar.TabIndex = 34;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
@@ -150,9 +157,10 @@
             this.btn_Confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_Confirmar.Location = new System.Drawing.Point(169, 509);
+            this.btn_Confirmar.Location = new System.Drawing.Point(225, 626);
+            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Confirmar.Name = "btn_Confirmar";
-            this.btn_Confirmar.Size = new System.Drawing.Size(164, 42);
+            this.btn_Confirmar.Size = new System.Drawing.Size(219, 52);
             this.btn_Confirmar.TabIndex = 4;
             this.btn_Confirmar.Text = "Reistrar Empleado";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
@@ -161,35 +169,39 @@
             // txt_Duracion
             // 
             this.txt_Duracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Duracion.Location = new System.Drawing.Point(239, 357);
+            this.txt_Duracion.Location = new System.Drawing.Point(319, 439);
+            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Duracion.Name = "txt_Duracion";
-            this.txt_Duracion.Size = new System.Drawing.Size(331, 29);
+            this.txt_Duracion.Size = new System.Drawing.Size(440, 34);
             this.txt_Duracion.TabIndex = 14;
             // 
             // txt_CategoriaServ
             // 
             this.txt_CategoriaServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CategoriaServ.Location = new System.Drawing.Point(239, 322);
+            this.txt_CategoriaServ.Location = new System.Drawing.Point(319, 396);
+            this.txt_CategoriaServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_CategoriaServ.Name = "txt_CategoriaServ";
-            this.txt_CategoriaServ.Size = new System.Drawing.Size(331, 29);
+            this.txt_CategoriaServ.Size = new System.Drawing.Size(440, 34);
             this.txt_CategoriaServ.TabIndex = 13;
             // 
             // txt_DescServ
             // 
             this.txt_DescServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DescServ.Location = new System.Drawing.Point(239, 173);
+            this.txt_DescServ.Location = new System.Drawing.Point(319, 213);
+            this.txt_DescServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_DescServ.Multiline = true;
             this.txt_DescServ.Name = "txt_DescServ";
-            this.txt_DescServ.Size = new System.Drawing.Size(331, 143);
+            this.txt_DescServ.Size = new System.Drawing.Size(440, 175);
             this.txt_DescServ.TabIndex = 12;
             // 
             // lbl_Descripcion
             // 
             this.lbl_Descripcion.AutoSize = true;
             this.lbl_Descripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Descripcion.Location = new System.Drawing.Point(45, 176);
+            this.lbl_Descripcion.Location = new System.Drawing.Point(60, 217);
+            this.lbl_Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Descripcion.Name = "lbl_Descripcion";
-            this.lbl_Descripcion.Size = new System.Drawing.Size(91, 21);
+            this.lbl_Descripcion.Size = new System.Drawing.Size(114, 28);
             this.lbl_Descripcion.TabIndex = 11;
             this.lbl_Descripcion.Text = "Descripción";
             // 
@@ -197,9 +209,10 @@
             // 
             this.lbl_CategoriaServ.AutoSize = true;
             this.lbl_CategoriaServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CategoriaServ.Location = new System.Drawing.Point(45, 322);
+            this.lbl_CategoriaServ.Location = new System.Drawing.Point(60, 396);
+            this.lbl_CategoriaServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CategoriaServ.Name = "lbl_CategoriaServ";
-            this.lbl_CategoriaServ.Size = new System.Drawing.Size(77, 21);
+            this.lbl_CategoriaServ.Size = new System.Drawing.Size(97, 28);
             this.lbl_CategoriaServ.TabIndex = 10;
             this.lbl_CategoriaServ.Text = "Categoria";
             // 
@@ -207,9 +220,10 @@
             // 
             this.lbl_Duracion.AutoSize = true;
             this.lbl_Duracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Duracion.Location = new System.Drawing.Point(45, 357);
+            this.lbl_Duracion.Location = new System.Drawing.Point(60, 439);
+            this.lbl_Duracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Duracion.Name = "lbl_Duracion";
-            this.lbl_Duracion.Size = new System.Drawing.Size(140, 21);
+            this.lbl_Duracion.Size = new System.Drawing.Size(175, 28);
             this.lbl_Duracion.TabIndex = 9;
             this.lbl_Duracion.Text = "Duración Estimada";
             // 
@@ -217,9 +231,10 @@
             // 
             this.lbl_PrecioServ.AutoSize = true;
             this.lbl_PrecioServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PrecioServ.Location = new System.Drawing.Point(45, 392);
+            this.lbl_PrecioServ.Location = new System.Drawing.Point(60, 482);
+            this.lbl_PrecioServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PrecioServ.Name = "lbl_PrecioServ";
-            this.lbl_PrecioServ.Size = new System.Drawing.Size(53, 21);
+            this.lbl_PrecioServ.Size = new System.Drawing.Size(66, 28);
             this.lbl_PrecioServ.TabIndex = 8;
             this.lbl_PrecioServ.Text = "Precio";
             // 
@@ -227,27 +242,30 @@
             // 
             this.lbl_NomServ.AutoSize = true;
             this.lbl_NomServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NomServ.Location = new System.Drawing.Point(45, 122);
+            this.lbl_NomServ.Location = new System.Drawing.Point(60, 150);
+            this.lbl_NomServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NomServ.Name = "lbl_NomServ";
-            this.lbl_NomServ.Size = new System.Drawing.Size(68, 21);
+            this.lbl_NomServ.Size = new System.Drawing.Size(85, 28);
             this.lbl_NomServ.TabIndex = 7;
             this.lbl_NomServ.Text = "Nombre";
             // 
             // txt_NomServ
             // 
             this.txt_NomServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NomServ.Location = new System.Drawing.Point(239, 122);
+            this.txt_NomServ.Location = new System.Drawing.Point(319, 150);
+            this.txt_NomServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_NomServ.Name = "txt_NomServ";
-            this.txt_NomServ.Size = new System.Drawing.Size(331, 29);
+            this.txt_NomServ.Size = new System.Drawing.Size(440, 34);
             this.txt_NomServ.TabIndex = 6;
             // 
             // lbl_Inf
             // 
             this.lbl_Inf.AutoSize = true;
             this.lbl_Inf.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Inf.Location = new System.Drawing.Point(44, 63);
+            this.lbl_Inf.Location = new System.Drawing.Point(59, 78);
+            this.lbl_Inf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Inf.Name = "lbl_Inf";
-            this.lbl_Inf.Size = new System.Drawing.Size(236, 30);
+            this.lbl_Inf.Size = new System.Drawing.Size(302, 37);
             this.lbl_Inf.TabIndex = 4;
             this.lbl_Inf.Text = "Información del Servicio";
             // 
@@ -258,9 +276,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Regis.AutoSize = true;
             this.lbl_Regis.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Regis.Location = new System.Drawing.Point(179, 7);
+            this.lbl_Regis.Location = new System.Drawing.Point(239, 9);
+            this.lbl_Regis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Regis.Name = "lbl_Regis";
-            this.lbl_Regis.Size = new System.Drawing.Size(244, 37);
+            this.lbl_Regis.Size = new System.Drawing.Size(300, 46);
             this.lbl_Regis.TabIndex = 3;
             this.lbl_Regis.Text = "Registrar Servicio";
             // 
@@ -269,9 +288,10 @@
             this.pic_Redimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
-            this.pic_Redimencionar.Location = new System.Drawing.Point(1032, 7);
+            this.pic_Redimencionar.Location = new System.Drawing.Point(1376, 9);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
-            this.pic_Redimencionar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Redimencionar.TabIndex = 1;
             this.pic_Redimencionar.TabStop = false;
@@ -285,18 +305,20 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(1100, 38);
+            this.pnl_Titulo.Size = new System.Drawing.Size(1467, 47);
             this.pnl_Titulo.TabIndex = 8;
             // 
             // frm_NuevoServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1467, 753);
             this.Controls.Add(this.pnl_NuevoCl);
             this.Controls.Add(this.pnl_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_NuevoServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NuevoServicio";

@@ -114,6 +114,48 @@ namespace Funeraria_Descanso_Eterno
             }
         }
 
+        public string Mostrarproveedor1()
+        {
+            SQLiteDataReader reader = null;
+            StringBuilder resultado = new StringBuilder();
+            SQLiteConnection conexion_sqlite;
+            SQLiteCommand cmd_sqlite;
+
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+                cmd_sqlite.CommandText = "SELECT * FROM tabla_proveedores";
+
+                reader = cmd_sqlite.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    List<string> campos = new List<string>();
+
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        campos.Add(reader[i].ToString());
+                    }
+
+                    resultado.AppendLine(string.Join(";", campos));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar el proveedor: " + ex.Message);
+            }
+            finally
+            {
+                if (reader != null && !reader.IsClosed)
+                    reader.Close();
+
+
+            }
+
+            return resultado.ToString();
+        }
+
 
     }
 }

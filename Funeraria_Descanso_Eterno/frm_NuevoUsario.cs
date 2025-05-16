@@ -83,6 +83,9 @@ namespace Funeraria_Descanso_Eterno
         private void frm_NuevoUsario_Load(object sender, EventArgs e)
         {
 
+            txt_Usuario.Text = "";
+            txt_Pass.Text = "";
+
         }
     }
 }

@@ -54,5 +54,10 @@ namespace Funeraria_Descanso_Eterno
             this.Close();
             
         }
+
+        private void pnl_NuevoCl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

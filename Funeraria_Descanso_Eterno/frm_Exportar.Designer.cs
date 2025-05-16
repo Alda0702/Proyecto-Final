@@ -77,6 +77,7 @@
             this.cmb_Tabla.Name = "cmb_Tabla";
             this.cmb_Tabla.Size = new System.Drawing.Size(301, 29);
             this.cmb_Tabla.TabIndex = 37;
+            this.cmb_Tabla.SelectedIndexChanged += new System.EventHandler(this.cmb_Tabla_SelectedIndexChanged);
             // 
             // btn_Siguiente
             // 
@@ -85,12 +86,13 @@
             this.btn_Siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Siguiente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Siguiente.ForeColor = System.Drawing.Color.White;
-            this.btn_Siguiente.Location = new System.Drawing.Point(48, 267);
+            this.btn_Siguiente.Location = new System.Drawing.Point(48, 245);
             this.btn_Siguiente.Name = "btn_Siguiente";
             this.btn_Siguiente.Size = new System.Drawing.Size(301, 33);
             this.btn_Siguiente.TabIndex = 2;
             this.btn_Siguiente.Text = "Exportar";
             this.btn_Siguiente.UseVisualStyleBackColor = false;
+            this.btn_Siguiente.Click += new System.EventHandler(this.btn_Siguiente_Click);
             // 
             // lbl_Escoger
             // 
