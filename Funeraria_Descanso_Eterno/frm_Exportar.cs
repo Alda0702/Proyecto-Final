@@ -71,7 +71,7 @@ Tabla Cliente
                         writer.WriteLine(empleadoparts);
                     }
 
-                    MessageBox.Show("Archivo creado en: " + Environment.CurrentDirectory);
+                    MessageBox.Show("Archivo creado");
                 }
                 catch
                 {
@@ -271,6 +271,46 @@ Tabla Cliente
                         writer.WriteLine("CodigoServ;" + "NombreServ;" + "DescripcionServ;" + "CategoriaServ;" + "DuracionEstimadaServ" + "PrecioServ;");
 
                         writer.WriteLine(serviciosparts);
+                    }
+
+                    MessageBox.Show("Archivo creado");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo crear el archivo");
+                }
+
+
+            }
+
+            if (cmb_Tabla.Text == "Table Rol")
+            {
+                Cls_LoginCRUD cls_LoginCRUD = new Cls_LoginCRUD();
+
+                string rol = cls_LoginCRUD.MostrarRol1();
+
+
+
+                string rolparts = "";
+
+                if (rol.Contains(";"))
+                {
+
+                    foreach (var item in rol.Split(';'))
+                    {
+                        rolparts += item + ";";
+
+                    }
+
+                }
+                try
+                {
+
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\rol.csv", false, Encoding.UTF8))
+                    {
+                        writer.WriteLine("CodigoRol;" + "Nombre;");
+
+                        writer.WriteLine(rolparts);
                     }
 
                     MessageBox.Show("Archivo creado");
