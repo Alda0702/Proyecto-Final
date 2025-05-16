@@ -64,7 +64,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\empleado.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\empleado.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("IdEmpleado;" + "Tipo_Documento;" + "CedulaEmpleado;" + "NombreEmpleado;" + "ApellidoPEmpleado;" + "ApellidoMEmpleado;" + "FechaNacimientoEmpleado;" + "SexoEmpleado;" + "RolEmpleado;" + "DepartamentoEmpleado;" + "CiudadEmpleado;" + "DireccionEmpleado;" + "CelularEmpleado;" + "EmailEmpleado;");
 
@@ -106,7 +106,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\cliente.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\cliente.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("IdCliente;" + "TipoDocumentoCliente;" + "CedulaCliente;" + "NombreCliente;" + "ApellidoPCliente;" + "ApellidoMCliente;" + "FechaNacimientoCliente;" + "SexoCliente;" + "Pais;" + "DepartamentoCliente;" + "CiudadCliente;" + "DireccionCliente;" + "CelularCliente;" + "EmailCliente;");
 
@@ -146,7 +146,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\inventario.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\inventario.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("CodigoProd;" + "NombreProd;" + "DescripcionProd;" + "CategoriaPord;" + "CantidadProd;" + "PrecioProd;");
 
@@ -186,7 +186,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\login.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\login.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("CodigoLoguin;" + "Usuario;" + "Pass;" + "RolEmpleado;");
 
@@ -226,7 +226,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\proveedores.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\proveedores.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("CodigoProv;" + "NombreProv;" + "CiudadProv;" + "ContactoProv;" + "EmailProv");
 
@@ -266,7 +266,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\servicios.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\servicios.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("CodigoServ;" + "NombreServ;" + "DescripcionServ;" + "CategoriaServ;" + "DuracionEstimadaServ" + "PrecioServ;");
 
@@ -306,7 +306,7 @@ Tabla Cliente
                 try
                 {
 
-                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\rol.csv", false, Encoding.UTF8))
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\Exportation" + "\\rol.csv", false, Encoding.UTF8))
                     {
                         writer.WriteLine("CodigoRol;" + "Nombre;");
 
