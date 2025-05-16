@@ -69,8 +69,7 @@ namespace Funeraria_Descanso_Eterno
 
                 this.Hide();
                 frm_Menu.ShowDialog();
-                this.Show();
-                this.Close();
+                
 
             }
 
