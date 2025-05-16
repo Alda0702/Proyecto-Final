@@ -1,0 +1,3 @@
+﻿IdEmpleado;Tipo_Documento;CedulaEmpleado;NombreEmpleado;ApellidoPEmpleado;ApellidoMEmpleado;FechaNacimientoEmpleado;SexoEmpleado;RolEmpleado;DepartamentoEmpleado;CiudadEmpleado;DireccionEmpleado;CelularEmpleado;EmailEmpleado;
+1;C.C;2131423;Pedro;Alvarez;Ososa;01/09/2005;Masculino;Vendedor;Antioquia;Bello;Crra 65;32124;pedro@gmail.com
+;

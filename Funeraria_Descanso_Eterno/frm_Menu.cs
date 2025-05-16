@@ -225,11 +225,7 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
-            frm_Loguin frm_loguin = new frm_Loguin();
-            this.Hide();
-            frm_loguin.ShowDialog();
-            this.Show();
-            this.Close();
+            Application.Restart();
         }
 
         private void btn_Exportar_Click(object sender, EventArgs e)
