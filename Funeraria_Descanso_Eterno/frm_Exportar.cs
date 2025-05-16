@@ -163,7 +163,132 @@ Tabla Cliente
 
             }
 
+            if (cmb_Tabla.Text == "Tabla Loguín")
+            {
+                Cls_LoginCRUD cls_LoginCRUD = new Cls_LoginCRUD();
 
+                string login = cls_LoginCRUD.Mostrarlogin1();
+
+
+
+                string loginparts = "";
+
+                if (login.Contains(";"))
+                {
+
+                    foreach (var item in login.Split(';'))
+                    {
+                        loginparts += item + ";";
+
+                    }
+
+                }
+                try
+                {
+
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\login.csv", false, Encoding.UTF8))
+                    {
+                        writer.WriteLine("CodigoLoguin;" + "Usuario;" + "Pass;" + "RolEmpleado;");
+
+                        writer.WriteLine(loginparts);
+                    }
+
+                    MessageBox.Show("Archivo creado");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo crear el archivo");
+                }
+
+
+            }
+
+            if (cmb_Tabla.Text == "Tabla Proveedores")
+            {
+                Cls_ProveedoresCRUD cls_ProveedoresCRUD = new Cls_ProveedoresCRUD();
+
+                string proveedores = cls_ProveedoresCRUD.Mostrarproveedor1();
+
+
+
+                string proveedorparts = "";
+
+                if (proveedores.Contains(";"))
+                {
+
+                    foreach (var item in proveedores.Split(';'))
+                    {
+                        proveedorparts += item + ";";
+
+                    }
+
+                }
+                try
+                {
+
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\proveedores.csv", false, Encoding.UTF8))
+                    {
+                        writer.WriteLine("CodigoProv;" + "NombreProv;" + "CiudadProv;" + "ContactoProv;" + "EmailProv");
+
+                        writer.WriteLine(proveedorparts);
+                    }
+
+                    MessageBox.Show("Archivo creado");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo crear el archivo");
+                }
+
+
+            }
+
+            if (cmb_Tabla.Text == "Tabla Servicio")
+            {
+                Cls_ServiciosCRUD cls_ServiciosCRUD = new Cls_ServiciosCRUD();
+
+                string servicios = cls_ServiciosCRUD.Mostrarservicio1();
+
+
+
+                string serviciosparts = "";
+
+                if (servicios.Contains(";"))
+                {
+
+                    foreach (var item in servicios.Split(';'))
+                    {
+                        serviciosparts += item + ";";
+
+                    }
+
+                }
+                try
+                {
+
+                    using (StreamWriter writer = new StreamWriter(Environment.CurrentDirectory + "\\servicios.csv", false, Encoding.UTF8))
+                    {
+                        writer.WriteLine("CodigoServ;" + "NombreServ;" + "DescripcionServ;" + "CategoriaServ;" + "DuracionEstimadaServ" + "PrecioServ;");
+
+                        writer.WriteLine(serviciosparts);
+                    }
+
+                    MessageBox.Show("Archivo creado");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo crear el archivo");
+                }
+
+
+            }
+
+
+
+        }
+
+        private void cmb_Tabla_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
