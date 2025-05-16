@@ -42,35 +42,35 @@ namespace Funeraria_Descanso_Eterno
 
         public void MostrarFactura(DataGridView dgv, int cod, Label codFact, Label NombreC, Label CedualC, Label UserCC)
         {
-            // llenar los labels
-            //try
-            //{
-            //    conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
-            //    cmd_sqlite = conexion_sqlite.CreateCommand();
+            //llenar los labels
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
 
-            //    cmd_sqlite.CommandText = $"SELECT id, cl.NombreCliente, cl.CedulaCliente, em.NombreEmpleado, em.CedulaEmpleado, fecha from Factura fact\r\njoin tabla_cliente cl on cl.IdCliente = fact.REF_cliente\r\njoin tabla_empleado em on em.IdEmpleado = fact.ref_empleado\r\nwhere id = {cod}";
-            //    cmd_sqlite.ExecuteNonQuery();
+                cmd_sqlite.CommandText = $"SELECT id, cl.NombreCliente, cl.CedulaCliente, em.NombreEmpleado, em.CedulaEmpleado, fecha from Factura fact\r\njoin tabla_cliente cl on cl.IdCliente = fact.REF_cliente\r\njoin tabla_empleado em on em.IdEmpleado = fact.ref_empleado\r\nwhere id = {cod}";
+                cmd_sqlite.ExecuteNonQuery();
 
-            //    datareader_sqlite = cmd_sqlite.ExecuteReader();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
 
-            //    if (datareader_sqlite.Read())
-            //    {
-            //        //codFact.Text = datareader_sqlite["id"].ToString();
-            //        codFact.Text = cod.ToString();
-            //        NombreC.Text = datareader_sqlite["NombreCliente"].ToString();
-            //        CedualC.Text = datareader_sqlite["CedulaCliente"].ToString();
-            //        UserCC.Text = datareader_sqlite["NombreEmpleado"].ToString();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("No se encontró una factura con ese ID.");
-            //    }
+                if (datareader_sqlite.Read())
+                {
+                    //codFact.Text = datareader_sqlite["id"].ToString();
+                    codFact.Text = cod.ToString();
+                    NombreC.Text = datareader_sqlite["NombreCliente"].ToString();
+                    CedualC.Text = datareader_sqlite["CedulaCliente"].ToString();
+                    UserCC.Text = datareader_sqlite["NombreEmpleado"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró una factura con ese ID.");
+                }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al mostrar los datos: " + ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
 
 
             // llenar el datagridview con los porductos
