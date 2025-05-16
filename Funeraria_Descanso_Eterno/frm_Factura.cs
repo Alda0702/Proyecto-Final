@@ -29,7 +29,7 @@ namespace Funeraria_Descanso_Eterno
             // Llenar el DataGridView con los datos de la base de datos
 
             dtg_Factura.Rows.Clear();
-            factura.MostrarFactura(dtg_Factura, idBuscar, lbl_PrintNunFact, lbl_PrintNombreC, lbl_PrintCedulaC, lbl_PrintUserCC);
+            factura.MostrarFactura(dtg_Factura, idBuscar, lbl_PrintNunFact, lbl_PrintNombreC, lbl_PrintCedulaC, lbl_PrintUserCC, lbl_PrintTotal);
             
         }
 

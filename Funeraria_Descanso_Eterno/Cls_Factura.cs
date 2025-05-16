@@ -40,8 +40,9 @@ namespace Funeraria_Descanso_Eterno
         }
 
 
-        public void MostrarFactura(DataGridView dgv, int cod, Label codFact, Label NombreC, Label CedualC, Label UserCC)
+        public void MostrarFactura(DataGridView dgv, int cod, Label codFact, Label NombreC, Label CedualC, Label UserCC, Label total)
         {
+            int totalNeto = 0;
             //llenar los labels
             try
             {
@@ -85,7 +86,9 @@ namespace Funeraria_Descanso_Eterno
 
                 while (datareader_sqlite.Read())
                 {
-                    dgv.Rows.Add(datareader_sqlite["CodigoProd"].ToString(), datareader_sqlite["NombreProd"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioProd"].ToString(), "Prueba");
+                    int Ptotal = Convert.ToInt32(datareader_sqlite["cantidad"]) * Convert.ToInt32(datareader_sqlite["PrecioProd"]);
+                    dgv.Rows.Add(datareader_sqlite["CodigoProd"].ToString(), datareader_sqlite["NombreProd"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioProd"].ToString(), Ptotal.ToString());
+                    totalNeto += Ptotal;
                 }
 
 
@@ -98,6 +101,7 @@ namespace Funeraria_Descanso_Eterno
             // llenar el datagridview con los servicios
             try
             {
+                
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
@@ -107,9 +111,12 @@ namespace Funeraria_Descanso_Eterno
 
                 while (datareader_sqlite.Read())
                 {
-                    dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), "Prueba");
+                    int Ptotal = Convert.ToInt32(datareader_sqlite["cantidad"]) * Convert.ToInt32(datareader_sqlite["PrecioServ"]);
+                    
+                    totalNeto += Ptotal;
+                    dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), Ptotal.ToString());
                 }
-
+                total.Text = totalNeto.ToString();
 
             }
             catch (Exception ex)
