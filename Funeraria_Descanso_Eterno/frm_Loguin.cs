@@ -25,6 +25,7 @@ namespace Funeraria_Descanso_Eterno
 
         private void pic_Cerrar_Click(object sender, EventArgs e)
         {
+            // Cerrar la aplicación
             Application.Exit();
         }
 
