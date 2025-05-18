@@ -326,6 +326,7 @@
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
             this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 5;
+            this.pnl_NuevoCl.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_NuevoCl_Paint);
             // 
             // cmb_Rol
             // 
@@ -335,7 +336,8 @@
             "Vendedor",
             "Logística",
             "RRHH",
-            "Contratador"});
+            "Contratador",
+            "Administrador"});
             this.cmb_Rol.Location = new System.Drawing.Point(512, 64);
             this.cmb_Rol.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Rol.Name = "cmb_Rol";

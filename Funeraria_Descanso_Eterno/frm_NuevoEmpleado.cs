@@ -14,7 +14,7 @@ namespace Funeraria_Descanso_Eterno
     public partial class frm_NuevoEmpleado : Form
     {
         private static frm_NuevoEmpleado instancia;
-        public static string LastEmpleadoID { get; set; }  // Variable estática para almacenar el último ID de empleado
+        public static string LastEmpleadoID { get; set; }  // variable estática para almacenar el último ID de empleado
 
         public frm_NuevoEmpleado()
         {
@@ -61,7 +61,7 @@ namespace Funeraria_Descanso_Eterno
 
             string result = "";
 
-            // Validar campos vacíos
+            // se validan los campos vacíos
             if (string.IsNullOrWhiteSpace(txt_NomE.Text) ||
                 string.IsNullOrWhiteSpace(txt_ApellidoPE.Text) ||
                 string.IsNullOrWhiteSpace(txt_ApellidoME.Text) ||
@@ -79,7 +79,7 @@ namespace Funeraria_Descanso_Eterno
                 return;
             }
 
-            // Validar Rol
+            // aqui se valida cada rol
             if (cmb_Rol.Text == "Vendedor")
             {
                 result = "Vendedor";
@@ -95,6 +95,10 @@ namespace Funeraria_Descanso_Eterno
             else if (cmb_Rol.Text == "Contratador")
             {
                 result = "Contratador";
+            }
+            else if (cmb_Rol.Text == "Administrador")
+            {
+                result = "Administrador";
             }
             else
             {
@@ -131,13 +135,22 @@ namespace Funeraria_Descanso_Eterno
             int idEmpleado = empleadoDB.InsertarEmpleado(nuevoEmpleado);  // Aquí obtienes el ID del empleado recién insertado
 
              frm_NuevoUsario.LastEmpleadoID = result;
-        //    MessageBox.Show("Empleado registrado correctamente.");
+            //    MessageBox.Show("Empleado registrado correctamente.");
 
 
-              frm_NuevoUsario.Instancia.ShowDialog();
-            this.Close();
+
+            this.Hide();
+
+            frm_NuevoUsario nuevoUsuario = frm_NuevoUsario.Instancia;
+            nuevoUsuario.ShowDialog();
+
+
 
         }
 
+        private void pnl_NuevoCl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
