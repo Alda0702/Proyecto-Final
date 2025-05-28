@@ -79,7 +79,7 @@ namespace Funeraria_Descanso_Eterno
                                     Sexo_E = campos[7],
                                     REF_Rol = campos[8],
                                     Depto_E = campos[9],
-                                    Ciudad_E = campos[10],
+                                    Ciudad_E = campos[10],  
                                     Direccion_E = campos[11],
                                     Celular_E = campos[12],
                                     Mail_E = campos[13]

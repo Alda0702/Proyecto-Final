@@ -34,15 +34,15 @@
             this.lbl_BuscarF = new System.Windows.Forms.Label();
             this.txt_BuscarF = new System.Windows.Forms.TextBox();
             this.dtg_Factura = new System.Windows.Forms.DataGridView();
+            this.CodigoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_EliminarF = new System.Windows.Forms.Button();
             this.btn_ActualizarF = new System.Windows.Forms.Button();
             this.btn_NuevoF = new System.Windows.Forms.Button();
             this.pnl_BuscarF = new System.Windows.Forms.Panel();
             this.btn_Imprimir = new System.Windows.Forms.Button();
-            this.CodigoF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Factura)).BeginInit();
             this.pnl_BuscarF.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +114,34 @@
             this.dtg_Factura.Size = new System.Drawing.Size(1059, 372);
             this.dtg_Factura.TabIndex = 16;
             // 
+            // CodigoF
+            // 
+            this.CodigoF.HeaderText = "Codigo Factura";
+            this.CodigoF.Name = "CodigoF";
+            this.CodigoF.ReadOnly = true;
+            this.CodigoF.Width = 130;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 130;
+            // 
+            // Empleado
+            // 
+            this.Empleado.HeaderText = "empleado";
+            this.Empleado.Name = "Empleado";
+            this.Empleado.ReadOnly = true;
+            this.Empleado.Width = 130;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 130;
+            // 
             // btn_EliminarF
             // 
             this.btn_EliminarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -155,6 +183,7 @@
             this.btn_NuevoF.TabIndex = 13;
             this.btn_NuevoF.Text = "+ Nuevo Pago";
             this.btn_NuevoF.UseVisualStyleBackColor = false;
+            this.btn_NuevoF.Click += new System.EventHandler(this.btn_NuevoF_Click);
             // 
             // pnl_BuscarF
             // 
@@ -182,34 +211,6 @@
             this.btn_Imprimir.Text = "Imprimir Factura";
             this.btn_Imprimir.UseVisualStyleBackColor = false;
             this.btn_Imprimir.Click += new System.EventHandler(this.btn_Imprimir_Click);
-            // 
-            // CodigoF
-            // 
-            this.CodigoF.HeaderText = "Codigo Factura";
-            this.CodigoF.Name = "CodigoF";
-            this.CodigoF.ReadOnly = true;
-            this.CodigoF.Width = 130;
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 130;
-            // 
-            // Empleado
-            // 
-            this.Empleado.HeaderText = "empleado";
-            this.Empleado.Name = "Empleado";
-            this.Empleado.ReadOnly = true;
-            this.Empleado.Width = 130;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 130;
             // 
             // frm_Facturacion
             // 

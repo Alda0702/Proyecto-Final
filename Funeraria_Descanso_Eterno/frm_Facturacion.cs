@@ -44,5 +44,13 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Seleccione un proceso para finalizar.");
             }
         }
+
+        private void btn_NuevoF_Click(object sender, EventArgs e)
+        {
+            frm_NuevaVenta frmventa = new frm_NuevaVenta();
+            this.Hide();
+            frmventa.ShowDialog();
+            this.Show();    
+        }
     }
 }

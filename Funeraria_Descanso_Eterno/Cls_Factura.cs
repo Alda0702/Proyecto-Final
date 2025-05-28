@@ -101,7 +101,7 @@ namespace Funeraria_Descanso_Eterno
             // llenar el datagridview con los servicios
             try
             {
-                
+
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
@@ -112,7 +112,7 @@ namespace Funeraria_Descanso_Eterno
                 while (datareader_sqlite.Read())
                 {
                     int Ptotal = Convert.ToInt32(datareader_sqlite["cantidad"]) * Convert.ToInt32(datareader_sqlite["PrecioServ"]);
-                    
+
                     totalNeto += Ptotal;
                     dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), Ptotal.ToString());
                 }
@@ -125,5 +125,85 @@ namespace Funeraria_Descanso_Eterno
             }
         }
 
+        public void cargarProd(int idc, int ide, int idp, int cant)
+        {
+            try
+            {
+
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"insert into datalles_Producto (Ref_Venta, ref_Producto,cantidad values ('{idc}','{idp}','{cant}'))";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+
+        }
+
+
+
+
+        public void cargarservi(int idc, int ide, int idp, int cant)
+        {
+            try
+            {
+
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"insert into datalles_Servicio (Ref_Venta, ref_Servicio,cantidad values ('{idc}','{idp}','{cant}'))";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+
+        }
+
+        public void pfactura(int idc, int ide, string fecha)
+        {
+            try
+            {
+
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"insert into Factura (REF_cliente, ref_empleado ,fecha values ('{idc}','{ide}','{fecha}'))";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+        }
+
+        public void ultima()
+        {
+            try
+            {
+
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"select MAX(id) from Factura ";
+                cmd_sqlite.ExecuteNonQuery();
+                datareader_sqlite = cmd_sqlite.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+            }
+        }
     }
 }
