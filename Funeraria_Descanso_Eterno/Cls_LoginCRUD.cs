@@ -121,5 +121,27 @@ namespace Funeraria_Descanso_Eterno
             return resultado.ToString();
         }
 
+        public void InsertarLogin(string usuario, string contraseña, string rol)
+        {
+            try
+            {
+                using (var conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion())
+                using (var cmd_sqlite = conexion_sqlite.CreateCommand())
+                {
+                    cmd_sqlite.CommandText = "INSERT INTO tabla_loguin (Usuario, Pass, RolEmpleado) VALUES (@usuario, @pass, @rol)";
+
+                    cmd_sqlite.Parameters.Add(new Finisar.SQLite.SQLiteParameter("@usuario", System.Data.DbType.String) { Value = usuario });
+                    cmd_sqlite.Parameters.Add(new Finisar.SQLite.SQLiteParameter("@pass", System.Data.DbType.String) { Value = contraseña });
+                    cmd_sqlite.Parameters.Add(new Finisar.SQLite.SQLiteParameter("@rol", System.Data.DbType.String) { Value = rol });
+
+                    cmd_sqlite.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar login: " + ex.Message);
+            }
+        }
+
     }
 }

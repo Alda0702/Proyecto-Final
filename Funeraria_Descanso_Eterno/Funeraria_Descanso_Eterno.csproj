@@ -116,6 +116,12 @@
     <Compile Include="frm_Facturacion.Designer.cs">
       <DependentUpon>frm_Facturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Importar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Importar.Designer.cs">
+      <DependentUpon>frm_Importar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Facturacion.resx">
       <DependentUpon>frm_Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Importar.resx">
+      <DependentUpon>frm_Importar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>

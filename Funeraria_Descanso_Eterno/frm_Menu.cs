@@ -235,6 +235,15 @@ namespace Funeraria_Descanso_Eterno
             frm_Exportar.ShowDialog();
             this.Show();
         }
+
+        private void btn_Importar_Click(object sender, EventArgs e)
+        {
+            frm_Importar frm_Importar = new frm_Importar();
+            this.Hide();
+            frm_Importar.ShowDialog();
+            this.Show();
+
+        }
     }
 
 }

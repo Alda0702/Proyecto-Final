@@ -155,6 +155,7 @@
             this.btn_Importar.TabIndex = 9;
             this.btn_Importar.Text = "Importar";
             this.btn_Importar.UseVisualStyleBackColor = false;
+            this.btn_Importar.Click += new System.EventHandler(this.btn_Importar_Click);
             // 
             // btn_Cerrar
             // 
