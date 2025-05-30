@@ -31,6 +31,7 @@ namespace Funeraria_Descanso_Eterno
 
             dtg_Factura.Rows.Clear();
             factura.MostrarFactura(dtg_Factura, idBuscar, lbl_PrintNunFact, lbl_PrintNombreC, lbl_PrintCedulaC, lbl_PrintUserCC, lbl_PrintTotal);
+
             
         }
 
@@ -74,6 +75,11 @@ namespace Funeraria_Descanso_Eterno
         private void frm_Factura_Load(object sender, EventArgs e)
         {
             llenarGrid();
+        }
+
+        private void dtg_Factura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

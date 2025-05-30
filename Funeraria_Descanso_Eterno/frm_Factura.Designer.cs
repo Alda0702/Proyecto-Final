@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Fondo = new System.Windows.Forms.Panel();
             this.dtg_Factura = new System.Windows.Forms.DataGridView();
             this.Dod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,9 +99,10 @@
             this.pnl_Fondo.Controls.Add(this.pnl_3);
             this.pnl_Fondo.Controls.Add(this.pnl_2);
             this.pnl_Fondo.Controls.Add(this.pnl_1);
-            this.pnl_Fondo.Location = new System.Drawing.Point(33, 44);
+            this.pnl_Fondo.Location = new System.Drawing.Point(44, 54);
+            this.pnl_Fondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Fondo.Name = "pnl_Fondo";
-            this.pnl_Fondo.Size = new System.Drawing.Size(484, 459);
+            this.pnl_Fondo.Size = new System.Drawing.Size(645, 565);
             this.pnl_Fondo.TabIndex = 12;
             // 
             // dtg_Factura
@@ -110,14 +111,14 @@
             this.dtg_Factura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_Factura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtg_Factura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_Factura.ColumnHeadersHeight = 20;
             this.dtg_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dod,
@@ -125,35 +126,39 @@
             this.Cantidad,
             this.Precio,
             this.ValorT});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_Factura.EnableHeadersVisualStyles = false;
-            this.dtg_Factura.Location = new System.Drawing.Point(22, 277);
+            this.dtg_Factura.Location = new System.Drawing.Point(29, 341);
+            this.dtg_Factura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_Factura.Name = "dtg_Factura";
             this.dtg_Factura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_Factura.RowHeadersVisible = false;
+            this.dtg_Factura.RowHeadersWidth = 51;
             this.dtg_Factura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Factura.Size = new System.Drawing.Size(425, 147);
+            this.dtg_Factura.Size = new System.Drawing.Size(567, 181);
             this.dtg_Factura.TabIndex = 13;
+            this.dtg_Factura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Factura_CellContentClick);
             // 
             // Dod
             // 
             this.Dod.HeaderText = "Codigo";
+            this.Dod.MinimumWidth = 6;
             this.Dod.Name = "Dod";
             this.Dod.ReadOnly = true;
             this.Dod.Width = 50;
@@ -161,12 +166,15 @@
             // Nomb
             // 
             this.Nomb.HeaderText = "Nombre";
+            this.Nomb.MinimumWidth = 6;
             this.Nomb.Name = "Nomb";
             this.Nomb.ReadOnly = true;
+            this.Nomb.Width = 125;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 70;
@@ -174,21 +182,26 @@
             // Precio
             // 
             this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
             // 
             // ValorT
             // 
             this.ValorT.HeaderText = "Valor Total";
+            this.ValorT.MinimumWidth = 6;
             this.ValorT.Name = "ValorT";
             this.ValorT.ReadOnly = true;
+            this.ValorT.Width = 125;
             // 
             // pic_Logo
             // 
             this.pic_Logo.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.WhatsApp_Image_2025_04_26_at_7_46_00_PM__2_;
-            this.pic_Logo.Location = new System.Drawing.Point(39, 15);
+            this.pic_Logo.Location = new System.Drawing.Point(52, 18);
+            this.pic_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Logo.Name = "pic_Logo";
-            this.pic_Logo.Size = new System.Drawing.Size(117, 63);
+            this.pic_Logo.Size = new System.Drawing.Size(156, 78);
             this.pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Logo.TabIndex = 26;
             this.pic_Logo.TabStop = false;
@@ -198,10 +211,9 @@
             this.lbl_PrintTotal.AutoSize = true;
             this.lbl_PrintTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PrintTotal.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_PrintTotal.Location = new System.Drawing.Point(291, 426);
-            this.lbl_PrintTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintTotal.Location = new System.Drawing.Point(388, 524);
             this.lbl_PrintTotal.Name = "lbl_PrintTotal";
-            this.lbl_PrintTotal.Size = new System.Drawing.Size(154, 24);
+            this.lbl_PrintTotal.Size = new System.Drawing.Size(181, 29);
             this.lbl_PrintTotal.TabIndex = 25;
             this.lbl_PrintTotal.Text = "........................";
             // 
@@ -210,10 +222,9 @@
             this.lbl_Total.AutoSize = true;
             this.lbl_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Total.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Total.Location = new System.Drawing.Point(147, 426);
-            this.lbl_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Total.Location = new System.Drawing.Point(196, 524);
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(138, 24);
+            this.lbl_Total.Size = new System.Drawing.Size(175, 29);
             this.lbl_Total.TabIndex = 24;
             this.lbl_Total.Text = "Total a pagar:";
             // 
@@ -221,10 +232,9 @@
             // 
             this.lbl_City.AutoSize = true;
             this.lbl_City.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_City.Location = new System.Drawing.Point(36, 119);
-            this.lbl_City.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_City.Location = new System.Drawing.Point(48, 146);
             this.lbl_City.Name = "lbl_City";
-            this.lbl_City.Size = new System.Drawing.Size(218, 13);
+            this.lbl_City.Size = new System.Drawing.Size(275, 16);
             this.lbl_City.TabIndex = 23;
             this.lbl_City.Text = "Ciudad: Medellín City (Soy delverde soy feliz)";
             // 
@@ -232,10 +242,9 @@
             // 
             this.lbl_telefono.AutoSize = true;
             this.lbl_telefono.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_telefono.Location = new System.Drawing.Point(36, 132);
-            this.lbl_telefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_telefono.Location = new System.Drawing.Point(48, 162);
             this.lbl_telefono.Name = "lbl_telefono";
-            this.lbl_telefono.Size = new System.Drawing.Size(111, 13);
+            this.lbl_telefono.Size = new System.Drawing.Size(131, 16);
             this.lbl_telefono.TabIndex = 22;
             this.lbl_telefono.Text = "teléfono: 3256987549";
             // 
@@ -243,10 +252,9 @@
             // 
             this.lbl_Funera.AutoSize = true;
             this.lbl_Funera.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Funera.Location = new System.Drawing.Point(36, 81);
-            this.lbl_Funera.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Funera.Location = new System.Drawing.Point(48, 100);
             this.lbl_Funera.Name = "lbl_Funera";
-            this.lbl_Funera.Size = new System.Drawing.Size(120, 13);
+            this.lbl_Funera.Size = new System.Drawing.Size(149, 16);
             this.lbl_Funera.TabIndex = 20;
             this.lbl_Funera.Text = "Funeraria Luz de Ocaso";
             // 
@@ -254,10 +262,9 @@
             // 
             this.lbl_Nit.AutoSize = true;
             this.lbl_Nit.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Nit.Location = new System.Drawing.Point(36, 94);
-            this.lbl_Nit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Nit.Location = new System.Drawing.Point(48, 116);
             this.lbl_Nit.Name = "lbl_Nit";
-            this.lbl_Nit.Size = new System.Drawing.Size(83, 13);
+            this.lbl_Nit.Size = new System.Drawing.Size(96, 16);
             this.lbl_Nit.TabIndex = 17;
             this.lbl_Nit.Text = "Nit. 1255555-00";
             // 
@@ -265,10 +272,9 @@
             // 
             this.lbl_Direccion.AutoSize = true;
             this.lbl_Direccion.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Direccion.Location = new System.Drawing.Point(36, 106);
-            this.lbl_Direccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Direccion.Location = new System.Drawing.Point(48, 130);
             this.lbl_Direccion.Name = "lbl_Direccion";
-            this.lbl_Direccion.Size = new System.Drawing.Size(144, 13);
+            this.lbl_Direccion.Size = new System.Drawing.Size(174, 16);
             this.lbl_Direccion.TabIndex = 21;
             this.lbl_Direccion.Text = "Dirección: Carrera 50 #89-55";
             // 
@@ -277,19 +283,19 @@
             this.pnl_4.BackColor = System.Drawing.SystemColors.GrayText;
             this.pnl_4.Controls.Add(this.lbl_Dian);
             this.pnl_4.Controls.Add(this.lbl_Resolucion);
-            this.pnl_4.Location = new System.Drawing.Point(24, 150);
+            this.pnl_4.Location = new System.Drawing.Point(32, 185);
+            this.pnl_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_4.Name = "pnl_4";
-            this.pnl_4.Size = new System.Drawing.Size(422, 20);
+            this.pnl_4.Size = new System.Drawing.Size(563, 25);
             this.pnl_4.TabIndex = 15;
             // 
             // lbl_Dian
             // 
             this.lbl_Dian.AutoSize = true;
             this.lbl_Dian.ForeColor = System.Drawing.Color.White;
-            this.lbl_Dian.Location = new System.Drawing.Point(189, 3);
-            this.lbl_Dian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Dian.Location = new System.Drawing.Point(252, 4);
             this.lbl_Dian.Name = "lbl_Dian";
-            this.lbl_Dian.Size = new System.Drawing.Size(91, 13);
+            this.lbl_Dian.Size = new System.Drawing.Size(106, 16);
             this.lbl_Dian.TabIndex = 14;
             this.lbl_Dian.Text = "125-458-85-85.00";
             // 
@@ -297,10 +303,9 @@
             // 
             this.lbl_Resolucion.AutoSize = true;
             this.lbl_Resolucion.ForeColor = System.Drawing.Color.White;
-            this.lbl_Resolucion.Location = new System.Drawing.Point(1, 3);
-            this.lbl_Resolucion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Resolucion.Location = new System.Drawing.Point(1, 4);
             this.lbl_Resolucion.Name = "lbl_Resolucion";
-            this.lbl_Resolucion.Size = new System.Drawing.Size(184, 13);
+            this.lbl_Resolucion.Size = new System.Drawing.Size(228, 16);
             this.lbl_Resolucion.TabIndex = 16;
             this.lbl_Resolucion.Text = "Resolución de autorización DIAN No.";
             // 
@@ -316,9 +321,10 @@
             this.pnl_3.Controls.Add(this.label5);
             this.pnl_3.Controls.Add(this.lbl_Vendidopor);
             this.pnl_3.Controls.Add(this.lbl_Cedula);
-            this.pnl_3.Location = new System.Drawing.Point(24, 176);
+            this.pnl_3.Location = new System.Drawing.Point(32, 217);
+            this.pnl_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_3.Name = "pnl_3";
-            this.pnl_3.Size = new System.Drawing.Size(423, 95);
+            this.pnl_3.Size = new System.Drawing.Size(564, 117);
             this.pnl_3.TabIndex = 14;
             this.pnl_3.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_3_Paint);
             // 
@@ -326,10 +332,9 @@
             // 
             this.lbl_PrintUserCC.AutoSize = true;
             this.lbl_PrintUserCC.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintUserCC.Location = new System.Drawing.Point(91, 71);
-            this.lbl_PrintUserCC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintUserCC.Location = new System.Drawing.Point(121, 87);
             this.lbl_PrintUserCC.Name = "lbl_PrintUserCC";
-            this.lbl_PrintUserCC.Size = new System.Drawing.Size(41, 13);
+            this.lbl_PrintUserCC.Size = new System.Drawing.Size(51, 16);
             this.lbl_PrintUserCC.TabIndex = 13;
             this.lbl_PrintUserCC.Text = "label13";
             // 
@@ -337,10 +342,9 @@
             // 
             this.lbl_CedulaEmp.AutoSize = true;
             this.lbl_CedulaEmp.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_CedulaEmp.Location = new System.Drawing.Point(12, 68);
-            this.lbl_CedulaEmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_CedulaEmp.Location = new System.Drawing.Point(16, 84);
             this.lbl_CedulaEmp.Name = "lbl_CedulaEmp";
-            this.lbl_CedulaEmp.Size = new System.Drawing.Size(73, 13);
+            this.lbl_CedulaEmp.Size = new System.Drawing.Size(93, 16);
             this.lbl_CedulaEmp.TabIndex = 11;
             this.lbl_CedulaEmp.Text = "CC: empleado";
             // 
@@ -348,10 +352,9 @@
             // 
             this.lbl_Vendidoa.AutoSize = true;
             this.lbl_Vendidoa.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Vendidoa.Location = new System.Drawing.Point(12, 6);
-            this.lbl_Vendidoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Vendidoa.Location = new System.Drawing.Point(16, 7);
             this.lbl_Vendidoa.Name = "lbl_Vendidoa";
-            this.lbl_Vendidoa.Size = new System.Drawing.Size(58, 13);
+            this.lbl_Vendidoa.Size = new System.Drawing.Size(72, 16);
             this.lbl_Vendidoa.TabIndex = 8;
             this.lbl_Vendidoa.Text = "Vendido a:";
             // 
@@ -359,10 +362,9 @@
             // 
             this.lbl_PrintNombreC.AutoSize = true;
             this.lbl_PrintNombreC.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintNombreC.Location = new System.Drawing.Point(91, 19);
-            this.lbl_PrintNombreC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintNombreC.Location = new System.Drawing.Point(121, 23);
             this.lbl_PrintNombreC.Name = "lbl_PrintNombreC";
-            this.lbl_PrintNombreC.Size = new System.Drawing.Size(35, 13);
+            this.lbl_PrintNombreC.Size = new System.Drawing.Size(44, 16);
             this.lbl_PrintNombreC.TabIndex = 5;
             this.lbl_PrintNombreC.Text = "label6";
             // 
@@ -370,10 +372,9 @@
             // 
             this.lbl_PrintCedulaC.AutoSize = true;
             this.lbl_PrintCedulaC.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_PrintCedulaC.Location = new System.Drawing.Point(91, 32);
-            this.lbl_PrintCedulaC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintCedulaC.Location = new System.Drawing.Point(121, 39);
             this.lbl_PrintCedulaC.Name = "lbl_PrintCedulaC";
-            this.lbl_PrintCedulaC.Size = new System.Drawing.Size(35, 13);
+            this.lbl_PrintCedulaC.Size = new System.Drawing.Size(44, 16);
             this.lbl_PrintCedulaC.TabIndex = 2;
             this.lbl_PrintCedulaC.Text = "label3";
             // 
@@ -381,10 +382,9 @@
             // 
             this.lbl_Nombre.AutoSize = true;
             this.lbl_Nombre.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Nombre.Location = new System.Drawing.Point(12, 19);
-            this.lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Nombre.Location = new System.Drawing.Point(16, 23);
             this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(47, 13);
+            this.lbl_Nombre.Size = new System.Drawing.Size(59, 16);
             this.lbl_Nombre.TabIndex = 3;
             this.lbl_Nombre.Text = "Nombre:";
             // 
@@ -392,20 +392,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(104, 84);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(139, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.Size = new System.Drawing.Size(0, 16);
             this.label5.TabIndex = 4;
             // 
             // lbl_Vendidopor
             // 
             this.lbl_Vendidopor.AutoSize = true;
             this.lbl_Vendidopor.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Vendidopor.Location = new System.Drawing.Point(12, 55);
-            this.lbl_Vendidopor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Vendidopor.Location = new System.Drawing.Point(16, 68);
             this.lbl_Vendidopor.Name = "lbl_Vendidopor";
-            this.lbl_Vendidopor.Size = new System.Drawing.Size(67, 13);
+            this.lbl_Vendidopor.Size = new System.Drawing.Size(84, 16);
             this.lbl_Vendidopor.TabIndex = 10;
             this.lbl_Vendidopor.Text = "Vendido por:";
             // 
@@ -413,10 +411,9 @@
             // 
             this.lbl_Cedula.AutoSize = true;
             this.lbl_Cedula.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Cedula.Location = new System.Drawing.Point(12, 32);
-            this.lbl_Cedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Cedula.Location = new System.Drawing.Point(16, 39);
             this.lbl_Cedula.Name = "lbl_Cedula";
-            this.lbl_Cedula.Size = new System.Drawing.Size(43, 13);
+            this.lbl_Cedula.Size = new System.Drawing.Size(53, 16);
             this.lbl_Cedula.TabIndex = 9;
             this.lbl_Cedula.Text = "Cedula:";
             // 
@@ -425,9 +422,10 @@
             this.pnl_2.BackColor = System.Drawing.Color.White;
             this.pnl_2.Controls.Add(this.lbl_PrintNunFact);
             this.pnl_2.Controls.Add(this.lbl_No);
-            this.pnl_2.Location = new System.Drawing.Point(265, 46);
+            this.pnl_2.Location = new System.Drawing.Point(353, 57);
+            this.pnl_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_2.Name = "pnl_2";
-            this.pnl_2.Size = new System.Drawing.Size(181, 32);
+            this.pnl_2.Size = new System.Drawing.Size(241, 39);
             this.pnl_2.TabIndex = 13;
             // 
             // lbl_PrintNunFact
@@ -435,10 +433,9 @@
             this.lbl_PrintNunFact.AutoSize = true;
             this.lbl_PrintNunFact.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PrintNunFact.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_PrintNunFact.Location = new System.Drawing.Point(54, 4);
-            this.lbl_PrintNunFact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrintNunFact.Location = new System.Drawing.Point(72, 5);
             this.lbl_PrintNunFact.Name = "lbl_PrintNunFact";
-            this.lbl_PrintNunFact.Size = new System.Drawing.Size(17, 24);
+            this.lbl_PrintNunFact.Size = new System.Drawing.Size(22, 29);
             this.lbl_PrintNunFact.TabIndex = 19;
             this.lbl_PrintNunFact.Text = "-";
             // 
@@ -447,10 +444,9 @@
             this.lbl_No.AutoSize = true;
             this.lbl_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_No.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_No.Location = new System.Drawing.Point(7, 4);
-            this.lbl_No.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_No.Location = new System.Drawing.Point(9, 5);
             this.lbl_No.Name = "lbl_No";
-            this.lbl_No.Size = new System.Drawing.Size(43, 24);
+            this.lbl_No.Size = new System.Drawing.Size(54, 29);
             this.lbl_No.TabIndex = 18;
             this.lbl_No.Text = "No.";
             // 
@@ -458,9 +454,10 @@
             // 
             this.pnl_1.BackColor = System.Drawing.SystemColors.GrayText;
             this.pnl_1.Controls.Add(this.lbl_Fact);
-            this.pnl_1.Location = new System.Drawing.Point(265, 15);
+            this.pnl_1.Location = new System.Drawing.Point(353, 18);
+            this.pnl_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_1.Name = "pnl_1";
-            this.pnl_1.Size = new System.Drawing.Size(181, 32);
+            this.pnl_1.Size = new System.Drawing.Size(241, 39);
             this.pnl_1.TabIndex = 12;
             // 
             // lbl_Fact
@@ -468,10 +465,9 @@
             this.lbl_Fact.AutoSize = true;
             this.lbl_Fact.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fact.ForeColor = System.Drawing.Color.White;
-            this.lbl_Fact.Location = new System.Drawing.Point(8, 4);
-            this.lbl_Fact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Fact.Location = new System.Drawing.Point(11, 5);
             this.lbl_Fact.Name = "lbl_Fact";
-            this.lbl_Fact.Size = new System.Drawing.Size(166, 24);
+            this.lbl_Fact.Size = new System.Drawing.Size(206, 29);
             this.lbl_Fact.TabIndex = 17;
             this.lbl_Fact.Text = "Factura de venta";
             // 
@@ -484,8 +480,9 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(550, 38);
+            this.pnl_Titulo.Size = new System.Drawing.Size(733, 47);
             this.pnl_Titulo.TabIndex = 13;
             // 
             // pic_Restaurar
@@ -493,9 +490,10 @@
             this.pic_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
-            this.pic_Restaurar.Location = new System.Drawing.Point(482, 7);
+            this.pic_Restaurar.Location = new System.Drawing.Point(643, 9);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Restaurar.Name = "pic_Restaurar";
-            this.pic_Restaurar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Restaurar.TabIndex = 2;
             this.pic_Restaurar.TabStop = false;
@@ -506,9 +504,10 @@
             this.pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
-            this.pic_Minimizar.Location = new System.Drawing.Point(441, 7);
+            this.pic_Minimizar.Location = new System.Drawing.Point(588, 9);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Minimizar.Name = "pic_Minimizar";
-            this.pic_Minimizar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Minimizar.TabIndex = 2;
             this.pic_Minimizar.TabStop = false;
@@ -518,9 +517,10 @@
             this.pic_Redimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
-            this.pic_Redimencionar.Location = new System.Drawing.Point(482, 7);
+            this.pic_Redimencionar.Location = new System.Drawing.Point(643, 9);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
-            this.pic_Redimencionar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Redimencionar.TabIndex = 1;
             this.pic_Redimencionar.TabStop = false;
@@ -530,9 +530,10 @@
             this.pic_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
-            this.pic_Cerrar.Location = new System.Drawing.Point(522, 7);
+            this.pic_Cerrar.Location = new System.Drawing.Point(696, 9);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Cerrar.Name = "pic_Cerrar";
-            this.pic_Cerrar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Cerrar.TabIndex = 0;
             this.pic_Cerrar.TabStop = false;
@@ -545,9 +546,10 @@
             this.btn_ImprimirFac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ImprimirFac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ImprimirFac.ForeColor = System.Drawing.Color.White;
-            this.btn_ImprimirFac.Location = new System.Drawing.Point(186, 516);
+            this.btn_ImprimirFac.Location = new System.Drawing.Point(248, 635);
+            this.btn_ImprimirFac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ImprimirFac.Name = "btn_ImprimirFac";
-            this.btn_ImprimirFac.Size = new System.Drawing.Size(164, 42);
+            this.btn_ImprimirFac.Size = new System.Drawing.Size(219, 52);
             this.btn_ImprimirFac.TabIndex = 14;
             this.btn_ImprimirFac.Text = "Imprimir";
             this.btn_ImprimirFac.UseVisualStyleBackColor = false;
@@ -555,13 +557,14 @@
             // 
             // frm_Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 570);
+            this.ClientSize = new System.Drawing.Size(733, 702);
             this.Controls.Add(this.btn_ImprimirFac);
             this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.pnl_Fondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frm_Factura";

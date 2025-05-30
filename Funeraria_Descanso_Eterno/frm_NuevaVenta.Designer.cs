@@ -71,9 +71,10 @@
             // tx_Fecha
             // 
             this.tx_Fecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_Fecha.Location = new System.Drawing.Point(239, 187);
+            this.tx_Fecha.Location = new System.Drawing.Point(319, 230);
+            this.tx_Fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tx_Fecha.Name = "tx_Fecha";
-            this.tx_Fecha.Size = new System.Drawing.Size(331, 29);
+            this.tx_Fecha.Size = new System.Drawing.Size(440, 34);
             this.tx_Fecha.TabIndex = 35;
             // 
             // btn_Cancelar
@@ -83,9 +84,10 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(339, 509);
+            this.btn_Cancelar.Location = new System.Drawing.Point(452, 626);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(94, 42);
+            this.btn_Cancelar.Size = new System.Drawing.Size(125, 52);
             this.btn_Cancelar.TabIndex = 34;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
@@ -98,9 +100,10 @@
             this.btn_Confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_Confirmar.Location = new System.Drawing.Point(169, 509);
+            this.btn_Confirmar.Location = new System.Drawing.Point(225, 626);
+            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Confirmar.Name = "btn_Confirmar";
-            this.btn_Confirmar.Size = new System.Drawing.Size(164, 42);
+            this.btn_Confirmar.Size = new System.Drawing.Size(219, 52);
             this.btn_Confirmar.TabIndex = 4;
             this.btn_Confirmar.Text = "Reistrar Venta";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
@@ -109,18 +112,20 @@
             // txt_IdE
             // 
             this.txt_IdE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdE.Location = new System.Drawing.Point(239, 152);
+            this.txt_IdE.Location = new System.Drawing.Point(319, 187);
+            this.txt_IdE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_IdE.Name = "txt_IdE";
-            this.txt_IdE.Size = new System.Drawing.Size(331, 29);
+            this.txt_IdE.Size = new System.Drawing.Size(440, 34);
             this.txt_IdE.TabIndex = 14;
             // 
             // lbl_IdE
             // 
             this.lbl_IdE.AutoSize = true;
             this.lbl_IdE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_IdE.Location = new System.Drawing.Point(45, 152);
+            this.lbl_IdE.Location = new System.Drawing.Point(60, 187);
+            this.lbl_IdE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_IdE.Name = "lbl_IdE";
-            this.lbl_IdE.Size = new System.Drawing.Size(96, 21);
+            this.lbl_IdE.Size = new System.Drawing.Size(122, 28);
             this.lbl_IdE.TabIndex = 9;
             this.lbl_IdE.Text = "Id Empleado";
             // 
@@ -128,9 +133,10 @@
             // 
             this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fecha.Location = new System.Drawing.Point(45, 187);
+            this.lbl_Fecha.Location = new System.Drawing.Point(60, 230);
+            this.lbl_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Fecha.Name = "lbl_Fecha";
-            this.lbl_Fecha.Size = new System.Drawing.Size(50, 21);
+            this.lbl_Fecha.Size = new System.Drawing.Size(62, 28);
             this.lbl_Fecha.TabIndex = 8;
             this.lbl_Fecha.Text = "Fecha";
             // 
@@ -138,27 +144,30 @@
             // 
             this.lbl_IdC.AutoSize = true;
             this.lbl_IdC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_IdC.Location = new System.Drawing.Point(45, 117);
+            this.lbl_IdC.Location = new System.Drawing.Point(60, 144);
+            this.lbl_IdC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_IdC.Name = "lbl_IdC";
-            this.lbl_IdC.Size = new System.Drawing.Size(75, 21);
+            this.lbl_IdC.Size = new System.Drawing.Size(94, 28);
             this.lbl_IdC.TabIndex = 7;
             this.lbl_IdC.Text = "Id Cliente";
             // 
             // tx_IdC
             // 
             this.tx_IdC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tx_IdC.Location = new System.Drawing.Point(239, 117);
+            this.tx_IdC.Location = new System.Drawing.Point(319, 144);
+            this.tx_IdC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tx_IdC.Name = "tx_IdC";
-            this.tx_IdC.Size = new System.Drawing.Size(331, 29);
+            this.tx_IdC.Size = new System.Drawing.Size(440, 34);
             this.tx_IdC.TabIndex = 6;
             // 
             // lbl_Inf
             // 
             this.lbl_Inf.AutoSize = true;
             this.lbl_Inf.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Inf.Location = new System.Drawing.Point(44, 63);
+            this.lbl_Inf.Location = new System.Drawing.Point(59, 78);
+            this.lbl_Inf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Inf.Name = "lbl_Inf";
-            this.lbl_Inf.Size = new System.Drawing.Size(235, 30);
+            this.lbl_Inf.Size = new System.Drawing.Size(298, 37);
             this.lbl_Inf.TabIndex = 4;
             this.lbl_Inf.Text = "Información de la Venta";
             // 
@@ -169,9 +178,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Regis.AutoSize = true;
             this.lbl_Regis.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Regis.Location = new System.Drawing.Point(182, 7);
+            this.lbl_Regis.Location = new System.Drawing.Point(243, 9);
+            this.lbl_Regis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Regis.Name = "lbl_Regis";
-            this.lbl_Regis.Size = new System.Drawing.Size(214, 37);
+            this.lbl_Regis.Size = new System.Drawing.Size(264, 46);
             this.lbl_Regis.TabIndex = 3;
             this.lbl_Regis.Text = "Registrar Venta";
             // 
@@ -180,9 +190,10 @@
             this.pic_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
-            this.pic_Restaurar.Location = new System.Drawing.Point(1032, 7);
+            this.pic_Restaurar.Location = new System.Drawing.Point(1376, 9);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Restaurar.Name = "pic_Restaurar";
-            this.pic_Restaurar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Restaurar.TabIndex = 2;
             this.pic_Restaurar.TabStop = false;
@@ -193,9 +204,10 @@
             this.pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
-            this.pic_Minimizar.Location = new System.Drawing.Point(991, 7);
+            this.pic_Minimizar.Location = new System.Drawing.Point(1321, 9);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Minimizar.Name = "pic_Minimizar";
-            this.pic_Minimizar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Minimizar.TabIndex = 2;
             this.pic_Minimizar.TabStop = false;
@@ -205,9 +217,10 @@
             this.pic_Redimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
-            this.pic_Redimencionar.Location = new System.Drawing.Point(1032, 7);
+            this.pic_Redimencionar.Location = new System.Drawing.Point(1376, 9);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
-            this.pic_Redimencionar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Redimencionar.TabIndex = 1;
             this.pic_Redimencionar.TabStop = false;
@@ -217,9 +230,10 @@
             this.pic_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
-            this.pic_Cerrar.Location = new System.Drawing.Point(1072, 7);
+            this.pic_Cerrar.Location = new System.Drawing.Point(1429, 9);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Cerrar.Name = "pic_Cerrar";
-            this.pic_Cerrar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Cerrar.TabIndex = 0;
             this.pic_Cerrar.TabStop = false;
@@ -234,8 +248,9 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(1100, 38);
+            this.pnl_Titulo.Size = new System.Drawing.Size(1467, 47);
             this.pnl_Titulo.TabIndex = 8;
             // 
             // pnl_NuevoCl
@@ -258,9 +273,10 @@
             this.pnl_NuevoCl.Controls.Add(this.tx_IdC);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Inf);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Regis);
-            this.pnl_NuevoCl.Location = new System.Drawing.Point(246, 55);
+            this.pnl_NuevoCl.Location = new System.Drawing.Point(328, 68);
+            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
-            this.pnl_NuevoCl.Size = new System.Drawing.Size(613, 556);
+            this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 9;
             // 
             // dtg_servi
@@ -293,7 +309,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_servi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_servi.EnableHeadersVisualStyles = false;
-            this.dtg_servi.Location = new System.Drawing.Point(315, 282);
+            this.dtg_servi.Location = new System.Drawing.Point(420, 347);
+            this.dtg_servi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_servi.Name = "dtg_servi";
             this.dtg_servi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -305,21 +322,25 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_servi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_servi.RowHeadersVisible = false;
+            this.dtg_servi.RowHeadersWidth = 51;
             this.dtg_servi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_servi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_servi.Size = new System.Drawing.Size(255, 146);
+            this.dtg_servi.Size = new System.Drawing.Size(340, 180);
             this.dtg_servi.TabIndex = 40;
+            this.dtg_servi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_servi_CellContentClick);
             // 
             // servi
             // 
             this.servi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.servi.HeaderText = "ID Servicio";
+            this.servi.MinimumWidth = 6;
             this.servi.Name = "servi";
             this.servi.Width = 130;
             // 
             // canti
             // 
             this.canti.HeaderText = "Cantidad";
+            this.canti.MinimumWidth = 6;
             this.canti.Name = "canti";
             this.canti.Width = 130;
             // 
@@ -327,9 +348,10 @@
             // 
             this.lbl_servis.AutoSize = true;
             this.lbl_servis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_servis.Location = new System.Drawing.Point(405, 252);
+            this.lbl_servis.Location = new System.Drawing.Point(540, 310);
+            this.lbl_servis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_servis.Name = "lbl_servis";
-            this.lbl_servis.Size = new System.Drawing.Size(69, 27);
+            this.lbl_servis.Size = new System.Drawing.Size(86, 33);
             this.lbl_servis.TabIndex = 39;
             this.lbl_servis.Text = "Servicios";
             this.lbl_servis.UseCompatibleTextRendering = true;
@@ -338,9 +360,10 @@
             // 
             this.lbl_Prods.AutoSize = true;
             this.lbl_Prods.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Prods.Location = new System.Drawing.Point(125, 255);
+            this.lbl_Prods.Location = new System.Drawing.Point(167, 314);
+            this.lbl_Prods.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Prods.Name = "lbl_Prods";
-            this.lbl_Prods.Size = new System.Drawing.Size(79, 27);
+            this.lbl_Prods.Size = new System.Drawing.Size(99, 33);
             this.lbl_Prods.TabIndex = 38;
             this.lbl_Prods.Text = "Productos";
             this.lbl_Prods.UseCompatibleTextRendering = true;
@@ -375,7 +398,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_prod.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_prod.EnableHeadersVisualStyles = false;
-            this.dtg_prod.Location = new System.Drawing.Point(24, 285);
+            this.dtg_prod.Location = new System.Drawing.Point(32, 351);
+            this.dtg_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_prod.Name = "dtg_prod";
             this.dtg_prod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -387,9 +411,10 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_prod.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_prod.RowHeadersVisible = false;
+            this.dtg_prod.RowHeadersWidth = 51;
             this.dtg_prod.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_prod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_prod.Size = new System.Drawing.Size(255, 146);
+            this.dtg_prod.Size = new System.Drawing.Size(340, 180);
             this.dtg_prod.TabIndex = 36;
             this.dtg_prod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Factura_CellContentClick);
             // 
@@ -397,23 +422,26 @@
             // 
             this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.IdProducto.HeaderText = "ID Producto";
+            this.IdProducto.MinimumWidth = 6;
             this.IdProducto.Name = "IdProducto";
             this.IdProducto.Width = 130;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.Width = 130;
             // 
             // frm_NuevaVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1467, 753);
             this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.pnl_NuevoCl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_NuevaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NuevaVenta";

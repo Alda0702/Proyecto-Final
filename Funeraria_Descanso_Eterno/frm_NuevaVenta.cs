@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Funeraria_Descanso_Eterno
 {
@@ -94,11 +95,18 @@ namespace Funeraria_Descanso_Eterno
 
             MessageBox.Show("Venta registrada correctamente.");
             this.Close();
+           
+
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtg_servi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

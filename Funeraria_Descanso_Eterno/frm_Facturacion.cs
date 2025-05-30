@@ -69,5 +69,9 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Seleccione un proceso para finalizar.");
             }
         }
+
+        private void frm_Facturacion_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

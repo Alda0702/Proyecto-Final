@@ -1,6 +1,7 @@
 ﻿using Finisar.SQLite;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,7 @@ namespace Funeraria_Descanso_Eterno
 
                 cmd_sqlite.CommandText = $"SELECT id, cl.NombreCliente, cl.CedulaCliente, em.NombreEmpleado, em.CedulaEmpleado, fecha from Factura fact\r\njoin tabla_cliente cl on cl.IdCliente = fact.REF_cliente\r\njoin tabla_empleado em on em.IdEmpleado = fact.ref_empleado\r\nwhere id = {cod}";
                 cmd_sqlite.ExecuteNonQuery();
+
 
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
 
@@ -115,10 +117,12 @@ namespace Funeraria_Descanso_Eterno
 
                 while (datareader_sqlite.Read())
                 {
-                    int Ptotal = Convert.ToInt32(datareader_sqlite["cantidad"]) * Convert.ToInt32(datareader_sqlite["PrecioServ"]);
+                    int Ctotal = Convert.ToInt32(datareader_sqlite["cantidad"]) * Convert.ToInt32(datareader_sqlite["PrecioServ"]);
 
-                    totalNeto += Ptotal;
-                    dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), Ptotal.ToString());
+                    totalNeto += Ctotal;
+                    
+                    dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), Ctotal.ToString());
+
                 }
                 total.Text = totalNeto.ToString();
                 datareader_sqlite.Close();
@@ -161,6 +165,7 @@ namespace Funeraria_Descanso_Eterno
 
                 cmd_sqlite.CommandText = $"insert into datalles_Servicio (Ref_Venta, ref_Servicio,cantidad) values ('{idventa}','{idservi}','{cant}')";
                 cmd_sqlite.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
@@ -189,17 +194,16 @@ namespace Funeraria_Descanso_Eterno
         public int ultima()
         {
             int facturaId = 0;
+
             try
             {
-
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"select MAX(id) from Factura ";
-                cmd_sqlite.ExecuteNonQuery();
+                cmd_sqlite.CommandText = "SELECT MAX(id) FROM Factura";
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
 
-                if (datareader_sqlite.Read())
+                if (datareader_sqlite.Read() && datareader_sqlite[0] != DBNull.Value)
                 {
                     facturaId = Convert.ToInt32(datareader_sqlite[0]);
                 }
@@ -207,14 +211,23 @@ namespace Funeraria_Descanso_Eterno
                 {
                     MessageBox.Show("No se encontró ninguna factura.");
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al mostrar la ultima factura: " + ex.Message);
+                MessageBox.Show("Error al mostrar la última factura: " + ex.Message);
             }
+            finally
+            {
+                if (datareader_sqlite != null && !datareader_sqlite.IsClosed)
+                    datareader_sqlite.Close();
+
+                if (conexion_sqlite != null && conexion_sqlite.State == ConnectionState.Open)
+                    conexion_sqlite.Close();
+            }
+
             return facturaId;
         }
+
 
         //elinar fact
         public void EliminarFactura(int id)
