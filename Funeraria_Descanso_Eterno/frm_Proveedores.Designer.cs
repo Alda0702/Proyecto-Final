@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_BuscarProv = new System.Windows.Forms.Label();
             this.txt_BuscarProv = new System.Windows.Forms.TextBox();
             this.dtg_Proveedores = new System.Windows.Forms.DataGridView();
@@ -51,20 +51,18 @@
             // 
             this.lbl_BuscarProv.AutoSize = true;
             this.lbl_BuscarProv.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BuscarProv.Location = new System.Drawing.Point(23, 36);
-            this.lbl_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_BuscarProv.Location = new System.Drawing.Point(17, 29);
             this.lbl_BuscarProv.Name = "lbl_BuscarProv";
-            this.lbl_BuscarProv.Size = new System.Drawing.Size(136, 46);
+            this.lbl_BuscarProv.Size = new System.Drawing.Size(109, 37);
             this.lbl_BuscarProv.TabIndex = 2;
             this.lbl_BuscarProv.Text = "Buscar:";
             // 
             // txt_BuscarProv
             // 
             this.txt_BuscarProv.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_BuscarProv.Location = new System.Drawing.Point(176, 36);
-            this.txt_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_BuscarProv.Location = new System.Drawing.Point(132, 29);
             this.txt_BuscarProv.Name = "txt_BuscarProv";
-            this.txt_BuscarProv.Size = new System.Drawing.Size(1183, 39);
+            this.txt_BuscarProv.Size = new System.Drawing.Size(888, 33);
             this.txt_BuscarProv.TabIndex = 0;
             // 
             // dtg_Proveedores
@@ -76,14 +74,14 @@
             this.dtg_Proveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_Proveedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtg_Proveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_Proveedores.ColumnHeadersHeight = 50;
             this.dtg_Proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cod,
@@ -91,32 +89,31 @@
             this.Contacto,
             this.email,
             this.Ciudad});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Proveedores.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Proveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_Proveedores.EnableHeadersVisualStyles = false;
-            this.dtg_Proveedores.Location = new System.Drawing.Point(16, 222);
-            this.dtg_Proveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtg_Proveedores.Location = new System.Drawing.Point(12, 180);
             this.dtg_Proveedores.Name = "dtg_Proveedores";
             this.dtg_Proveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Proveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Proveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_Proveedores.RowHeadersVisible = false;
             this.dtg_Proveedores.RowHeadersWidth = 51;
             this.dtg_Proveedores.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Proveedores.Size = new System.Drawing.Size(1435, 517);
+            this.dtg_Proveedores.Size = new System.Drawing.Size(1076, 420);
             this.dtg_Proveedores.TabIndex = 16;
             // 
             // Cod
@@ -166,10 +163,9 @@
             this.btn_EliminarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarProv.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarProv.Location = new System.Drawing.Point(792, 151);
-            this.btn_EliminarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_EliminarProv.Location = new System.Drawing.Point(594, 123);
             this.btn_EliminarProv.Name = "btn_EliminarProv";
-            this.btn_EliminarProv.Size = new System.Drawing.Size(339, 52);
+            this.btn_EliminarProv.Size = new System.Drawing.Size(254, 42);
             this.btn_EliminarProv.TabIndex = 15;
             this.btn_EliminarProv.Text = "Eliminar Proveedor";
             this.btn_EliminarProv.UseVisualStyleBackColor = false;
@@ -182,10 +178,9 @@
             this.btn_ActualizarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ActualizarProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ActualizarProv.ForeColor = System.Drawing.Color.White;
-            this.btn_ActualizarProv.Location = new System.Drawing.Point(563, 151);
-            this.btn_ActualizarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ActualizarProv.Location = new System.Drawing.Point(422, 123);
             this.btn_ActualizarProv.Name = "btn_ActualizarProv";
-            this.btn_ActualizarProv.Size = new System.Drawing.Size(221, 52);
+            this.btn_ActualizarProv.Size = new System.Drawing.Size(166, 42);
             this.btn_ActualizarProv.TabIndex = 14;
             this.btn_ActualizarProv.Text = "Actualizar Proveedor";
             this.btn_ActualizarProv.UseVisualStyleBackColor = false;
@@ -198,10 +193,9 @@
             this.btn_NuevoProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NuevoProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NuevoProv.ForeColor = System.Drawing.Color.White;
-            this.btn_NuevoProv.Location = new System.Drawing.Point(336, 151);
-            this.btn_NuevoProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_NuevoProv.Location = new System.Drawing.Point(252, 123);
             this.btn_NuevoProv.Name = "btn_NuevoProv";
-            this.btn_NuevoProv.Size = new System.Drawing.Size(219, 52);
+            this.btn_NuevoProv.Size = new System.Drawing.Size(164, 42);
             this.btn_NuevoProv.TabIndex = 13;
             this.btn_NuevoProv.Text = "+ Nuevo Proveedor";
             this.btn_NuevoProv.UseVisualStyleBackColor = false;
@@ -214,24 +208,22 @@
             this.pnl_BuscarProv.BackColor = System.Drawing.Color.White;
             this.pnl_BuscarProv.Controls.Add(this.lbl_BuscarProv);
             this.pnl_BuscarProv.Controls.Add(this.txt_BuscarProv);
-            this.pnl_BuscarProv.Location = new System.Drawing.Point(33, 15);
-            this.pnl_BuscarProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BuscarProv.Location = new System.Drawing.Point(25, 12);
             this.pnl_BuscarProv.Name = "pnl_BuscarProv";
-            this.pnl_BuscarProv.Size = new System.Drawing.Size(1395, 114);
+            this.pnl_BuscarProv.Size = new System.Drawing.Size(1046, 93);
             this.pnl_BuscarProv.TabIndex = 12;
             // 
             // frm_Proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 753);
+            this.ClientSize = new System.Drawing.Size(1040, 612);
             this.Controls.Add(this.dtg_Proveedores);
             this.Controls.Add(this.btn_EliminarProv);
             this.Controls.Add(this.btn_ActualizarProv);
             this.Controls.Add(this.btn_NuevoProv);
             this.Controls.Add(this.pnl_BuscarProv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Proveedores";
             this.Text = "frm_Proveedores";
             this.Load += new System.EventHandler(this.frm_Proveedores_Load);

@@ -52,18 +52,20 @@
             // 
             this.lbl_BuscarI.AutoSize = true;
             this.lbl_BuscarI.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BuscarI.Location = new System.Drawing.Point(17, 29);
+            this.lbl_BuscarI.Location = new System.Drawing.Point(23, 36);
+            this.lbl_BuscarI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_BuscarI.Name = "lbl_BuscarI";
-            this.lbl_BuscarI.Size = new System.Drawing.Size(109, 37);
+            this.lbl_BuscarI.Size = new System.Drawing.Size(136, 46);
             this.lbl_BuscarI.TabIndex = 2;
             this.lbl_BuscarI.Text = "Buscar:";
             // 
             // txt_BuscarI
             // 
             this.txt_BuscarI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_BuscarI.Location = new System.Drawing.Point(132, 29);
+            this.txt_BuscarI.Location = new System.Drawing.Point(176, 36);
+            this.txt_BuscarI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_BuscarI.Name = "txt_BuscarI";
-            this.txt_BuscarI.Size = new System.Drawing.Size(888, 33);
+            this.txt_BuscarI.Size = new System.Drawing.Size(1183, 39);
             this.txt_BuscarI.TabIndex = 0;
             this.txt_BuscarI.TextChanged += new System.EventHandler(this.txt_BuscarI_TextChanged);
             // 
@@ -74,9 +76,10 @@
             this.pnl_BuscarI.BackColor = System.Drawing.Color.White;
             this.pnl_BuscarI.Controls.Add(this.lbl_BuscarI);
             this.pnl_BuscarI.Controls.Add(this.txt_BuscarI);
-            this.pnl_BuscarI.Location = new System.Drawing.Point(25, 12);
+            this.pnl_BuscarI.Location = new System.Drawing.Point(33, 15);
+            this.pnl_BuscarI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_BuscarI.Name = "pnl_BuscarI";
-            this.pnl_BuscarI.Size = new System.Drawing.Size(1046, 93);
+            this.pnl_BuscarI.Size = new System.Drawing.Size(1395, 114);
             this.pnl_BuscarI.TabIndex = 3;
             // 
             // btn_EliminarI
@@ -86,9 +89,10 @@
             this.btn_EliminarI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarI.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarI.Location = new System.Drawing.Point(594, 123);
+            this.btn_EliminarI.Location = new System.Drawing.Point(792, 151);
+            this.btn_EliminarI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_EliminarI.Name = "btn_EliminarI";
-            this.btn_EliminarI.Size = new System.Drawing.Size(254, 42);
+            this.btn_EliminarI.Size = new System.Drawing.Size(339, 52);
             this.btn_EliminarI.TabIndex = 10;
             this.btn_EliminarI.Text = "Eliminar Producto";
             this.btn_EliminarI.UseVisualStyleBackColor = false;
@@ -101,9 +105,10 @@
             this.btn_ActualizarI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ActualizarI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ActualizarI.ForeColor = System.Drawing.Color.White;
-            this.btn_ActualizarI.Location = new System.Drawing.Point(422, 123);
+            this.btn_ActualizarI.Location = new System.Drawing.Point(563, 151);
+            this.btn_ActualizarI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ActualizarI.Name = "btn_ActualizarI";
-            this.btn_ActualizarI.Size = new System.Drawing.Size(166, 42);
+            this.btn_ActualizarI.Size = new System.Drawing.Size(221, 52);
             this.btn_ActualizarI.TabIndex = 9;
             this.btn_ActualizarI.Text = "Actualizar Producto";
             this.btn_ActualizarI.UseVisualStyleBackColor = false;
@@ -116,9 +121,10 @@
             this.btn_NuevoI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NuevoI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NuevoI.ForeColor = System.Drawing.Color.White;
-            this.btn_NuevoI.Location = new System.Drawing.Point(252, 123);
+            this.btn_NuevoI.Location = new System.Drawing.Point(336, 151);
+            this.btn_NuevoI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NuevoI.Name = "btn_NuevoI";
-            this.btn_NuevoI.Size = new System.Drawing.Size(164, 42);
+            this.btn_NuevoI.Size = new System.Drawing.Size(219, 52);
             this.btn_NuevoI.TabIndex = 8;
             this.btn_NuevoI.Text = "+ Nuevo Producto";
             this.btn_NuevoI.UseVisualStyleBackColor = false;
@@ -158,7 +164,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg_Inventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_Inventario.EnableHeadersVisualStyles = false;
-            this.dtg_Inventario.Location = new System.Drawing.Point(12, 180);
+            this.dtg_Inventario.Location = new System.Drawing.Point(16, 222);
+            this.dtg_Inventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtg_Inventario.Name = "dtg_Inventario";
             this.dtg_Inventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -170,14 +177,17 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_Inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_Inventario.RowHeadersVisible = false;
+            this.dtg_Inventario.RowHeadersWidth = 51;
             this.dtg_Inventario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Inventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_Inventario.Size = new System.Drawing.Size(1076, 420);
+            this.dtg_Inventario.Size = new System.Drawing.Size(1435, 517);
             this.dtg_Inventario.TabIndex = 11;
+            this.dtg_Inventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Inventario_CellContentClick);
             // 
             // Cod
             // 
             this.Cod.HeaderText = "Código";
+            this.Cod.MinimumWidth = 6;
             this.Cod.Name = "Cod";
             this.Cod.ReadOnly = true;
             this.Cod.Width = 150;
@@ -185,6 +195,7 @@
             // NombreP
             // 
             this.NombreP.HeaderText = "Nombre";
+            this.NombreP.MinimumWidth = 6;
             this.NombreP.Name = "NombreP";
             this.NombreP.ReadOnly = true;
             this.NombreP.Width = 150;
@@ -192,6 +203,7 @@
             // Desc
             // 
             this.Desc.HeaderText = "Descripción";
+            this.Desc.MinimumWidth = 6;
             this.Desc.Name = "Desc";
             this.Desc.ReadOnly = true;
             this.Desc.Width = 300;
@@ -199,6 +211,7 @@
             // Categoria
             // 
             this.Categoria.HeaderText = "Categoria";
+            this.Categoria.MinimumWidth = 6;
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             this.Categoria.Width = 150;
@@ -206,6 +219,7 @@
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 150;
@@ -213,21 +227,23 @@
             // Precio
             // 
             this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             this.Precio.Width = 150;
             // 
             // frm_Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 612);
+            this.ClientSize = new System.Drawing.Size(1467, 753);
             this.Controls.Add(this.dtg_Inventario);
             this.Controls.Add(this.btn_EliminarI);
             this.Controls.Add(this.btn_ActualizarI);
             this.Controls.Add(this.btn_NuevoI);
             this.Controls.Add(this.pnl_BuscarI);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Inventario";
             this.Text = "frm_Inventario";
             this.Load += new System.EventHandler(this.frm_Inventario_Load);

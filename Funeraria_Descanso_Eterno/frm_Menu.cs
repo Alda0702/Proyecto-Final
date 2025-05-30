@@ -39,8 +39,29 @@ namespace Funeraria_Descanso_Eterno
 
         private void pic_Cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
+
+        private Button botonSeleccionado = null;
+        private Color colorOriginal = Color.FromArgb(224, 224, 224);
+        private Color colorSeleccionado = Color.FromArgb(0, 105, 209);
+
+        private void SeleccionarBoton(Button botonActual)
+        {
+            // Restaurar color del botón anterior
+            if (botonSeleccionado != null)
+            {
+                botonSeleccionado.BackColor = colorOriginal;
+            }
+
+            // Cambiar color del botón actual
+            botonActual.BackColor = colorSeleccionado;
+
+            // Actualizar referencia
+            botonSeleccionado = botonActual;
+        }
+
+
 
         private void pic_Redimencionar_Click(object sender, EventArgs e)
         {
@@ -68,6 +89,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Registro_Cliente(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Registro_Cliente);
         }
 
         private void pic_Logo_Click(object sender, EventArgs e)
@@ -93,7 +115,8 @@ namespace Funeraria_Descanso_Eterno
                 btn_Proveedores.Enabled = true;
                 btn_Servicios.Enabled = false;
                 btn_Registro_Cliente.Enabled = false;
-
+                btn_Exportar.Visible = false;
+                btn_Importar.Visible = false;
 
             }
             else if (loginrol == "Logística")
@@ -104,6 +127,8 @@ namespace Funeraria_Descanso_Eterno
                 btn_Proveedores.Enabled = true;
                 btn_Servicios.Enabled = false;
                 btn_Registro_Cliente.Enabled = false;
+                btn_Exportar.Visible = false;
+                btn_Importar.Visible = false;
 
 
             }
@@ -115,6 +140,8 @@ namespace Funeraria_Descanso_Eterno
                 btn_Inventario.Enabled = true;
                 btn_Proveedores.Enabled = false;
                 btn_Servicios.Enabled = true;
+                btn_Exportar.Visible = false;
+                btn_Importar.Visible = false;
 
             }
             else if (loginrol == "RRHH")
@@ -125,8 +152,22 @@ namespace Funeraria_Descanso_Eterno
                 btn_Inventario.Enabled = false;
                 btn_Proveedores.Enabled = false;
                 btn_Servicios.Enabled = false;
+                btn_Exportar.Visible = false;
+                btn_Importar.Visible = false;
 
             }
+            else if (loginrol == "Administrador")
+            {
+                btn_Registro_Cliente.Enabled = true;
+                btn_Empleados.Enabled = true;
+                btn_Facturación.Enabled = true;
+                btn_Inventario.Enabled = true;
+                btn_Proveedores.Enabled = true;
+                btn_Servicios.Enabled = true;
+
+            }
+
+
 
         }
 
@@ -135,6 +176,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Empleados(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Empleados);
 
 
         }
@@ -144,6 +186,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Inventario(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Inventario);
         }
 
         private void btn_Servicios_Click(object sender, EventArgs e)
@@ -151,6 +194,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Servicios(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Servicios);
         }
 
         private void btn_Proveedores_Click(object sender, EventArgs e)
@@ -158,6 +202,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Proveedores(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Proveedores);
         }
 
         private void btn_Facturación_Click(object sender, EventArgs e)
@@ -165,6 +210,7 @@ namespace Funeraria_Descanso_Eterno
             //LLama la clase AbrirForm para ejecutar el form en el panel Contenedor 
             Cls_AbrirForm abrir = new Cls_AbrirForm();
             abrir.abrirForm(new frm_Facturacion(), this.pnl_Contenedor);
+            SeleccionarBoton(btn_Facturación);
         }
 
         private void pnl_Contenedor_Paint(object sender, PaintEventArgs e)
@@ -174,6 +220,28 @@ namespace Funeraria_Descanso_Eterno
 
         private void pnl_Menu_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void btn_Exportar_Click(object sender, EventArgs e)
+        {
+            frm_Exportar frm_Exportar = new frm_Exportar();
+            this.Hide();
+            frm_Exportar.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_Importar_Click(object sender, EventArgs e)
+        {
+            frm_Importar frm_Importar = new frm_Importar();
+            this.Hide();
+            frm_Importar.ShowDialog();
+            this.Show();
 
         }
     }

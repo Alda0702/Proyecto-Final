@@ -44,5 +44,30 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Seleccione un proceso para finalizar.");
             }
         }
+
+        private void btn_NuevoF_Click(object sender, EventArgs e)
+        {
+            frm_NuevaVenta frmventa = new frm_NuevaVenta();
+            this.Hide();
+            frmventa.ShowDialog();
+            this.Show();
+            llenarGrid();
+        }
+
+        private void btn_EliminarF_Click(object sender, EventArgs e)
+        {
+            if (dtg_Factura.SelectedRows.Count > 0)
+            {
+                int idProceso = Convert.ToInt32(dtg_Factura.SelectedRows[0].Cells["CodigoF"].Value);
+                MessageBox.Show("¿Está seguro de que desea eliminar la factura con ID: " + idProceso + "?");
+
+                factura.EliminarFactura(idProceso);
+                llenarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proceso para finalizar.");
+            }
+        }
     }
 }

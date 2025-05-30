@@ -25,7 +25,8 @@ namespace Funeraria_Descanso_Eterno
 
         private void pic_Cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Cerrar la aplicación
+            Application.Exit();
         }
 
         private void pic_Restaurar_Click(object sender, EventArgs e)
@@ -62,15 +63,9 @@ namespace Funeraria_Descanso_Eterno
                 frm_Menu frm_Menu;
                 frm_Menu = frm_Menu.Instancia;
                 frm_Menu.loginrol = rol;
-
-
-
-
-
                 this.Hide();
                 frm_Menu.ShowDialog();
-                this.Show();
-                this.Close();
+                
 
             }
 

@@ -57,6 +57,7 @@
     <Compile Include="Cls_ConexionDB.cs" />
     <Compile Include="Cls_EmpleadoCRUD.cs" />
     <Compile Include="Cls_Factura.cs" />
+    <Compile Include="Cls_FacturaCRUD.cs" />
     <Compile Include="Cls_InventarioCRUD.cs" />
     <Compile Include="Cls_LoginCRUD.cs" />
     <Compile Include="Cls_ProveedoresCRUD.cs" />
@@ -98,6 +99,12 @@
     <Compile Include="frm_Empleados.Designer.cs">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Exportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Exportar.Designer.cs">
+      <DependentUpon>frm_Exportar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +116,12 @@
     </Compile>
     <Compile Include="frm_Facturacion.Designer.cs">
       <DependentUpon>frm_Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Importar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Importar.Designer.cs">
+      <DependentUpon>frm_Importar.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Inicio.cs">
       <SubType>Form</SubType>
@@ -133,6 +146,12 @@
     </Compile>
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NuevaVenta.Designer.cs">
+      <DependentUpon>frm_NuevaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_NuevoCliente.cs">
       <SubType>Form</SubType>
@@ -208,11 +227,17 @@
     <EmbeddedResource Include="frm_Empleados.resx">
       <DependentUpon>frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Exportar.resx">
+      <DependentUpon>frm_Exportar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Factura.resx">
       <DependentUpon>frm_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Facturacion.resx">
       <DependentUpon>frm_Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Importar.resx">
+      <DependentUpon>frm_Importar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
@@ -225,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NuevaVenta.resx">
+      <DependentUpon>frm_NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NuevoCliente.resx">
       <DependentUpon>frm_NuevoCliente.cs</DependentUpon>
@@ -314,6 +342,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

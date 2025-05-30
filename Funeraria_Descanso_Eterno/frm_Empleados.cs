@@ -14,8 +14,22 @@ namespace Funeraria_Descanso_Eterno
 {
     public partial class frm_Empleados : Form
     {
-        EmpleadoDB empleadoDB = new EmpleadoDB();
+       private EmpleadoDB empleadoDB = new EmpleadoDB();
 
+        private static frm_Empleados instancia;
+
+        public static frm_Empleados Instancia
+        {
+            get
+            {
+                // Si la instancia no existe, se crea
+                if (instancia == null)
+                {
+                    instancia = new frm_Empleados();
+                }
+                return instancia;
+            }
+        }
         public frm_Empleados()
         {
             InitializeComponent();
@@ -27,17 +41,17 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_N_Empleado.ShowDialog();
             this.Show();
-            llenargrid();
+
+
         }
 
         private void btn_EliminarE_Click(object sender, EventArgs e)
         {
             if (dtg_Empleados.SelectedRows.Count > 0)
             {
-                // Obtener el ID del empleado seleccionado (suponiendo que la columna "IdEmpleado" es la primera columna)
+                // obtiene el id del empleado seleccionado 
                 int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
 
-                // Confirmación antes de eliminar
                 DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar este empleado?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -54,24 +68,20 @@ namespace Funeraria_Descanso_Eterno
             {
                 MessageBox.Show("Por favor, seleccione un empleado para eliminar.");
             }
-            llenargrid();
-        }
-
-        private void llenargrid()
-        {
-            dtg_Empleados.Rows.Clear();
-            empleadoDB.Mostrarempleado(dtg_Empleados);
         }
 
 
         private void frm_Empleados_Load(object sender, EventArgs e)
         {
-            llenargrid();
+            // cargar los empleados al iniciar el formulario
+            empleadoDB.Mostrarempleado(dtg_Empleados);
 
         }
 
         private void txt_BuscarE_TextChanged(object sender, EventArgs e)
         {
+
+            //llamar al metodo de busqueda
             empleadoDB.BuscarPorCodigoempl(dtg_Empleados, txt_BuscarE.Text.Trim());
 
         }
@@ -82,24 +92,34 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_ActualizarE_Click(object sender, EventArgs e)
         {
-            frm_ActualizarEmpleado frmActualizar = frm_ActualizarEmpleado.Instancia;
 
-            int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
+            // verifica si hay una fila seleccionada en el datagridview
+            if (dtg_Empleados.SelectedRows.Count > 0)
+                {
+                    int idEmpleado = Convert.ToInt32(dtg_Empleados.SelectedRows[0].Cells["ID"].Value);
 
-            frmActualizar.txt_NomE.Text = dtg_Empleados.SelectedRows[0].Cells["Nombre"].Value.ToString();
-            frmActualizar.txt_ApellidoPE.Text = dtg_Empleados.SelectedRows[0].Cells["ApellidoP"].Value.ToString();
-            frmActualizar.cmb_Rol.Text = dtg_Empleados.SelectedRows[0].Cells["Rol"].Value.ToString();
-            frmActualizar.txt_Cel.Text = dtg_Empleados.SelectedRows[0].Cells["Celular"].Value.ToString();
-            frmActualizar.txt_Email.Text = dtg_Empleados.SelectedRows[0].Cells["Email"].Value.ToString();
+                ClsEmpleado empleado = empleadoDB.ObtenerEmpleadoPorID(idEmpleado);
 
-            frmActualizar.idservicio = idEmpleado;
-            this.Hide();
-            frmActualizar.ShowDialog();
-            llenargrid();
 
+                if (empleado != null)
+                    {
+                        frm_ActualizarEmpleado frm = new frm_ActualizarEmpleado(empleado);
+                        frm.ShowDialog();
+                        this.Hide();
+
+                }
+            }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona un empleado para actualizar.");
+                }
 
         }
+
+
+
     }
+    
 
     
 

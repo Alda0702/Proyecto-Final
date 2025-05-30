@@ -60,7 +60,17 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_EliminarProv_Click(object sender, EventArgs e)
         {
-
+            if (dtg_Proveedores.SelectedRows.Count > 0)
+            {
+                int idProceso = Convert.ToInt32(dtg_Proveedores.SelectedRows[0].Cells["Cod"].Value);
+                MessageBox.Show("¿Está seguro de que desea eliminar el Proovedor con ID: " + idProceso + "?");
+                Provedores.EliminarRegistroProv(idProceso);
+                llenarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proceso para finalizar.");
+            }
         }
     }
 }
