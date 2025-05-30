@@ -14,6 +14,7 @@ namespace Funeraria_Descanso_Eterno
         SQLiteConnection conexion_sqlite;
         SQLiteCommand cmd_sqlite;
         SQLiteDataReader datareader_sqlite;
+
         public void mostrarFacturacion(DataGridView dgv)
         {
             SQLiteDataReader datareader_sqlite;
@@ -66,7 +67,7 @@ namespace Funeraria_Descanso_Eterno
                 {
                     MessageBox.Show("No se encontró una factura con ese ID.");
                 }
-
+                datareader_sqlite.Close();
             }
             catch (Exception ex)
             {
@@ -91,7 +92,7 @@ namespace Funeraria_Descanso_Eterno
                     totalNeto += Ptotal;
                 }
 
-
+                datareader_sqlite.Close();
             }
             catch (Exception ex)
             {
@@ -117,7 +118,7 @@ namespace Funeraria_Descanso_Eterno
                     dgv.Rows.Add(datareader_sqlite["CodigoServ"].ToString(), datareader_sqlite["NombreServ"].ToString(), datareader_sqlite["cantidad"].ToString(), datareader_sqlite["PrecioServ"].ToString(), Ptotal.ToString());
                 }
                 total.Text = totalNeto.ToString();
-
+                datareader_sqlite.Close();
             }
             catch (Exception ex)
             {
@@ -125,7 +126,9 @@ namespace Funeraria_Descanso_Eterno
             }
         }
 
-        public void cargarProd(int idc, int ide, int idp, int cant)
+
+
+        public void cargarProd(int idventa, int idprod, int cant)
         {
             try
             {
@@ -133,62 +136,56 @@ namespace Funeraria_Descanso_Eterno
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"insert into datalles_Producto (Ref_Venta, ref_Producto,cantidad values ('{idc}','{idp}','{cant}'))";
+                cmd_sqlite.CommandText = $"insert into datalles_Producto (Ref_Venta, ref_Producto,cantidad) values ('{idventa}','{idprod}','{cant}')";
                 cmd_sqlite.ExecuteNonQuery();
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+                MessageBox.Show("Error al insertar los produtos: " + ex.Message);
             }
 
         }
+       
 
-
-
-
-        public void cargarservi(int idc, int ide, int idp, int cant)
+        public void cargarservi(int idventa,  int idservi, int cant)
         {
             try
             {
-
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"insert into datalles_Servicio (Ref_Venta, ref_Servicio,cantidad values ('{idc}','{idp}','{cant}'))";
+                cmd_sqlite.CommandText = $"insert into datalles_Servicio (Ref_Venta, ref_Servicio,cantidad) values ('{idventa}','{idservi}','{cant}')";
                 cmd_sqlite.ExecuteNonQuery();
-                datareader_sqlite = cmd_sqlite.ExecuteReader();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+                MessageBox.Show("Error al insertar los Servicios: " + ex.Message);
             }
 
         }
 
         public void pfactura(int idc, int ide, string fecha)
         {
+
             try
             {
-
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"insert into Factura (REF_cliente, ref_empleado ,fecha values ('{idc}','{ide}','{fecha}'))";
+                cmd_sqlite.CommandText = $"insert into Factura (REF_cliente, ref_empleado ,fecha) values ('{idc}','{ide}','{fecha}')";
                 cmd_sqlite.ExecuteNonQuery();
-                datareader_sqlite = cmd_sqlite.ExecuteReader();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+                MessageBox.Show("Error al insertar el pfactura: " + ex.Message);
             }
         }
 
-        public void ultima()
+        public int ultima()
         {
+            int facturaId = 0;
             try
             {
 
@@ -199,12 +196,73 @@ namespace Funeraria_Descanso_Eterno
                 cmd_sqlite.ExecuteNonQuery();
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
 
+                if (datareader_sqlite.Read())
+                {
+                    facturaId = Convert.ToInt32(datareader_sqlite[0]);
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ninguna factura.");
+                }
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al mostrar los datos: " + ex.Message);
+                MessageBox.Show("Error al mostrar la ultima factura: " + ex.Message);
             }
+            return facturaId;
         }
+
+        //elinar fact
+        public void EliminarFactura(int id)
+        {
+            //p
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Delete From Factura Where id = {id} ";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar Servicio" + ex.Message);
+            }
+
+            //a 
+            
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Delete From datalles_Producto Where Ref_Venta = {id} ";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar Servicio" + ex.Message);
+            }
+
+            //b
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
+
+                cmd_sqlite.CommandText = $"Delete From datalles_Servicio Where Ref_Venta = {id} ";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar Servicio" + ex.Message);
+            }
+
+        }
+
+
+
     }
 }
 //:)

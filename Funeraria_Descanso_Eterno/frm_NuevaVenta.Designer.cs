@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tx_Fecha = new System.Windows.Forms.TextBox();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Confirmar = new System.Windows.Forms.Button();
@@ -50,22 +50,22 @@
             this.pic_Cerrar = new System.Windows.Forms.PictureBox();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.pnl_NuevoCl = new System.Windows.Forms.Panel();
-            this.dtg_prod = new System.Windows.Forms.DataGridView();
-            this.lbl_Prods = new System.Windows.Forms.Label();
-            this.lbl_servis = new System.Windows.Forms.Label();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtg_servi = new System.Windows.Forms.DataGridView();
             this.servi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.canti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_servis = new System.Windows.Forms.Label();
+            this.lbl_Prods = new System.Windows.Forms.Label();
+            this.dtg_prod = new System.Windows.Forms.DataGridView();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Redimencionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cerrar)).BeginInit();
             this.pnl_Titulo.SuspendLayout();
             this.pnl_NuevoCl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_prod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_servi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_prod)).BeginInit();
             this.SuspendLayout();
             // 
             // tx_Fecha
@@ -89,6 +89,7 @@
             this.btn_Cancelar.TabIndex = 34;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Confirmar
             // 
@@ -262,89 +263,6 @@
             this.pnl_NuevoCl.Size = new System.Drawing.Size(613, 556);
             this.pnl_NuevoCl.TabIndex = 9;
             // 
-            // dtg_prod
-            // 
-            this.dtg_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtg_prod.BackgroundColor = System.Drawing.Color.White;
-            this.dtg_prod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtg_prod.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dtg_prod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_prod.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtg_prod.ColumnHeadersHeight = 50;
-            this.dtg_prod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdProducto,
-            this.Cantidad});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_prod.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtg_prod.EnableHeadersVisualStyles = false;
-            this.dtg_prod.Location = new System.Drawing.Point(24, 285);
-            this.dtg_prod.Name = "dtg_prod";
-            this.dtg_prod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_prod.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtg_prod.RowHeadersVisible = false;
-            this.dtg_prod.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtg_prod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_prod.Size = new System.Drawing.Size(255, 146);
-            this.dtg_prod.TabIndex = 36;
-            this.dtg_prod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Factura_CellContentClick);
-            // 
-            // lbl_Prods
-            // 
-            this.lbl_Prods.AutoSize = true;
-            this.lbl_Prods.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Prods.Location = new System.Drawing.Point(125, 255);
-            this.lbl_Prods.Name = "lbl_Prods";
-            this.lbl_Prods.Size = new System.Drawing.Size(79, 27);
-            this.lbl_Prods.TabIndex = 38;
-            this.lbl_Prods.Text = "Productos";
-            this.lbl_Prods.UseCompatibleTextRendering = true;
-            // 
-            // lbl_servis
-            // 
-            this.lbl_servis.AutoSize = true;
-            this.lbl_servis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_servis.Location = new System.Drawing.Point(405, 252);
-            this.lbl_servis.Name = "lbl_servis";
-            this.lbl_servis.Size = new System.Drawing.Size(69, 27);
-            this.lbl_servis.TabIndex = 39;
-            this.lbl_servis.Text = "Servicios";
-            this.lbl_servis.UseCompatibleTextRendering = true;
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.IdProducto.HeaderText = "ID Producto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.Width = 130;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 130;
-            // 
             // dtg_servi
             // 
             this.dtg_servi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -405,6 +323,89 @@
             this.canti.Name = "canti";
             this.canti.Width = 130;
             // 
+            // lbl_servis
+            // 
+            this.lbl_servis.AutoSize = true;
+            this.lbl_servis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_servis.Location = new System.Drawing.Point(405, 252);
+            this.lbl_servis.Name = "lbl_servis";
+            this.lbl_servis.Size = new System.Drawing.Size(69, 27);
+            this.lbl_servis.TabIndex = 39;
+            this.lbl_servis.Text = "Servicios";
+            this.lbl_servis.UseCompatibleTextRendering = true;
+            // 
+            // lbl_Prods
+            // 
+            this.lbl_Prods.AutoSize = true;
+            this.lbl_Prods.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Prods.Location = new System.Drawing.Point(125, 255);
+            this.lbl_Prods.Name = "lbl_Prods";
+            this.lbl_Prods.Size = new System.Drawing.Size(79, 27);
+            this.lbl_Prods.TabIndex = 38;
+            this.lbl_Prods.Text = "Productos";
+            this.lbl_Prods.UseCompatibleTextRendering = true;
+            // 
+            // dtg_prod
+            // 
+            this.dtg_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtg_prod.BackgroundColor = System.Drawing.Color.White;
+            this.dtg_prod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtg_prod.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtg_prod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_prod.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtg_prod.ColumnHeadersHeight = 50;
+            this.dtg_prod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdProducto,
+            this.Cantidad});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_prod.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dtg_prod.EnableHeadersVisualStyles = false;
+            this.dtg_prod.Location = new System.Drawing.Point(24, 285);
+            this.dtg_prod.Name = "dtg_prod";
+            this.dtg_prod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_prod.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtg_prod.RowHeadersVisible = false;
+            this.dtg_prod.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtg_prod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtg_prod.Size = new System.Drawing.Size(255, 146);
+            this.dtg_prod.TabIndex = 36;
+            this.dtg_prod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Factura_CellContentClick);
+            // 
+            // IdProducto
+            // 
+            this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.IdProducto.HeaderText = "ID Producto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.Width = 130;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 130;
+            // 
             // frm_NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,8 +424,8 @@
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_NuevoCl.ResumeLayout(false);
             this.pnl_NuevoCl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_prod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_servi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_prod)).EndInit();
             this.ResumeLayout(false);
 
         }

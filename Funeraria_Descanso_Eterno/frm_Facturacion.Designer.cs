@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_BuscarF = new System.Windows.Forms.Label();
             this.txt_BuscarF = new System.Windows.Forms.TextBox();
             this.dtg_Factura = new System.Windows.Forms.DataGridView();
@@ -39,7 +39,6 @@
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_EliminarF = new System.Windows.Forms.Button();
-            this.btn_ActualizarF = new System.Windows.Forms.Button();
             this.btn_NuevoF = new System.Windows.Forms.Button();
             this.pnl_BuscarF = new System.Windows.Forms.Panel();
             this.btn_Imprimir = new System.Windows.Forms.Button();
@@ -74,40 +73,40 @@
             this.dtg_Factura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_Factura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtg_Factura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtg_Factura.ColumnHeadersHeight = 50;
             this.dtg_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoF,
             this.Cliente,
             this.Empleado,
             this.Fecha});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Factura.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_Factura.EnableHeadersVisualStyles = false;
             this.dtg_Factura.Location = new System.Drawing.Point(12, 180);
             this.dtg_Factura.Name = "dtg_Factura";
             this.dtg_Factura.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_Factura.RowHeadersVisible = false;
             this.dtg_Factura.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtg_Factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -149,26 +148,13 @@
             this.btn_EliminarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EliminarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EliminarF.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarF.Location = new System.Drawing.Point(594, 123);
+            this.btn_EliminarF.Location = new System.Drawing.Point(499, 123);
             this.btn_EliminarF.Name = "btn_EliminarF";
             this.btn_EliminarF.Size = new System.Drawing.Size(254, 42);
             this.btn_EliminarF.TabIndex = 15;
             this.btn_EliminarF.Text = "Eliminar Pago";
             this.btn_EliminarF.UseVisualStyleBackColor = false;
-            // 
-            // btn_ActualizarF
-            // 
-            this.btn_ActualizarF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_ActualizarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(209)))));
-            this.btn_ActualizarF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ActualizarF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarF.ForeColor = System.Drawing.Color.White;
-            this.btn_ActualizarF.Location = new System.Drawing.Point(422, 123);
-            this.btn_ActualizarF.Name = "btn_ActualizarF";
-            this.btn_ActualizarF.Size = new System.Drawing.Size(166, 42);
-            this.btn_ActualizarF.TabIndex = 14;
-            this.btn_ActualizarF.Text = "Actualizar Pago";
-            this.btn_ActualizarF.UseVisualStyleBackColor = false;
+            this.btn_EliminarF.Click += new System.EventHandler(this.btn_EliminarF_Click);
             // 
             // btn_NuevoF
             // 
@@ -177,7 +163,7 @@
             this.btn_NuevoF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NuevoF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NuevoF.ForeColor = System.Drawing.Color.White;
-            this.btn_NuevoF.Location = new System.Drawing.Point(252, 123);
+            this.btn_NuevoF.Location = new System.Drawing.Point(329, 123);
             this.btn_NuevoF.Name = "btn_NuevoF";
             this.btn_NuevoF.Size = new System.Drawing.Size(164, 42);
             this.btn_NuevoF.TabIndex = 13;
@@ -220,7 +206,6 @@
             this.Controls.Add(this.btn_Imprimir);
             this.Controls.Add(this.dtg_Factura);
             this.Controls.Add(this.btn_EliminarF);
-            this.Controls.Add(this.btn_ActualizarF);
             this.Controls.Add(this.btn_NuevoF);
             this.Controls.Add(this.pnl_BuscarF);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -239,7 +224,6 @@
         private System.Windows.Forms.TextBox txt_BuscarF;
         private System.Windows.Forms.DataGridView dtg_Factura;
         private System.Windows.Forms.Button btn_EliminarF;
-        private System.Windows.Forms.Button btn_ActualizarF;
         private System.Windows.Forms.Button btn_NuevoF;
         private System.Windows.Forms.Panel pnl_BuscarF;
         private System.Windows.Forms.Button btn_Imprimir;

@@ -30,6 +30,12 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tx_IdC.Text) ||string.IsNullOrWhiteSpace(txt_IdE.Text) ||string.IsNullOrWhiteSpace(tx_Fecha.Text) || (dtg_prod.Rows.Count == 0 && dtg_servi.Rows.Count == 0))
+            {
+                MessageBox.Show("Todos los campos deben estar llenos y debe haber al menos un producto o un servicio.");
+                return; 
+            }
+
             int IDps, Cantps, IDCliente, IDempleado;
             string fecha;
             IDCliente = Convert.ToInt32(tx_IdC.Text);
@@ -38,7 +44,8 @@ namespace Funeraria_Descanso_Eterno
 
 
             a.pfactura(IDCliente, IDempleado, fecha);
-           int ultiam =  a.ultima();
+            
+            int ultima =  a.ultima();
 
 
             foreach (DataGridViewRow row in dtg_prod.Rows)
@@ -51,7 +58,7 @@ namespace Funeraria_Descanso_Eterno
                     IDps = Convert.ToInt32(row.Cells["IdProducto"].Value);
                     Cantps = Convert.ToInt32(row.Cells["Cantidad"].Value);
 
-                    a.cargarProd(IDCliente, IDempleado, IDps, Cantps);
+                    a.cargarProd(ultima, IDps, Cantps);
                 }
             }
 
@@ -59,15 +66,21 @@ namespace Funeraria_Descanso_Eterno
             {
                 if (row.IsNewRow) continue;
 
-                if (row.Cells["IdProducto"].Value != null && row.Cells["Cantidad"].Value != null)
+                if (row.Cells["servi"].Value != null && row.Cells["canti"].Value != null)
                 {
                     IDps = Convert.ToInt32(row.Cells["servi"].Value);
                     Cantps = Convert.ToInt32(row.Cells["canti"].Value);
 
-                    a.cargarservi(IDCliente, IDempleado, IDps, Cantps);
+                    a.cargarservi(ultima, IDps, Cantps);
                 }
             }
+            MessageBox.Show("Venta registrada correctamente.");
+            this.Close();
+        }
 
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
