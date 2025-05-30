@@ -99,6 +99,9 @@ namespace Funeraria_Descanso_Eterno
                 MessageBox.Show("Error al mostrar los datos: " + ex.Message);
             }
 
+            if (dgv.Rows.Count > 0)
+                dgv.Rows.Add("-----", "-----", "-----", "-----", "-----");
+
             // llenar el datagridview con los servicios
             try
             {
@@ -106,7 +109,7 @@ namespace Funeraria_Descanso_Eterno
                 conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
                 cmd_sqlite = conexion_sqlite.CreateCommand();
 
-                cmd_sqlite.CommandText = $"SELECT serv.CodigoServ, serv.NombreServ,cantidad, serv.PrecioServ from datalles_Producto  \r\njoin tabla_servicio serv on serv.CodigoServ = datalles_Producto.ref_Producto\r\nwhere Ref_Venta = {cod}";
+                cmd_sqlite.CommandText = $"SELECT serv.CodigoServ, serv.NombreServ,cantidad, serv.PrecioServ from datalles_Servicio  \r\njoin tabla_servicio serv on serv.CodigoServ = datalles_Servicio.ref_Servicio\r\nwhere Ref_Venta = {cod}";
                 cmd_sqlite.ExecuteNonQuery();
                 datareader_sqlite = cmd_sqlite.ExecuteReader();
 

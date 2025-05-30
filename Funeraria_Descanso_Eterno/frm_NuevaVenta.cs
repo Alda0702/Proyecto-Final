@@ -48,32 +48,50 @@ namespace Funeraria_Descanso_Eterno
             int ultima =  a.ultima();
 
 
-            foreach (DataGridViewRow row in dtg_prod.Rows)
+            if (dtg_prod.Rows.Count == 0)
             {
-                if (row.IsNewRow) continue;
-
-                if (row.Cells["IdProducto"].Value != null && row.Cells["Cantidad"].Value != null)
+               
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dtg_prod.Rows)
                 {
+                    if (row.IsNewRow) continue;
 
-                    IDps = Convert.ToInt32(row.Cells["IdProducto"].Value);
-                    Cantps = Convert.ToInt32(row.Cells["Cantidad"].Value);
+                    if (row.Cells["IdProducto"].Value != null && row.Cells["Cantidad"].Value != null)
+                    {
 
-                    a.cargarProd(ultima, IDps, Cantps);
+                        IDps = Convert.ToInt32(row.Cells["IdProducto"].Value);
+                        Cantps = Convert.ToInt32(row.Cells["Cantidad"].Value);
+
+                        a.cargarProd(ultima, IDps, Cantps);
+                    }
                 }
             }
 
-            foreach (DataGridViewRow row in dtg_servi.Rows)
+            IDps = 0;
+            Cantps = 0;
+
+            if(dtg_servi.Rows.Count == 0)
             {
-                if (row.IsNewRow) continue;
 
-                if (row.Cells["servi"].Value != null && row.Cells["canti"].Value != null)
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dtg_servi.Rows)
                 {
-                    IDps = Convert.ToInt32(row.Cells["servi"].Value);
-                    Cantps = Convert.ToInt32(row.Cells["canti"].Value);
+                    if (row.IsNewRow) continue;
 
-                    a.cargarservi(ultima, IDps, Cantps);
+                    if (row.Cells["servi"].Value != null && row.Cells["canti"].Value != null)
+                    {
+                        IDps = Convert.ToInt32(row.Cells["servi"].Value);
+                        Cantps = Convert.ToInt32(row.Cells["canti"].Value);
+
+                        a.cargarservi(ultima, IDps, Cantps);
+                    }
                 }
             }
+
             MessageBox.Show("Venta registrada correctamente.");
             this.Close();
         }
