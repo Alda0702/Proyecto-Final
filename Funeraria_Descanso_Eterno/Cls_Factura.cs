@@ -264,7 +264,21 @@ namespace Funeraria_Descanso_Eterno
 
         }
 
+        public void Eliminar()
+        {
+            try
+            {
+                conexion_sqlite = Cls_ConexionDB.Instancia.ObtenerConexion();
+                cmd_sqlite = conexion_sqlite.CreateCommand();
 
+                cmd_sqlite.CommandText = $"Delete From datalles_Servicio";
+                cmd_sqlite.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar Servicio" + ex.Message);
+            }
+        }
 
     }
 }

@@ -52,6 +52,10 @@ namespace Funeraria_Descanso_Eterno
 
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
+
+            Cls_Factura bb = new Cls_Factura();
+            bb.Eliminar();
+
             string usuario = txt_Usuario.Text;
             string contraseña = txt_Pass.Text;
 

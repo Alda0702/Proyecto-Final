@@ -41,8 +41,7 @@ namespace Funeraria_Descanso_Eterno
             this.Hide();
             frm_N_Empleado.ShowDialog();
             this.Show();
-
-
+            llenargrid();
         }
 
         private void btn_EliminarE_Click(object sender, EventArgs e)
@@ -74,8 +73,14 @@ namespace Funeraria_Descanso_Eterno
         private void frm_Empleados_Load(object sender, EventArgs e)
         {
             // cargar los empleados al iniciar el formulario
-            empleadoDB.Mostrarempleado(dtg_Empleados);
 
+            llenargrid();
+        }
+
+        public void llenargrid()
+        {
+            dtg_Empleados.Rows.Clear();
+            empleadoDB.Mostrarempleado(dtg_Empleados);
         }
 
         private void txt_BuscarE_TextChanged(object sender, EventArgs e)
