@@ -72,17 +72,19 @@
             this.pnl_NuevoCl.Controls.Add(this.txt_NombreProv);
             this.pnl_NuevoCl.Controls.Add(this.lbl_InfProv);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Regis);
-            this.pnl_NuevoCl.Location = new System.Drawing.Point(246, 55);
+            this.pnl_NuevoCl.Location = new System.Drawing.Point(328, 68);
+            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
-            this.pnl_NuevoCl.Size = new System.Drawing.Size(613, 556);
+            this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 13;
             // 
             // txt_EmailProv
             // 
             this.txt_EmailProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_EmailProv.Location = new System.Drawing.Point(239, 226);
+            this.txt_EmailProv.Location = new System.Drawing.Point(319, 278);
+            this.txt_EmailProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_EmailProv.Name = "txt_EmailProv";
-            this.txt_EmailProv.Size = new System.Drawing.Size(331, 29);
+            this.txt_EmailProv.Size = new System.Drawing.Size(440, 34);
             this.txt_EmailProv.TabIndex = 35;
             // 
             // btn_Cancelar
@@ -92,9 +94,10 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancelar.Location = new System.Drawing.Point(339, 509);
+            this.btn_Cancelar.Location = new System.Drawing.Point(452, 626);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(94, 42);
+            this.btn_Cancelar.Size = new System.Drawing.Size(125, 52);
             this.btn_Cancelar.TabIndex = 34;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
@@ -106,37 +109,41 @@
             this.btn_Confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_Confirmar.Location = new System.Drawing.Point(169, 509);
+            this.btn_Confirmar.Location = new System.Drawing.Point(225, 626);
+            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Confirmar.Name = "btn_Confirmar";
-            this.btn_Confirmar.Size = new System.Drawing.Size(164, 42);
+            this.btn_Confirmar.Size = new System.Drawing.Size(219, 52);
             this.btn_Confirmar.TabIndex = 4;
-            this.btn_Confirmar.Text = "Actulizar proveedor";
+            this.btn_Confirmar.Text = "Registrar proveedor";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
             this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // txt_ContactoProv
             // 
             this.txt_ContactoProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ContactoProv.Location = new System.Drawing.Point(239, 191);
+            this.txt_ContactoProv.Location = new System.Drawing.Point(319, 235);
+            this.txt_ContactoProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ContactoProv.Name = "txt_ContactoProv";
-            this.txt_ContactoProv.Size = new System.Drawing.Size(331, 29);
+            this.txt_ContactoProv.Size = new System.Drawing.Size(440, 34);
             this.txt_ContactoProv.TabIndex = 14;
             // 
             // txt_CiudadProv
             // 
             this.txt_CiudadProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CiudadProv.Location = new System.Drawing.Point(239, 156);
+            this.txt_CiudadProv.Location = new System.Drawing.Point(319, 192);
+            this.txt_CiudadProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_CiudadProv.Name = "txt_CiudadProv";
-            this.txt_CiudadProv.Size = new System.Drawing.Size(331, 29);
+            this.txt_CiudadProv.Size = new System.Drawing.Size(440, 34);
             this.txt_CiudadProv.TabIndex = 13;
             // 
             // lbl_CiudadProv
             // 
             this.lbl_CiudadProv.AutoSize = true;
             this.lbl_CiudadProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CiudadProv.Location = new System.Drawing.Point(45, 156);
+            this.lbl_CiudadProv.Location = new System.Drawing.Point(60, 192);
+            this.lbl_CiudadProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CiudadProv.Name = "lbl_CiudadProv";
-            this.lbl_CiudadProv.Size = new System.Drawing.Size(59, 21);
+            this.lbl_CiudadProv.Size = new System.Drawing.Size(74, 28);
             this.lbl_CiudadProv.TabIndex = 10;
             this.lbl_CiudadProv.Text = "Ciudad";
             // 
@@ -144,9 +151,10 @@
             // 
             this.lbl_ContactoProv.AutoSize = true;
             this.lbl_ContactoProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ContactoProv.Location = new System.Drawing.Point(45, 191);
+            this.lbl_ContactoProv.Location = new System.Drawing.Point(60, 235);
+            this.lbl_ContactoProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ContactoProv.Name = "lbl_ContactoProv";
-            this.lbl_ContactoProv.Size = new System.Drawing.Size(72, 21);
+            this.lbl_ContactoProv.Size = new System.Drawing.Size(92, 28);
             this.lbl_ContactoProv.TabIndex = 9;
             this.lbl_ContactoProv.Text = "Contacto";
             // 
@@ -154,9 +162,10 @@
             // 
             this.lbl_EmailProv.AutoSize = true;
             this.lbl_EmailProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EmailProv.Location = new System.Drawing.Point(45, 226);
+            this.lbl_EmailProv.Location = new System.Drawing.Point(60, 278);
+            this.lbl_EmailProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_EmailProv.Name = "lbl_EmailProv";
-            this.lbl_EmailProv.Size = new System.Drawing.Size(48, 21);
+            this.lbl_EmailProv.Size = new System.Drawing.Size(59, 28);
             this.lbl_EmailProv.TabIndex = 8;
             this.lbl_EmailProv.Text = "Email";
             // 
@@ -164,27 +173,30 @@
             // 
             this.lbl_NombreProv.AutoSize = true;
             this.lbl_NombreProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NombreProv.Location = new System.Drawing.Point(45, 122);
+            this.lbl_NombreProv.Location = new System.Drawing.Point(60, 150);
+            this.lbl_NombreProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NombreProv.Name = "lbl_NombreProv";
-            this.lbl_NombreProv.Size = new System.Drawing.Size(68, 21);
+            this.lbl_NombreProv.Size = new System.Drawing.Size(85, 28);
             this.lbl_NombreProv.TabIndex = 7;
             this.lbl_NombreProv.Text = "Nombre";
             // 
             // txt_NombreProv
             // 
             this.txt_NombreProv.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreProv.Location = new System.Drawing.Point(239, 122);
+            this.txt_NombreProv.Location = new System.Drawing.Point(319, 150);
+            this.txt_NombreProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_NombreProv.Name = "txt_NombreProv";
-            this.txt_NombreProv.Size = new System.Drawing.Size(331, 29);
+            this.txt_NombreProv.Size = new System.Drawing.Size(440, 34);
             this.txt_NombreProv.TabIndex = 6;
             // 
             // lbl_InfProv
             // 
             this.lbl_InfProv.AutoSize = true;
             this.lbl_InfProv.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_InfProv.Location = new System.Drawing.Point(44, 63);
+            this.lbl_InfProv.Location = new System.Drawing.Point(59, 78);
+            this.lbl_InfProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_InfProv.Name = "lbl_InfProv";
-            this.lbl_InfProv.Size = new System.Drawing.Size(259, 30);
+            this.lbl_InfProv.Size = new System.Drawing.Size(332, 37);
             this.lbl_InfProv.TabIndex = 4;
             this.lbl_InfProv.Text = "Información del Proveedor";
             // 
@@ -195,9 +207,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Regis.AutoSize = true;
             this.lbl_Regis.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Regis.Location = new System.Drawing.Point(179, 7);
+            this.lbl_Regis.Location = new System.Drawing.Point(239, 9);
+            this.lbl_Regis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Regis.Name = "lbl_Regis";
-            this.lbl_Regis.Size = new System.Drawing.Size(276, 37);
+            this.lbl_Regis.Size = new System.Drawing.Size(339, 46);
             this.lbl_Regis.TabIndex = 3;
             this.lbl_Regis.Text = "Registrar Proveedor";
             // 
@@ -206,9 +219,10 @@
             this.pic_Restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
-            this.pic_Restaurar.Location = new System.Drawing.Point(972, 7);
+            this.pic_Restaurar.Location = new System.Drawing.Point(1296, 9);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Restaurar.Name = "pic_Restaurar";
-            this.pic_Restaurar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Restaurar.TabIndex = 2;
             this.pic_Restaurar.TabStop = false;
@@ -219,9 +233,10 @@
             this.pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
-            this.pic_Minimizar.Location = new System.Drawing.Point(931, 7);
+            this.pic_Minimizar.Location = new System.Drawing.Point(1241, 9);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Minimizar.Name = "pic_Minimizar";
-            this.pic_Minimizar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Minimizar.TabIndex = 2;
             this.pic_Minimizar.TabStop = false;
@@ -231,9 +246,10 @@
             this.pic_Redimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
-            this.pic_Redimencionar.Location = new System.Drawing.Point(972, 7);
+            this.pic_Redimencionar.Location = new System.Drawing.Point(1296, 9);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
-            this.pic_Redimencionar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Redimencionar.TabIndex = 1;
             this.pic_Redimencionar.TabStop = false;
@@ -243,9 +259,10 @@
             this.pic_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
-            this.pic_Cerrar.Location = new System.Drawing.Point(1012, 7);
+            this.pic_Cerrar.Location = new System.Drawing.Point(1349, 9);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_Cerrar.Name = "pic_Cerrar";
-            this.pic_Cerrar.Size = new System.Drawing.Size(25, 25);
+            this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Cerrar.TabIndex = 0;
             this.pic_Cerrar.TabStop = false;
@@ -260,19 +277,20 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(1040, 38);
+            this.pnl_Titulo.Size = new System.Drawing.Size(1387, 47);
             this.pnl_Titulo.TabIndex = 12;
             // 
             // frm_NuevoProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 612);
+            this.ClientSize = new System.Drawing.Size(1387, 753);
             this.Controls.Add(this.pnl_NuevoCl);
             this.Controls.Add(this.pnl_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_NuevoProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NuevoProveedor";

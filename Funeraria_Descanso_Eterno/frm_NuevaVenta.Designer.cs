@@ -72,7 +72,7 @@
             // 
             this.tx_Fecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tx_Fecha.Location = new System.Drawing.Point(319, 230);
-            this.tx_Fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tx_Fecha.Margin = new System.Windows.Forms.Padding(4);
             this.tx_Fecha.Name = "tx_Fecha";
             this.tx_Fecha.Size = new System.Drawing.Size(440, 34);
             this.tx_Fecha.TabIndex = 35;
@@ -85,7 +85,7 @@
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(452, 626);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(125, 52);
             this.btn_Cancelar.TabIndex = 34;
@@ -101,11 +101,11 @@
             this.btn_Confirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirmar.ForeColor = System.Drawing.Color.White;
             this.btn_Confirmar.Location = new System.Drawing.Point(225, 626);
-            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(219, 52);
             this.btn_Confirmar.TabIndex = 4;
-            this.btn_Confirmar.Text = "Reistrar Venta";
+            this.btn_Confirmar.Text = "Registrar Venta";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
             this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
@@ -113,7 +113,7 @@
             // 
             this.txt_IdE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IdE.Location = new System.Drawing.Point(319, 187);
-            this.txt_IdE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IdE.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IdE.Name = "txt_IdE";
             this.txt_IdE.Size = new System.Drawing.Size(440, 34);
             this.txt_IdE.TabIndex = 14;
@@ -155,7 +155,7 @@
             // 
             this.tx_IdC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tx_IdC.Location = new System.Drawing.Point(319, 144);
-            this.tx_IdC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tx_IdC.Margin = new System.Windows.Forms.Padding(4);
             this.tx_IdC.Name = "tx_IdC";
             this.tx_IdC.Size = new System.Drawing.Size(440, 34);
             this.tx_IdC.TabIndex = 6;
@@ -191,7 +191,7 @@
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
             this.pic_Restaurar.Location = new System.Drawing.Point(1376, 9);
-            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Restaurar.Name = "pic_Restaurar";
             this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,7 +205,7 @@
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
             this.pic_Minimizar.Location = new System.Drawing.Point(1321, 9);
-            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Minimizar.Name = "pic_Minimizar";
             this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -218,7 +218,7 @@
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
             this.pic_Redimencionar.Location = new System.Drawing.Point(1376, 9);
-            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
             this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,7 +231,7 @@
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
             this.pic_Cerrar.Location = new System.Drawing.Point(1429, 9);
-            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Cerrar.Name = "pic_Cerrar";
             this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,7 +248,7 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Titulo.Name = "pnl_Titulo";
             this.pnl_Titulo.Size = new System.Drawing.Size(1467, 47);
             this.pnl_Titulo.TabIndex = 8;
@@ -274,7 +274,7 @@
             this.pnl_NuevoCl.Controls.Add(this.lbl_Inf);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Regis);
             this.pnl_NuevoCl.Location = new System.Drawing.Point(328, 68);
-            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
             this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 9;
@@ -310,7 +310,7 @@
             this.dtg_servi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_servi.EnableHeadersVisualStyles = false;
             this.dtg_servi.Location = new System.Drawing.Point(420, 347);
-            this.dtg_servi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtg_servi.Margin = new System.Windows.Forms.Padding(4);
             this.dtg_servi.Name = "dtg_servi";
             this.dtg_servi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -399,7 +399,7 @@
             this.dtg_prod.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_prod.EnableHeadersVisualStyles = false;
             this.dtg_prod.Location = new System.Drawing.Point(32, 351);
-            this.dtg_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtg_prod.Margin = new System.Windows.Forms.Padding(4);
             this.dtg_prod.Name = "dtg_prod";
             this.dtg_prod.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -441,7 +441,7 @@
             this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.pnl_NuevoCl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_NuevaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NuevaVenta";

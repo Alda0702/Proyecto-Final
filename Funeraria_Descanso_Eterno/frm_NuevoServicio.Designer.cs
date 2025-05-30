@@ -62,7 +62,7 @@
             this.pic_Restaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Restaurar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.res;
             this.pic_Restaurar.Location = new System.Drawing.Point(1376, 9);
-            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Restaurar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Restaurar.Name = "pic_Restaurar";
             this.pic_Restaurar.Size = new System.Drawing.Size(33, 31);
             this.pic_Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +76,7 @@
             this.pic_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Minimizar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.minimazar;
             this.pic_Minimizar.Location = new System.Drawing.Point(1321, 9);
-            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Minimizar.Name = "pic_Minimizar";
             this.pic_Minimizar.Size = new System.Drawing.Size(33, 31);
             this.pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@
             this.pic_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Cerrar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.cerrar;
             this.pic_Cerrar.Location = new System.Drawing.Point(1429, 9);
-            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Cerrar.Name = "pic_Cerrar";
             this.pic_Cerrar.Size = new System.Drawing.Size(33, 31);
             this.pic_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             // 
             this.tx_PrecioServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tx_PrecioServ.Location = new System.Drawing.Point(319, 482);
-            this.tx_PrecioServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tx_PrecioServ.Margin = new System.Windows.Forms.Padding(4);
             this.tx_PrecioServ.Name = "tx_PrecioServ";
             this.tx_PrecioServ.Size = new System.Drawing.Size(440, 34);
             this.tx_PrecioServ.TabIndex = 35;
@@ -128,7 +128,7 @@
             this.pnl_NuevoCl.Controls.Add(this.lbl_Inf);
             this.pnl_NuevoCl.Controls.Add(this.lbl_Regis);
             this.pnl_NuevoCl.Location = new System.Drawing.Point(328, 68);
-            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_NuevoCl.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NuevoCl.Name = "pnl_NuevoCl";
             this.pnl_NuevoCl.Size = new System.Drawing.Size(817, 684);
             this.pnl_NuevoCl.TabIndex = 9;
@@ -142,7 +142,7 @@
             this.btn_Cancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(452, 626);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(125, 52);
             this.btn_Cancelar.TabIndex = 34;
@@ -158,11 +158,11 @@
             this.btn_Confirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirmar.ForeColor = System.Drawing.Color.White;
             this.btn_Confirmar.Location = new System.Drawing.Point(225, 626);
-            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Confirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(219, 52);
             this.btn_Confirmar.TabIndex = 4;
-            this.btn_Confirmar.Text = "Reistrar Empleado";
+            this.btn_Confirmar.Text = "Registrar servicio";
             this.btn_Confirmar.UseVisualStyleBackColor = false;
             this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
@@ -170,7 +170,7 @@
             // 
             this.txt_Duracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Duracion.Location = new System.Drawing.Point(319, 439);
-            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Duracion.Name = "txt_Duracion";
             this.txt_Duracion.Size = new System.Drawing.Size(440, 34);
             this.txt_Duracion.TabIndex = 14;
@@ -179,7 +179,7 @@
             // 
             this.txt_CategoriaServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CategoriaServ.Location = new System.Drawing.Point(319, 396);
-            this.txt_CategoriaServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_CategoriaServ.Margin = new System.Windows.Forms.Padding(4);
             this.txt_CategoriaServ.Name = "txt_CategoriaServ";
             this.txt_CategoriaServ.Size = new System.Drawing.Size(440, 34);
             this.txt_CategoriaServ.TabIndex = 13;
@@ -188,7 +188,7 @@
             // 
             this.txt_DescServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DescServ.Location = new System.Drawing.Point(319, 213);
-            this.txt_DescServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_DescServ.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DescServ.Multiline = true;
             this.txt_DescServ.Name = "txt_DescServ";
             this.txt_DescServ.Size = new System.Drawing.Size(440, 175);
@@ -253,7 +253,7 @@
             // 
             this.txt_NomServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NomServ.Location = new System.Drawing.Point(319, 150);
-            this.txt_NomServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_NomServ.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NomServ.Name = "txt_NomServ";
             this.txt_NomServ.Size = new System.Drawing.Size(440, 34);
             this.txt_NomServ.TabIndex = 6;
@@ -289,7 +289,7 @@
             this.pic_Redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Redimencionar.Image = global::Funeraria_Descanso_Eterno.Properties.Resources.maxi;
             this.pic_Redimencionar.Location = new System.Drawing.Point(1376, 9);
-            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_Redimencionar.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Redimencionar.Name = "pic_Redimencionar";
             this.pic_Redimencionar.Size = new System.Drawing.Size(33, 31);
             this.pic_Redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -305,7 +305,7 @@
             this.pnl_Titulo.Controls.Add(this.pic_Cerrar);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Titulo.Name = "pnl_Titulo";
             this.pnl_Titulo.Size = new System.Drawing.Size(1467, 47);
             this.pnl_Titulo.TabIndex = 8;
@@ -318,7 +318,7 @@
             this.Controls.Add(this.pnl_NuevoCl);
             this.Controls.Add(this.pnl_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_NuevoServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_NuevoServicio";

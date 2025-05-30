@@ -1,7 +1,0 @@
-﻿IdCliente;TipoDocumentoCliente;CedulaCliente;NombreCliente;ApellidoPCliente;ApellidoMCliente;FechaNacimientoCliente;SexoCliente;Pais;DepartamentoCliente;CiudadCliente;DireccionCliente;CelularCliente;EmailCliente;
-1;C.C;13812383;Abigail ;Durango;Gomez;12/09/2000;Femenino ;Colombia;Antioquia;Medellín;Cra. 44 #21 21;3014232342;abi.gomez@gmail.com
-2;C.C;1023456789;Juan;Pérez;Rodríguez;20-05-2005;Masculino ;Colombia;Antioquia;Medellín;Calle 45 #23-10;3001234567;juan.perez90@gmail.com
-3;C.C;1045678912;María Fernanda;Gómez;Torres;11/03/2001;Femenino ;Colombia;Cundinamarca;Bogotá;Carrera 80 #19-50;3116547890;mfgomez@gmail.com
-4;C.C;1002987654;Andrés Felipe;Rincón;Castaño;08/22/1999;Masculino ;Colombia;Valle del Cauca;Cali;Avenida 6 Norte #33-20;3172341234;afrincon22@hotmail.com
-5;C.E;XE99887766;Lucía;Silva;Martínez;12/10/1995;Femenino ;Venezuela;Norte de Santander;Cúcuta;Calle 10B #45-22;3129876543;luciasilva95@gmail.com
-;
